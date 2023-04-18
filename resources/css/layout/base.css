@@ -1,0 +1,11 @@
+/* * {
+  background: rgb(0 100 0 / 0.05) !important;
+} */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  @apply font-regular text-midnight
+}

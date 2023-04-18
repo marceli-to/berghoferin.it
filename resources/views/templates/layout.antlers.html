@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+<head>
+<meta charset="utf-8">
+<title>{{ title ?? site:name }}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="csrf-token" content="{{ csrf_token }}">
+<link rel="icon" href="https://fav.farm/🏨" />
+{{ vite src="resources/js/app.js" }}
+</head>
+<body class="font-regular">
+  <main class="p-20">{{ template_content }}</main>
+</body>
+</html>

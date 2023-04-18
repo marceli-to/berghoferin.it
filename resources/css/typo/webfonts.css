@@ -1,0 +1,11 @@
+/**
+ * Typography - Webfonts
+ * -----------------------------------------------------------------------------
+ */
+
+@font-face {
+  font-family: 'VolteRegular';
+  src: local('Volte Regular'), local('Volte-Regular'),url('../fonts/Volte-Regular.woff2') format('woff2'), url('../fonts/Volte-Regular.woff') format('woff'), url('../fonts/Volte-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}

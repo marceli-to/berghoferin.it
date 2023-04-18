@@ -14,7 +14,7 @@ export default defineConfig({
     vue(),
     laravel([
       'resources/js/app.js',
-      //'resources/js/web/form/app.js',
+      'resources/js/form/app.js',
     ]),
   ],
 });
