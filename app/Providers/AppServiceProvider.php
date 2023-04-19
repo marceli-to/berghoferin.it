@@ -26,6 +26,7 @@ class AppServiceProvider extends ServiceProvider
   {
     // Statamic::script('app', 'cp');
     // Statamic::style('app', 'cp');
+    
     // Set global mailto address
     if ($this->app->environment('local') || $this->app->environment('staging'))
     {

@@ -5,7 +5,7 @@
     </template>
     <template v-else>
 
-      <div class="grid grid-cols-16 gap-48">
+      <div class="grid grid-cols-16">
 
         <div class="col-span-4 lg:col-span-3 lg:col-start-2">
           <div class="mb-48">
@@ -19,6 +19,12 @@
               :enable-time-picker="false"
               month-name-format="long"
               locale="de">
+              <template #arrow-left>
+                <chevron-left />
+              </template>
+              <template #arrow-right>
+                <chevron-right />
+              </template>
             </VueDatePicker>
           </div>
           <div class="mb-48">
@@ -227,6 +233,9 @@ import FormLabel from '@/form/components/form/Label.vue';
 import FormInput from '@/form/components/form/Input.vue';
 import FormTextarea from '@/form/components/form/Textarea.vue';
 import HeadingThree from '@/form/components/headings/h3.vue';
+import ChevronLeft from '@/form/icons/ChevronLeft.vue';
+import ChevronRight from '@/form/icons/ChevronRight.vue';
+
 import i18n from "@/form/mixins/i18n";
 
 export default {
@@ -236,7 +245,9 @@ export default {
     FormLabel,
     FormInput,
     FormTextarea,
-    HeadingThree
+    HeadingThree,
+    ChevronLeft,
+    ChevronRight
   },
 
   mixins: [i18n],

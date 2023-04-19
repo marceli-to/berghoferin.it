@@ -21,7 +21,7 @@
 {{-- Footer --}}
 <x-slot:footer>
 <x-mail::footer>
-© {{ date('Y') }} {{ config('app.name_project') }}
+© {{ date('Y') }} {{ config('app.name') }}
 </x-mail::footer>
 </x-slot:footer>
 </x-mail::layout>
