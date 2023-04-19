@@ -159,7 +159,7 @@
           <form-group :error="errors.email ? true : false">
             <form-label>E-Mail *</form-label>
             <form-input 
-              type="text" 
+              type="email" 
               class="" 
               v-model="form.email" 
               placeholder="E-Mail"
@@ -180,8 +180,8 @@
           <heading-three>Anmerkungen</heading-three>
           <form-group>
             <form-textarea 
-              name="remarks"
-              v-model="form.remarks" 
+              name="message"
+              v-model="form.message" 
               placeholder="Anmerkungen">
             </form-textarea>
           </form-group>
@@ -247,20 +247,20 @@ export default {
         number_suites: 0,
         number_guests: 0,
         suite_type: null,
+        salutation: 'Mr.',
         name: null,
         firstname: null,
         street: null,
         street_number: null,
         zip: null,
         city: null,
-        country: null,
+        country: 'Switzerland',
         phone: null,
         email: null,
-        date: null,
-        dates: {
-          start: null,
-          end: null,
-        },
+        message: null,
+        arrival_date: null,
+        departure_date: null,
+        dates: {},
       },
 
       errors: {
@@ -271,7 +271,7 @@ export default {
       },
 
       routes: {
-        store: '/api/form-data'
+        store: '/api/inquiry'
       },
 
       i18n: {
@@ -290,6 +290,11 @@ export default {
     submit() {
       NProgress.start();
       this.isSent = false;
+
+      // Map dates
+      this.form.arrival_date = this.form.dates[0].toLocaleDateString('de-DE', {day: '2-digit', month: '2-digit', year: 'numeric'}); 
+      this.form.departure_date = this.form.dates[1].toLocaleDateString('de-DE', {day: '2-digit', month: '2-digit', year: 'numeric'});
+
       this.axios.post(this.routes.store, this.form).then(response => {
         NProgress.done();
         this.reset();
@@ -302,11 +307,12 @@ export default {
     },
 
     handleValidationErrors(data) {
-      let errors = [];
-      for (let key in data.errors) {
-        errors[data.errors[key][0]['field']] = data.errors[key][0]['error'];
-      }
-      this.errors = errors;
+      console.log(data);
+      // let errors = [];
+      // for (let key in data.errors) {
+      //   errors[data.errors[key][0]['field']] = data.errors[key][0]['error'];
+      // }
+      // this.errors = errors;
     },
 
     removeError(field) {

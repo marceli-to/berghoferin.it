@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\TranslationController;
+use App\Http\Controllers\Api\InquiryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +16,6 @@ use App\Http\Controllers\Api\TranslationController;
 |
 */
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
-
 Route::get('/translations/{locale}', [TranslationController::class, 'fetch']);
+Route::post('/inquiry', [InquiryController::class, 'store']);
 
