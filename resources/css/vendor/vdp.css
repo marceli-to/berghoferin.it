@@ -1,0 +1,114 @@
+:root {
+  /*General*/
+  --dp-font-family: 'VolteRegular', -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --dp-border-radius: 0; /*Configurable border-radius*/
+  --dp-cell-border-radius: 0; /*Specific border radius for the calendar cell*/
+
+  /*Sizing*/
+  --dp-button-heigh: 35px; /*Size for buttons in overlays*/
+  --dp-month-year-row-height: 35px; /*Height of the month-year select row*/
+  --dp-month-year-row-button-size: 35px; /*Specific height for the next/previous buttons*/
+  --dp-button-icon-height: 20px; /*Icon sizing in buttons*/
+  --dp-cell-size: 32px; /*Width and height of calendar cell*/
+  --dp-cell-padding: 0px; /*Padding in the cell*/
+  --dp-common-padding: 10px; /*Common padding used*/
+  --dp-input-icon-padding: 35px; /*Padding on the left side of the input if icon is present*/
+  --dp-input-padding: 6px 30px 6px 12px; /*Padding in the input*/
+  --dp-menu-min-width: 260px; /*Adjust the min width of the menu*/
+  --dp-action-buttons-padding: 2px 5px; /*Adjust padding for the action buttons in action row*/
+  --dp-row-maring: 0; /*Adjust the spacing between rows in the calendar*/
+  --dp-calendar-header-cell-padding:  0.5rem; /*Adjust padding in calendar header cells*/
+  --dp-two-calendars-spacing:  10px; /*Space between multiple calendars*/
+  --dp-overlay-col-padding:  3px; /*Padding in the overlay column*/
+  --dp-time-inc-dec-button-size:  32px; /*Sizing for arrow buttons in the time picker*/
+  
+  /*Font sizes*/
+  --dp-font-size: 1rem; /*Default font-size*/
+  --dp-preview-font-size: 0.8rem; /*Font size of the date preview in the action row*/
+  --dp-time-font-size: 0.8rem; /*Font size in the time picker*/
+  
+  /*Transitions*/
+  --dp-animation-duration: 0.1s; /*Transition duration*/
+  --dp-menu-appear-transition-timing: cubic-bezier(.4, 0, 1, 1); /*Timing on menu appear animation*/
+  --dp-transition-timing: ease-out; /*Timing on slide animations*/
+}
+
+.dp__main {
+  @apply !font-regular;
+  display: block !important;
+  width: 100%;
+}
+
+.dp__menu {
+  @apply !border-none;
+}
+
+.dp__calendar_header_separator,
+.dp__month_year_select:nth-child(2) {
+  @apply !hidden
+}
+
+.dp__month_year_select {
+  @apply !w-full !pointer-events-none
+}
+
+.dp__month_year_select:hover {
+  @apply !bg-white !pointer-events-none;
+}
+
+.dp__calendar_header {
+  @apply !font-regular !font-normal
+}
+
+.dp__calendar_header,
+.dp__calendar_row {
+  @apply !grid !grid-cols-7
+}
+
+
+.dp__calendar_header_item,
+.dp__calendar_item {
+  @apply !text-center !flex !justify-center;
+}
+
+.dp__calendar_item .dp__cell_inner {
+  @apply !border !border-gray-200
+}
+
+.dp__calendar_header_item {
+  @apply place-self-center;
+}
+
+.dp__calendar_header,
+.dp__calendar_row,
+.dp__calendar {
+  width: 100%;
+}
+
+.dp__month_year_row,
+.dp__calendar_row {
+  @apply !mb-8 xl:!mb-12
+}
+
+.dp__cell_inner {
+  @apply !leading-none
+}
+
+.dp__calendar_header_item,
+.dp__cell_inner {
+  @apply !w-24 !h-24 xl:!w-30 xl:!h-30
+}
+
+.dp__date_hover_end:hover, 
+.dp__date_hover_start:hover, 
+.dp__date_hover:hover,
+.dp__range_between,
+.dp__range_end, 
+.dp__range_start, 
+.dp__active_date {
+  @apply !bg-gray-100 !text-midnight-500 !rounded-none
+}
+
+.dp__today {
+  @apply !border !border-gray-200
+}

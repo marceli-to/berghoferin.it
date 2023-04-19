@@ -2,7 +2,3 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   display: none;
 }
-
-input[type=number] {
-  @apply text-center w-36 h-36
-}

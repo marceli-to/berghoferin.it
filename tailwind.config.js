@@ -6,7 +6,8 @@ module.exports = {
     './resources/**/*.antlers.html',
     './resources/**/*.blade.php',
     './resources/**/*.vue',
-    './content/**/*.md'
+    './content/**/*.md',
+    './node_modules/vue-tailwind-datepicker/**/*.js',
   ],
   theme: {
 
@@ -14,7 +15,14 @@ module.exports = {
       
       colors: {
         'burgundy': '#87362b',
-        'midnight': '#435464',
+        'midnight': {
+          100: '#435464',
+          200: '#c0ccdc',
+          300: '#deeafa',
+          400: '#c0ccdc',
+          500: '#435464',
+        },
+
       },
 
       fontFamily: {

@@ -1,16 +1,16 @@
 <template>
-  <input
+  <textarea
     :id="id"
     :type="type"
     :value="modelValue"
     :placeholder="placeholder"
     @input="updateInput"
-    class="border-0 border-b border-b-midnight-400 focus:border-midnight-400 ring-0 focus:ring-0 px-1 py-1"
-  />
+    class="border border-gray-200 focus:border-gray-200 ring-0 focus:ring-0 px-1 py-1 w-full">
+  </textarea>
 </template>
 <script>
 export default {
-  name: "FormInput",
+  name: "FormTextarea",
   props: {
     
     id: {

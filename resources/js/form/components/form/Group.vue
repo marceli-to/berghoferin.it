@@ -1,5 +1,5 @@
 <template>
-  <div :class="[error ? 'text-red-500' : '', `flex justify-between ${$props.cssClass}`]">
+  <div :class="[error ? 'text-red-500' : '', `flex items-center justify-between mb-12 ${$props.cssClass}`]">
     <slot />
   </div>
 </template>

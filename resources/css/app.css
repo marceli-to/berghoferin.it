@@ -2,7 +2,7 @@
 @import "forms/input.css";
 @import "layout/base.css";
 @import "vendor/nprogress.css";
-@import "vendor/datepicker.css";
+@import "vendor/vdp.css";
 
 @tailwind base;
 @tailwind components;

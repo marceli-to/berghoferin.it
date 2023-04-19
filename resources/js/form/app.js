@@ -7,17 +7,10 @@ import App from './App.vue';
 
 const app = createApp(App);
 
-// Calendar
-import { setupCalendar, Calendar, DatePicker } from 'v-calendar';
-import 'v-calendar/style.css';
-
-
-// Use plugin defaults (optional)
-app.use(setupCalendar, {})
-
-// Use the components
-app.component('VCalendar', Calendar);
-app.component('VDatePicker', DatePicker);
+// https://vue3datepicker.com/props/formatting/#month-name-format
+import VueDatePicker from '@vuepic/vue-datepicker';
+import '@vuepic/vue-datepicker/dist/main.css'
+app.component('VueDatePicker', VueDatePicker);
 
 // Axios
 import VueAxios from "vue-axios";
