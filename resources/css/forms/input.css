@@ -2,3 +2,11 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   display: none;
 }
+
+input[type='text'],
+input[type='email'],
+input[type='number'],
+textarea,
+select {
+  @apply leading-none text-md
+}

@@ -1,4 +1,16 @@
 {
+  "resources/css/fonts/Volte-Light.ttf": {
+    "file": "assets/Volte-Light-8a7a2638.ttf",
+    "src": "resources/css/fonts/Volte-Light.ttf"
+  },
+  "resources/css/fonts/Volte-Light.woff": {
+    "file": "assets/Volte-Light-e5ec8963.woff",
+    "src": "resources/css/fonts/Volte-Light.woff"
+  },
+  "resources/css/fonts/Volte-Light.woff2": {
+    "file": "assets/Volte-Light-c484dabe.woff2",
+    "src": "resources/css/fonts/Volte-Light.woff2"
+  },
   "resources/css/fonts/Volte-Regular.ttf": {
     "file": "assets/Volte-Regular-df3c356f.ttf",
     "src": "resources/css/fonts/Volte-Regular.ttf"
@@ -11,32 +23,50 @@
     "file": "assets/Volte-Regular-8cb7563d.woff2",
     "src": "resources/css/fonts/Volte-Regular.woff2"
   },
+  "resources/css/fonts/Volte-RegularItalic.ttf": {
+    "file": "assets/Volte-RegularItalic-1bb41d94.ttf",
+    "src": "resources/css/fonts/Volte-RegularItalic.ttf"
+  },
+  "resources/css/fonts/Volte-RegularItalic.woff": {
+    "file": "assets/Volte-RegularItalic-65a8d1bb.woff",
+    "src": "resources/css/fonts/Volte-RegularItalic.woff"
+  },
+  "resources/css/fonts/Volte-RegularItalic.woff2": {
+    "file": "assets/Volte-RegularItalic-8cfa40ac.woff2",
+    "src": "resources/css/fonts/Volte-RegularItalic.woff2"
+  },
   "resources/js/app.css": {
-    "file": "assets/app-e0f7c625.css",
+    "file": "assets/app-6589289c.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
     "assets": [
       "assets/Volte-Regular-8cb7563d.woff2",
       "assets/Volte-Regular-00c67544.woff",
-      "assets/Volte-Regular-df3c356f.ttf"
+      "assets/Volte-Regular-df3c356f.ttf",
+      "assets/Volte-RegularItalic-8cfa40ac.woff2",
+      "assets/Volte-RegularItalic-65a8d1bb.woff",
+      "assets/Volte-RegularItalic-1bb41d94.ttf",
+      "assets/Volte-Light-c484dabe.woff2",
+      "assets/Volte-Light-e5ec8963.woff",
+      "assets/Volte-Light-8a7a2638.ttf"
     ],
     "css": [
-      "assets/app-e0f7c625.css"
+      "assets/app-6589289c.css"
     ],
-    "file": "assets/app-28d84c67.js",
+    "file": "assets/app-12c0d2fa.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
   "resources/js/form/app.css": {
-    "file": "assets/app-9ece603d.css",
+    "file": "assets/app-7572c727.css",
     "src": "resources/js/form/app.css"
   },
   "resources/js/form/app.js": {
     "css": [
-      "assets/app-9ece603d.css"
+      "assets/app-7572c727.css"
     ],
-    "file": "assets/app-446fe63e.js",
+    "file": "assets/app-8e93b822.js",
     "isEntry": true,
     "src": "resources/js/form/app.js"
   }

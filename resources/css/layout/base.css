@@ -7,5 +7,5 @@ html {
 }
 
 body {
-  @apply font-regular text-midnight-500
+  @apply font-regular text-midnight-500 text-md
 }

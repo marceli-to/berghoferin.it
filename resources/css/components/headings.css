@@ -1,0 +1,7 @@
+h1, h2, h3 {
+  @apply font-regular text-md text-midnight-500
+}
+
+h2 {
+  @apply uppercase leading-none border-b border-midnight-300 pb-14 mb-20
+}

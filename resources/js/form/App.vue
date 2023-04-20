@@ -4,12 +4,10 @@
       Vielen Dank für Ihre Anfrage. Wir werden diese bearbeiten und melden uns bei Ihnen.
     </template>
     <template v-else>
-
       <div class="grid grid-cols-16">
-
         <div class="col-span-4 lg:col-span-3 lg:col-start-2">
-          <div class="mb-48">
-            <heading-three>Reisezeitraum</heading-three>
+          <div class="mb-80">
+            <heading-two>Reisezeitraum</heading-two>
             <VueDatePicker 
               v-model="form.dates" 
               inline
@@ -20,209 +18,259 @@
               month-name-format="long"
               locale="de">
               <template #arrow-left>
-                <chevron-left />
+                <icon-chevron-left />
               </template>
               <template #arrow-right>
-                <chevron-right />
+                <icon-chevron-right />
               </template>
             </VueDatePicker>
           </div>
-          <div class="mb-48">
-            <heading-three>Suiten</heading-three>
-            <form-group>
+          <div class="mb-80">
+            <heading-two>Suiten</heading-two>
+            <form-group class="mb-16">
               <form-label>Anzahl Suiten</form-label>
               <div class="flex items-center">
-                <a href="" @click.prevent="decrementCounter('number_suites')" class="block w-24 xl:w-30 h-24 xl:h-30 border border-midnight-400 text-center">-</a>
+                <button-counter @decrement=" decrementCounter('number_suites')" :action="'decrement'">
+                  <icon-minus />
+                </button-counter>
                 <form-input 
                   type="number" 
-                  class="mx-8 border-l border-t border-r border-midnight-400 w-24 xl:w-30 h-24 xl:h-30 text-center" 
+                  class="mx-8 border-l border-t border-r !border-midnight-300 w-32 !h-32 text-center" 
                   min="0"
                   v-model="form.number_suites"
                   @blur="validateCounter('number_suites')">
                 </form-input>
-                <a href="" @click.prevent="incrementCounter('number_suites')" class="block w-24 xl:w-30 h-24 xl:h-30 border border-midnight-400 text-center">+</a>
+                <button-counter @increment=" incrementCounter('number_suites')" :action="'increment'">
+                  <icon-plus />
+                </button-counter>
               </div>
             </form-group>
             <form-group>
               <form-label>Personen</form-label>
               <div class="flex items-center">
-                <a href="" 
-                  @click.prevent="decrementCounter('number_guests')" 
-                  class="block w-24 xl:w-30 h-24 xl:h-30 border border-midnight-400 text-center">
-                  -
-                </a>
+                <button-counter @decrement=" decrementCounter('number_guests')" :action="'decrement'">
+                  <icon-minus />
+                </button-counter>
                 <form-input 
                   type="number" 
-                  class="mx-8 border-l border-t border-r border-midnight-400 w-24 xl:w-30 h-24 xl:h-30 text-center" 
+                  class="mx-8 border-l border-t border-r !border-midnight-300 w-32 !h-32 text-center" 
                   min="0"
                   v-model="form.number_guests"
                   @blur="validateCounter('number_guests')">
                 </form-input>
-                <a href="" 
-                  @click.prevent="incrementCounter('number_guests')" 
-                  class="block w-24 xl:w-30 h-24 xl:h-30 border border-midnight-400 text-center">
-                  +
-                </a>
+                <button-counter @increment=" incrementCounter('number_guests')" :action="'increment'">
+                  <icon-plus />
+                </button-counter>
               </div>
             </form-group>
-
-            <heading-three class="mt-48">Bevorzugter Suitentyp</heading-three>
-            <form-group>
+          </div>
+          <div class="mb-80">
+            <heading-two>Bevorzugter Suitentyp</heading-two>
+            <form-group class="mb-16">
               <form-label>Freunde-Suite</form-label>
               <a href="" 
-                @click.prevent="selectSuiteType('friends-suite')"
-                :class="[form.suite_type == 'friends' ? 'text-gray-500' : 'text-gray-200', 'block w-24 h-24 border border-midnight-300 text-center']">
-                x
+                @click.prevent="selectType('friends-suite')"
+                :class="[form.suite_type == 'friends-suite' ? 'text-midnight-500' : 'text-midnight-300', 'flex items-center justify-center w-32 h-32 border border-midnight-300 text-center']">
+                <icon-cross />
               </a>
             </form-group>
-            <form-group>
+            <form-group class="mb-16">
               <form-label>Gäste-Suite</form-label>
               <a href="" 
-                @click.prevent="selectSuiteType('guest-suite')"
-                :class="[form.suite_type == 'guest' ? 'text-gray-500' : 'text-gray-200', 'block w-24 h-24 border border-midnight-300 text-center']">
-                x
+                @click.prevent="selectType('guest-suite')"
+                :class="[form.suite_type == 'guest-suite' ? 'text-midnight-500' : 'text-midnight-300', 'flex items-center justify-center w-32 h-32 border border-midnight-300 text-center']">
+                <icon-cross />
               </a>
             </form-group>
-            <form-group>
+            <form-group class="mb-16">
               <form-label>Chamber-Suite</form-label>
               <a href="" 
-                @click.prevent="selectSuiteType('chamber-suite')"
-                :class="[form.suite_type == 'chamber' ? 'text-gray-500' : 'text-gray-200', 'block w-24 h-24 border border-midnight-300 text-center']">
-                x
+                @click.prevent="selectType('chamber-suite')"
+                :class="[form.suite_type == 'chamber-suite' ? 'text-midnight-500' : 'text-midnight-300', 'flex items-center justify-center w-32 h-32 border border-midnight-300 text-center']">
+                <icon-cross />
               </a>
             </form-group>
-            <form-group>
+            <form-group class="mb-16">
               <form-label>Master-Suite</form-label>
               <a href="" 
-                @click.prevent="selectSuiteType('master-suite')"
-                :class="[form.suite_type == 'master' ? 'text-gray-500' : 'text-gray-200', 'block w-24 h-24 border border-midnight-300 text-center']">
-                x
+                @click.prevent="selectType('master-suite')"
+                :class="[form.suite_type == 'master-suite' ? 'text-midnight-500' : 'text-midnight-300', 'flex items-center justify-center w-32 h-32 border border-midnight-300 text-center']">
+                <icon-cross />
               </a>
             </form-group>
           </div>
         </div>
         <div class="col-span-8 lg:col-span-6 lg:col-start-6">
-          <heading-three>Persönliche Daten</heading-three>
-          <form-group :error="errors.firstname ? true : false">
-            <form-label>Vorname *</form-label>
+          <heading-two>Persönliche Daten</heading-two>
+          <form-group :error="errors.salutation ? true : false" class="mb-8 grid grid-cols-6">
+            <form-label class="col-span-2">Anrede *</form-label>
             <form-input 
               type="text" 
-              class="" 
+              class="col-span-4" 
+              v-model="form.salutation" 
+              placeholder="Anrede"
+              @blur="validateField('salutation')"
+              @focus="removeError('salutation')">
+            </form-input>
+          </form-group>
+          <form-group :error="errors.firstname ? true : false" class="mb-8 grid grid-cols-6">
+            <form-label class="col-span-2">Vorname *</form-label>
+            <form-input 
+              type="text" 
+              class="col-span-4" 
               v-model="form.firstname" 
               placeholder="Vorname"
+              @blur="validateField('firstname')"
               @focus="removeError('firstname')">
             </form-input>
           </form-group>
-          <form-group :error="errors.name ? true : false">
-            <form-label>Name *</form-label>
+          <form-group :error="errors.name ? true : false" class="mb-8 grid grid-cols-6">
+            <form-label class="col-span-2">Name *</form-label>
             <form-input 
               type="text" 
-              class="" 
+              class="col-span-4" 
               v-model="form.name" 
               placeholder="Name"
+              @blur="validateField('name')"
               @focus="removeError('name')">
             </form-input>
           </form-group>
-          <form-group :error="errors.street ? true : false">
-            <form-label>Strasse *</form-label>
+          <form-group :error="errors.street ? true : false" class="mb-8 grid grid-cols-6">
+            <form-label class="col-span-2">Strasse *</form-label>
             <form-input 
               type="text" 
-              class="" 
+              class="col-span-4" 
               v-model="form.street" 
               placeholder="Strasse"
+              @blur="validateField('street')"
               @focus="removeError('street')">
             </form-input>
           </form-group>
-          <form-group>
-            <form-label>Hausnummer</form-label>
+          <form-group class="mb-8 grid grid-cols-6">
+            <form-label class="col-span-2">Hausnummer</form-label>
             <form-input 
               type="text" 
-              class="" 
+              class="col-span-4" 
               v-model="form.street_number" 
               placeholder="Hausnummer">
             </form-input>
           </form-group>
-          <form-group :error="errors.zip ? true : false">
-            <form-label>Postleitzahl *</form-label>
+          <form-group :error="errors.zip ? true : false" class="mb-8 grid grid-cols-6">
+            <form-label class="col-span-2">Postleitzahl *</form-label>
             <form-input 
               type="text" 
-              class="" 
+              class="col-span-4" 
               v-model="form.zip" 
               placeholder="Postleitzahl"
+              @blur="validateField('zip')"
               @focus="removeError('zip')">
             </form-input>
           </form-group>
-          <form-group :error="errors.city ? true : false">
-            <form-label>Ort *</form-label>
+          <form-group :error="errors.city ? true : false" class="mb-8 grid grid-cols-6">
+            <form-label class="col-span-2">Ort *</form-label>
             <form-input 
               type="text" 
-              class="" 
+              class="col-span-4" 
               v-model="form.city" 
               placeholder="Ort"
+              @blur="validateField('city')"
               @focus="removeError('city')">
             </form-input>
           </form-group>
-          <form-group :error="errors.email ? true : false">
-            <form-label>E-Mail *</form-label>
+          <form-group :error="errors.country ? true : false" class="mb-8 grid grid-cols-6">
+            <form-label class="col-span-2">Land *</form-label>
+            <form-input 
+              type="text" 
+              class="col-span-4" 
+              v-model="form.country" 
+              placeholder="Land"
+              @blur="validateField('country')"
+              @focus="removeError('country')">
+            </form-input>
+          </form-group>
+          <form-group :error="errors.email ? true : false" class="mb-8 grid grid-cols-6">
+            <form-label class="col-span-2">E-Mail *</form-label>
             <form-input 
               type="email" 
-              class="" 
+              class="col-span-4" 
               v-model="form.email" 
               placeholder="E-Mail"
+              @blur="validateEmail()"
               @focus="removeError('email')">
             </form-input>
           </form-group>
-          <form-group :error="errors.phone ? true : false">
-            <form-label>Telefon *</form-label>
+          <form-group :error="errors.phone ? true : false" class="mb-8 grid grid-cols-6">
+            <form-label class="col-span-2">Telefon *</form-label>
             <form-input 
               type="text" 
-              class="" 
+              class="col-span-4" 
               v-model="form.phone" 
               placeholder="Telefon"
+              @blur="validateField('phone')"
               @focus="removeError('phone')">
             </form-input>
           </form-group>
 
-          <heading-three>Anmerkungen</heading-three>
-          <form-group>
-            <form-textarea 
-              name="message"
-              v-model="form.message" 
-              placeholder="Anmerkungen">
-            </form-textarea>
-          </form-group>
+          <div class="mt-80">
+            <heading-two>Anmerkungen</heading-two>
+            <form-group>
+              <form-textarea 
+                name="message"
+                v-model="form.message" 
+                placeholder="Anmerkungen">
+              </form-textarea>
+            </form-group>
+          </div>
         </div>
-        <div class="col-span-4 lg:col-span-3 lg:col-start-13">
-          <heading-three>Zusammenfassung</heading-three>
-          <form-group cssClass="border-b pb-4 mb-8 border-midnight-400" v-if="formattedStartDate">
+        <div class="col-span-4 lg:col-span-3 lg:col-start-13" v-if="isDirty">
+          <heading-two>Zusammenfassung</heading-two>
+          <form-group class="border-b border-midnight-300 mb-8 h-36" v-if="arrivalDate">
             <form-label>Anreise</form-label>
-            <div>{{ formattedStartDate }}</div>
+            <div>{{ arrivalDate }}</div>
           </form-group>
-          <form-group cssClass="border-b pb-4 mb-8 border-midnight-400" v-if="formattedEndDate">
+          <form-group class="border-b border-midnight-300 mb-8 h-36" v-if="departureDate">
             <form-label>Abreise</form-label>
-            <div>{{ formattedEndDate }}</div>
+            <div>{{ departureDate }}</div>
           </form-group>
-          <form-group cssClass="border-b pb-4 mb-8 border-midnight-400" v-if="form.number_suites > 0">
+          <form-group class="border-b border-midnight-300 mb-8 h-36" v-if="form.number_suites > 0">
             <form-label>Anzahl Suiten</form-label>
             <div>{{ form.number_suites }}</div>
           </form-group>
-          <form-group cssClass="border-b pb-4 mb-8 border-midnight-400" v-if="form.number_guests > 0">
+          <form-group class="border-b border-midnight-300 mb-8 h-36" v-if="form.number_guests > 0">
             <form-label>Personen</form-label>
             <div>{{ form.number_guests }}</div>
           </form-group>
-          <form-group cssClass="border-b pb-4 mb-8 border-midnight-400" v-if="form.suite_type">
+          <form-group class="border-b border-midnight-300 mb-8 h-36" v-if="form.suite_type">
             <form-label>Suitentyp</form-label>
             <div>{{ __(form.suite_type) }}</div>
           </form-group>
 
+          <form-group class="mt-40">
+            <form-checkbox :id="'privacy-statement'" v-model="form.privacy_statement" @change="toggle('privacy_statement')">
+              <template v-slot:label>
+                Hiermit stimme ich der Datenschutzerklärung zu.
+              </template>
+            </form-checkbox>
+          </form-group>
 
+          <form-group class="mt-40">
+            <form-checkbox :id="'newsletter'" v-model="form.newsletter" @change="toggle('newsletter')">
+              <template v-slot:label>
+                Ich bin an Mitteilungen und Neuigkeiten interessiert.
+              </template>
+            </form-checkbox>
+          </form-group>
 
-          <form-group :cssClass="'mt-48'">
-            <button @click.prevent="submit()">Senden</button>
+          <form-group class="mt-40">
+            <button 
+              :class="[isValid ? 'border-midnight-500 text-midnight-500' : 'border-midnight-300 text-midnight-300 pointer-events-none select-none', 'py-12 border-t border-b leading-none flex items-center w-full text-left']"
+              @click.prevent="submit()">
+              <icon-chevron-right :class="[isValid ? 'text-black' : 'text-midnight-400', '-mt-1 mr-8']" />
+              Unverbindlich anfragen
+            </button>
           </form-group>
         </div>
       </div>
-
     </template>
   </form>
 </template>
@@ -231,11 +279,15 @@ import NProgress from 'nprogress';
 import FormGroup from '@/form/components/form/Group.vue';
 import FormLabel from '@/form/components/form/Label.vue';
 import FormInput from '@/form/components/form/Input.vue';
+import FormCheckbox from '@/form/components/form/Checkbox.vue';
+import ButtonCounter from '@/form/components/form/ButtonCounter.vue';
 import FormTextarea from '@/form/components/form/Textarea.vue';
-import HeadingThree from '@/form/components/headings/h3.vue';
-import ChevronLeft from '@/form/icons/ChevronLeft.vue';
-import ChevronRight from '@/form/icons/ChevronRight.vue';
-
+import HeadingTwo from '@/form/components/headings/h2.vue';
+import IconChevronLeft from '@/form/icons/ChevronLeft.vue';
+import IconChevronRight from '@/form/icons/ChevronRight.vue';
+import IconMinus from '@/form/icons/Minus.vue';
+import IconPlus from '@/form/icons/Plus.vue';
+import IconCross from '@/form/icons/Cross.vue';
 import i18n from "@/form/mixins/i18n";
 
 export default {
@@ -245,38 +297,52 @@ export default {
     FormLabel,
     FormInput,
     FormTextarea,
-    HeadingThree,
-    ChevronLeft,
-    ChevronRight
+    FormCheckbox,
+    ButtonCounter,
+    HeadingTwo,
+    IconChevronLeft,
+    IconChevronRight,
+    IconMinus,
+    IconPlus,
+    IconCross
   },
 
   mixins: [i18n],
 
   data() {
+
     return {
+
       form: {
         number_suites: 0,
         number_guests: 0,
         suite_type: null,
-        salutation: 'Mr.',
+        salutation: null,
         name: null,
         firstname: null,
         street: null,
         street_number: null,
         zip: null,
         city: null,
-        country: 'Switzerland',
+        country: null,
         phone: null,
         email: null,
         message: null,
         arrival_date: null,
         departure_date: null,
         dates: {},
+        newsletter: 0,
+        privacy_statement: 0,
       },
 
       errors: {
-        name: false,
+        salutation: false,
         firstname: false,
+        name: false,
+        street: false,
+        zip: false,
+        city: false,
+        country: false,
         phone: false,
         email: false
       },
@@ -285,15 +351,8 @@ export default {
         store: '/api/inquiry'
       },
 
-      i18n: {
-
-      },
-
-      isSent: false
+      isSent: false,
     }
-  },
-
-  mounted() {
   },
 
   methods: {
@@ -301,8 +360,6 @@ export default {
     submit() {
       NProgress.start();
       this.isSent = false;
-
-      // Map dates
       this.form.arrival_date = this.form.dates[0].toLocaleDateString('de-DE', {day: '2-digit', month: '2-digit', year: 'numeric'}); 
       this.form.departure_date = this.form.dates[1].toLocaleDateString('de-DE', {day: '2-digit', month: '2-digit', year: 'numeric'});
 
@@ -315,6 +372,52 @@ export default {
         NProgress.done();
         this.handleValidationErrors(error.response.data);
       });
+    },
+
+    incrementCounter(field) {
+      this.form[field]++;
+    },
+
+    decrementCounter(field) {
+      if (this.form[field] > 0) {
+        this.form[field]--;
+      }
+    },
+
+    selectType(type) {
+      this.form.suite_type = type;
+    },
+
+    toggle(field) {
+      this.form[field] = this.form[field] == 0 ? 1 : 0;
+    }, 
+
+    validateEmail() {
+      if (this.form.email === null || this.form.email === '') {
+        this.errors.email = true;
+        return false;
+      }
+      const rgx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!rgx.test(this.form.email)) {
+        this.errors.email = true;
+        return false;
+      }
+      return true;
+    },
+
+    validateField(field) {
+      if (this.form[field] === null || this.form[field] === '') {
+        this.errors[field] = true;
+      } 
+      else {
+        this.errors[field] = false;
+      }
+    },
+
+    validateCounter(field) {
+      if (this.form[field] < 0) {
+        this.form[field] = 0;
+      }
     },
 
     handleValidationErrors(data) {
@@ -338,43 +441,70 @@ export default {
         street_number: null,
         zip: null,
         city: null,
+        country: null,
         phone: null,
-        email: null
+        email: null,
+        message: null,
+        arrival_date: null,
+        departure_date: null,
+        dates: {},
+        number_guests: 0,
+        number_suites: 0,
+        suite_type: null,
       };
       this.errors = {};
     },
 
-    validateCounter(field) {
-      if (this.form[field] < 0) {
-        this.form[field] = 0;
-      }
-    },
-
-    incrementCounter(field) {
-      this.form[field]++;
-    },
-
-    decrementCounter(field) {
-      if (this.form[field] > 0) {
-        this.form[field]--;
-      }
-    },
-
-    selectSuiteType(type) {
-      this.form.suite_type = type;
-    },
   },
 
   computed: {
-    formattedStartDate() {
+
+    isDirty() {
+      if (
+          this.form.dates[0] || 
+          this.form.dates[1] ||
+          this.form.number_suites > 0 ||
+          this.form.number_guests > 0 ||
+          this.form.suite_type
+        ) {
+        return true;
+      }
+      return false;
+    },
+
+    isValid() { 
+      if (
+        this.form.number_suites > 0 &&
+        this.form.number_guests > 0 &&
+        this.form.suite_type &&
+        this.form.salutation &&
+        this.form.name &&
+        this.form.firstname &&
+        this.form.street &&
+        this.form.zip &&
+        this.form.city &&
+        this.form.country &&
+        this.form.phone &&
+        this.form.privacy_statement &&
+        this.validateEmail()
+        ) {
+        return true;
+      }
+      return false;
+    },
+
+    arrivalDate() {
       if (this.form.dates[0]) {
         return this.form.dates[0].toLocaleDateString('de-DE', {day: '2-digit', month: '2-digit', year: 'numeric'});
       }
+      return null;
     },
-    formattedEndDate() {
+
+    departureDate() {
       if (this.form.dates[1]) {
         return this.form.dates[1].toLocaleDateString('de-DE', {day: '2-digit', month: '2-digit', year: 'numeric'});
       }
+      return null;
     },
   },
 }

@@ -23,7 +23,7 @@
   --dp-time-inc-dec-button-size:  32px; /*Sizing for arrow buttons in the time picker*/
   
   /*Font sizes*/
-  --dp-font-size: 1rem; /*Default font-size*/
+  --dp-font-size: 1.125rem; /*Default font-size*/
   --dp-preview-font-size: 0.8rem; /*Font size of the date preview in the action row*/
   --dp-time-font-size: 0.8rem; /*Font size in the time picker*/
   
@@ -48,8 +48,16 @@
   @apply !hidden
 }
 
+.dp__month_year_wrap {
+  @apply items-center 
+}
+
+.dp__month_year_row {
+  @apply !h-auto !mb-16
+}
+
 .dp__month_year_select {
-  @apply !w-full !pointer-events-none
+  @apply !w-full !pointer-events-none !h-auto !text-md !text-midnight-500 !rounded-none !leading-none
 }
 
 .dp__month_year_select:hover {
@@ -57,26 +65,34 @@
 }
 
 .dp__calendar_header {
-  @apply !font-regular !font-normal
+  @apply !font-regular !font-normal !text-midnight-500
 }
 
 .dp__calendar_header,
 .dp__calendar_row {
-  @apply !grid !grid-cols-7
+  @apply !justify-between
 }
-
 
 .dp__calendar_header_item,
 .dp__calendar_item {
-  @apply !text-center !flex !justify-center !p-0;
+  @apply !text-center !flex !justify-center !p-0 place-self-center !text-midnight-500 !grow-0;
 }
 
 .dp__calendar_item .dp__cell_inner {
-  @apply !border !border-gray-200
+  @apply !border !border-midnight-300 !p-0
 }
 
-.dp__calendar_header_item {
-  @apply place-self-center;
+.dp__calendar_item .dp__cell_inner.dp__cell_disabled {
+  @apply !text-midnight-300 
+}
+
+.dp__calendar_item .dp__cell_inner.dp__range_start,
+.dp__calendar_item .dp__cell_inner.dp__range_end,
+.dp__calendar_item .dp__cell_inner.dp__range_between,
+.dp__calendar_item .dp__cell_inner.dp__date_hover_end:hover,
+.dp__calendar_item .dp__cell_inner.dp__date_hover_start:hover,
+.dp__calendar_item .dp__cell_inner.dp__date_hover:hover {
+  @apply !border-midnight-400
 }
 
 .dp__calendar_header,
@@ -85,9 +101,8 @@
   width: 100%;
 }
 
-.dp__month_year_row,
 .dp__calendar_row {
-  @apply !mb-8 xl:!mb-12
+  @apply !m-0 !mb-8
 }
 
 .dp__cell_inner {
@@ -96,7 +111,7 @@
 
 .dp__calendar_header_item,
 .dp__cell_inner {
-  @apply !w-24 !h-24 xl:!w-30 xl:!h-30
+  @apply !w-24 !h-24 xl:!w-32 xl:!h-32
 }
 
 .dp__date_hover_end:hover, 
@@ -106,17 +121,21 @@
 .dp__range_end, 
 .dp__range_start, 
 .dp__active_date {
-  @apply !bg-gray-100 !text-midnight-500 !rounded-none
+  @apply !bg-midnight-300 !text-midnight-500 !rounded-none
 }
 
-.dp__today {
-  @apply !border !border-gray-200
+.dp__month_year_col_nav:first-of-type {
+  @apply !ml-1
 }
 
 .dp__inner_nav {
   @apply !rounded-none !w-auto !h-auto
 }
 
+.dp__inner_nav:hover {
+  @apply !bg-transparent
+}
+
 .dp__inner_nav svg {
-  @apply !block !w-auto !h-auto
+  @apply !block !w-auto !h-auto !text-black
 }

@@ -9,3 +9,17 @@
   font-weight: 400;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'VolteRegularItalic';
+  src: local('Volte Italic'), local('Volte-Italic'), url('../fonts/Volte-RegularItalic.woff2') format('woff2'), url('../fonts/Volte-RegularItalic.woff') format('woff'), url('../fonts/Volte-RegularItalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'VolteLight';
+  src: local('Volte Light'), local('Volte-Light'), url('../fonts/Volte-Light.woff2') format('woff2'), url('../fonts/Volte-Light.woff') format('woff'), url('../fonts/Volte-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}

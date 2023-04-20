@@ -5,7 +5,7 @@
     :value="modelValue"
     :placeholder="placeholder"
     @input="updateInput"
-    class="border border-gray-200 focus:border-gray-200 ring-0 focus:ring-0 px-1 py-1 w-full">
+    class="border-0 ring-0 focus:ring-0 px-0 py-0 min-h-[200px] w-full text-md placeholder:text-md placeholder:text-midnight-300 text-midnight-500">
   </textarea>
 </template>
 <script>

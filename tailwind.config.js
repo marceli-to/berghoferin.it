@@ -16,32 +16,32 @@ module.exports = {
       colors: {
         'burgundy': '#87362b',
         'midnight': {
-          100: '#435464',
-          200: '#c0ccdc',
+          //100: '#435464',
+          //200: '#c0ccdc',
           300: '#deeafa',
           400: '#c0ccdc',
           500: '#435464',
         },
-
       },
 
       fontFamily: {
         regular: ['VolteRegular', ...defaultTheme.fontFamily.sans],
-        //light: ['VolteLight', ...defaultTheme.fontFamily.sans],
+        'regular-italic': ['VolteRegularItalic', ...defaultTheme.fontFamily.sans],
+        light: ['VolteLight', ...defaultTheme.fontFamily.sans],
       },
 
       fontSize: {
-        'xxs': '0.5rem',   // 10px
-        'xs': '0.75rem',     // 12px
-        'sm': '0.8125rem',   // 13px
-        'base': '0.8125rem', // 13px
-        'md': '1rem',        // 16px
-        'lg': '1.25rem',     // 20px
-        'xl': '1.5rem',      // 24px
-        '2xl': '1.75rem',    // 28px
-        '3xl': '3rem',       // not in use
-        '4xl': '4rem',       // not in use
-        '5xl': '5rem',       // not in use
+        'xxs': '0.5rem',    // 10px
+        'xs': '0.75rem',    // 12px -- small font size
+        'sm': '0.875rem',   // 14px
+        'base': '1rem',     // 16px
+        'md': '1.125rem',   // 18px -- regular font size
+        'lg': '1.25rem',    // 20px
+        'xl': '1.6rem',     // 25px -- large font size
+        '2xl': '1.75rem',   // 28px
+        '3xl': '3rem',      // not in use
+        '4xl': '4rem',      // not in use
+        '5xl': '5rem',      // not in use
       },
 
       gridTemplateColumns: {
@@ -53,10 +53,6 @@ module.exports = {
         'span-14': 'span 14 / span 14',
         'span-15': 'span 15 / span 15',
         'span-16': 'span 16 / span 16',
-      },
-
-      boxShadow: {
-        'right': '5px 0 3px #000000',
       },
     },
 
