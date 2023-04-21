@@ -15,9 +15,11 @@
 <meta name="theme-color" content="#ffffff">
 {{ vite src="resources/js/app.js" }}
 </head>
-<body>
-  <main class="p-20 mx-auto max-w-[400px] md:max-w-[900px] xl:max-w-[1600px]">
+<body class="theme-{{ theme }} px-20 md:px-0">
+  {{ partial:layout/header }}
+  <main class="site pt-170 md:pt-60">
     {{ template_content }}
   </main>
+  {{ partial:layout/footer }}
 </body>
 </html>

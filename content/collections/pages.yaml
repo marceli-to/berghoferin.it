@@ -10,3 +10,4 @@ preview_targets:
     url: '{permalink}'
 structure:
   root: true
+  slugs: true

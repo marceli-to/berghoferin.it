@@ -1,0 +1,48 @@
+.theme-midnight {
+  @apply text-midnight-500;
+}
+
+.theme-midnight h2 {
+  @apply border-midnight-300
+}
+
+.theme-midnight .border-theme-color {
+  @apply border-midnight-300;
+}
+
+.theme-midnight hr {
+  @apply border-midnight-300
+}
+
+.theme-midnight .btn-menu {
+  @apply text-midnight-500;
+}
+
+.theme-midnight .site-menu {
+  @apply bg-midnight-500;
+}
+
+.theme-midnight .logo {
+  @apply text-midnight-500;
+}
+
+.theme-burgundy {
+  @apply text-burgundy;
+}
+
+.theme-burgundy h2 {
+  @apply border-burgundy
+}
+
+.theme-burgundy .btn-menu {
+  @apply text-burgundy;
+}
+
+.theme-burgundy .site-menu {
+  @apply bg-burgundy;
+}
+
+.theme-burgundy .logo {
+  @apply text-burgundy;
+}
+

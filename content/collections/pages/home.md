@@ -2,9 +2,11 @@
 id: home
 blueprint: pages
 title: Home
-template: templates/home
+template: templates/default
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1681819140
+updated_at: 1682089365
+theme: burgundy
+menu_category: main
 ---
 ## Welcome to your new brand Statamic site!
 

@@ -16,6 +16,49 @@ sections:
           type: markdown
           display: Content
           localizable: true
+  settings:
+    display: Settings
+    fields:
+      -
+        handle: menu_category
+        field:
+          options:
+            main: Main
+            meta: Meta
+          multiple: false
+          clearable: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          default: main
+          display: 'Menu category'
+          type: select
+          icon: select
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+      -
+        handle: theme
+        field:
+          options:
+            midnight: Midnight
+            burgundy: Burgundy
+          multiple: false
+          clearable: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          default: burgundy
+          display: Theme
+          type: select
+          icon: select
+          listable: hidden
+          instructions_position: above
+          visibility: visible
       -
         handle: template
         field:

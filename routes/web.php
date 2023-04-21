@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Statamic\Facades\Entry;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,15 @@ use Illuminate\Support\Facades\Route;
 // Route::statamic('example', 'example-view', [
 //    'title' => 'Example'
 // ]);
+
+Route::post('submit-testimonial', function (Request $request) {
+  $entry = Entry::make()
+    ->collection('testimonials')
+    ->slug($request->input('name'))
+    ->data([
+      'title' => $request->input('name') . "'s testimonial",
+      'name' => $request->input('name'),
+    ]);
+    $entry->save();
+  return redirect('/');
+});

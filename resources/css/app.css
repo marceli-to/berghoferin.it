@@ -3,9 +3,13 @@
 @import "tailwindcss/utilities";
 
 @import "typo/webfonts.css";
+
 @import "forms/input.css";
+
 @import "components/headings.css";
+
 @import "layout/base.css";
+@import "layout/themes.css";
 
 @import "vendor/nprogress.css";
 @import "vendor/vdp.css";

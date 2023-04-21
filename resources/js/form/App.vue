@@ -4,7 +4,7 @@
       Vielen Dank für Ihre Anfrage. Wir werden diese bearbeiten und melden uns bei Ihnen.
     </template>
     <template v-else>
-      <div class="grid grid-cols-16">
+      <div class="grid grid-cols-16 gap-16">
         <div class="col-span-full md:col-span-6 md:col-start-2 xl:col-span-3 xl:col-start-2">
           <div class="mb-80">
             <heading-two>Reisezeitraum</heading-two>
@@ -64,7 +64,7 @@
               </div>
             </form-group>
           </div>
-          <div class="mb-80">
+          <div class="mb-80 md:mb-0">
             <heading-two>Bevorzugter Suitentyp</heading-two>
             <form-group class="mb-16">
               <form-label>Freunde-Suite</form-label>
@@ -363,8 +363,8 @@ export default {
     submit() {
       NProgress.start();
       this.isSent = false;
-      this.form.arrival_date = this.form.dates[0].toLocaleDateString('de-DE', {day: '2-digit', month: '2-digit', year: 'numeric'}); 
-      this.form.departure_date = this.form.dates[1].toLocaleDateString('de-DE', {day: '2-digit', month: '2-digit', year: 'numeric'});
+      this.form.arrival_date = this.arrivalDate;
+      this.form.departure_date = this.departureDate; 
 
       this.axios.post(this.routes.store, this.form).then(response => {
         NProgress.done();
@@ -458,6 +458,12 @@ export default {
       this.errors = {};
     },
 
+    formatedDate(date) {
+      if (date) {
+        return date.toLocaleDateString('de-DE', {day: '2-digit', month: '2-digit', year: 'numeric'});
+      }
+      return null
+    }
   },
 
   computed: {
@@ -497,17 +503,11 @@ export default {
     },
 
     arrivalDate() {
-      if (this.form.dates[0]) {
-        return this.form.dates[0].toLocaleDateString('de-DE', {day: '2-digit', month: '2-digit', year: 'numeric'});
-      }
-      return null;
+      return this.formatedDate(this.form.dates[0]);
     },
 
     departureDate() {
-      if (this.form.dates[1]) {
-        return this.form.dates[1].toLocaleDateString('de-DE', {day: '2-digit', month: '2-digit', year: 'numeric'});
-      }
-      return null;
+      return this.formatedDate(this.form.dates[1]);
     },
   },
 }
