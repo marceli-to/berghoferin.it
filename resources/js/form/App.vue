@@ -5,7 +5,7 @@
     </template>
     <template v-else>
       <div class="grid grid-cols-16">
-        <div class="col-span-4 lg:col-span-3 lg:col-start-2">
+        <div class="col-span-full md:col-span-6 md:col-start-2 xl:col-span-3 xl:col-start-2">
           <div class="mb-80">
             <heading-two>Reisezeitraum</heading-two>
             <VueDatePicker 
@@ -35,7 +35,7 @@
                 </button-counter>
                 <form-input 
                   type="number" 
-                  class="mx-8 border-l border-t border-r !border-midnight-300 w-32 !h-32 text-center" 
+                  class="mx-16 pt-2 border-l border-t border-r !border-midnight-300 w-32 !h-32 text-center" 
                   min="0"
                   v-model="form.number_suites"
                   @blur="validateCounter('number_suites')">
@@ -53,7 +53,7 @@
                 </button-counter>
                 <form-input 
                   type="number" 
-                  class="mx-8 border-l border-t border-r !border-midnight-300 w-32 !h-32 text-center" 
+                  class="mx-16 pt-1 border-l border-t border-r !border-midnight-300 w-32 !h-32 text-center" 
                   min="0"
                   v-model="form.number_guests"
                   @blur="validateCounter('number_guests')">
@@ -100,129 +100,135 @@
             </form-group>
           </div>
         </div>
-        <div class="col-span-8 lg:col-span-6 lg:col-start-6">
-          <heading-two>Persönliche Daten</heading-two>
+        <div class="col-span-full md:col-span-6 md:col-start-10 xl:col-span-6 xl:col-start-6">
+          <heading-two class="flex justify-between md:mb-48 md:relative xl:mb-20">
+            Persönliche Daten
+            <div class="text-xs normal-case md:absolute md:top-48 xl:relative xl:top-0">
+              * Pflichtfelder
+            </div>
+          </heading-two>
           <form-group :error="errors.salutation ? true : false" class="mb-8 grid grid-cols-6">
-            <form-label class="col-span-2">Anrede *</form-label>
+            <form-label class="col-span-2 hidden xl:block">Anrede *</form-label>
             <form-input 
               type="text" 
-              class="col-span-4" 
+              class="col-span-6 xl:col-span-4" 
               v-model="form.salutation" 
-              placeholder="Anrede"
+              placeholder="Anrede *"
               @blur="validateField('salutation')"
               @focus="removeError('salutation')">
             </form-input>
           </form-group>
           <form-group :error="errors.firstname ? true : false" class="mb-8 grid grid-cols-6">
-            <form-label class="col-span-2">Vorname *</form-label>
+            <form-label class="col-span-2 hidden xl:block">Vorname *</form-label>
             <form-input 
               type="text" 
-              class="col-span-4" 
+              class="col-span-6 xl:col-span-4" 
               v-model="form.firstname" 
-              placeholder="Vorname"
+              placeholder="Vorname *"
               @blur="validateField('firstname')"
               @focus="removeError('firstname')">
             </form-input>
           </form-group>
           <form-group :error="errors.name ? true : false" class="mb-8 grid grid-cols-6">
-            <form-label class="col-span-2">Name *</form-label>
+            <form-label class="col-span-2 hidden xl:block">Name *</form-label>
             <form-input 
               type="text" 
-              class="col-span-4" 
+              class="col-span-6 xl:col-span-4" 
               v-model="form.name" 
-              placeholder="Name"
+              placeholder="Name *"
               @blur="validateField('name')"
               @focus="removeError('name')">
             </form-input>
           </form-group>
           <form-group :error="errors.street ? true : false" class="mb-8 grid grid-cols-6">
-            <form-label class="col-span-2">Strasse *</form-label>
+            <form-label class="col-span-2 hidden xl:block">Strasse *</form-label>
             <form-input 
               type="text" 
-              class="col-span-4" 
+              class="col-span-6 xl:col-span-4" 
               v-model="form.street" 
-              placeholder="Strasse"
+              placeholder="Strasse *"
               @blur="validateField('street')"
               @focus="removeError('street')">
             </form-input>
           </form-group>
           <form-group class="mb-8 grid grid-cols-6">
-            <form-label class="col-span-2">Hausnummer</form-label>
+            <form-label class="col-span-2 hidden xl:block">Hausnummer</form-label>
             <form-input 
               type="text" 
-              class="col-span-4" 
+              class="col-span-6 xl:col-span-4" 
               v-model="form.street_number" 
-              placeholder="Hausnummer">
+              placeholder="Hausnummer *">
             </form-input>
           </form-group>
           <form-group :error="errors.zip ? true : false" class="mb-8 grid grid-cols-6">
-            <form-label class="col-span-2">Postleitzahl *</form-label>
+            <form-label class="col-span-2 hidden xl:block">Postleitzahl *</form-label>
             <form-input 
               type="text" 
-              class="col-span-4" 
+              class="col-span-6 xl:col-span-4" 
               v-model="form.zip" 
-              placeholder="Postleitzahl"
+              placeholder="Postleitzahl *"
               @blur="validateField('zip')"
               @focus="removeError('zip')">
             </form-input>
           </form-group>
           <form-group :error="errors.city ? true : false" class="mb-8 grid grid-cols-6">
-            <form-label class="col-span-2">Ort *</form-label>
+            <form-label class="col-span-2 hidden xl:block">Ort *</form-label>
             <form-input 
               type="text" 
-              class="col-span-4" 
+              class="col-span-6 xl:col-span-4" 
               v-model="form.city" 
-              placeholder="Ort"
+              placeholder="Ort *"
               @blur="validateField('city')"
               @focus="removeError('city')">
             </form-input>
           </form-group>
           <form-group :error="errors.country ? true : false" class="mb-8 grid grid-cols-6">
-            <form-label class="col-span-2">Land *</form-label>
+            <form-label class="col-span-2 hidden xl:block">Land *</form-label>
             <form-input 
               type="text" 
-              class="col-span-4" 
+              class="col-span-6 xl:col-span-4" 
               v-model="form.country" 
-              placeholder="Land"
+              placeholder="Land *"
               @blur="validateField('country')"
               @focus="removeError('country')">
             </form-input>
           </form-group>
           <form-group :error="errors.email ? true : false" class="mb-8 grid grid-cols-6">
-            <form-label class="col-span-2">E-Mail *</form-label>
+            <form-label class="col-span-2 hidden xl:block">E-Mail *</form-label>
             <form-input 
               type="email" 
-              class="col-span-4" 
+              class="col-span-6 xl:col-span-4" 
               v-model="form.email" 
-              placeholder="E-Mail"
+              placeholder="E-Mail *"
               @blur="validateEmail()"
               @focus="removeError('email')">
             </form-input>
           </form-group>
           <form-group :error="errors.phone ? true : false" class="mb-8 grid grid-cols-6">
-            <form-label class="col-span-2">Telefon *</form-label>
+            <form-label class="col-span-2 hidden xl:block">Telefon *</form-label>
             <form-input 
               type="text" 
-              class="col-span-4" 
+              class="col-span-6 xl:col-span-4" 
               v-model="form.phone" 
-              placeholder="Telefon"
+              placeholder="Telefon *"
               @blur="validateField('phone')"
               @focus="removeError('phone')">
             </form-input>
           </form-group>
 
-          <div class="mt-80">
+          <div class="mt-80 mb-80 md:mb-0">
             <heading-two>Anmerkungen</heading-two>
             <form-group>
               <form-textarea 
                 name="message"
                 v-model="form.message" 
+                class="min-h-[80px] md:min-h-[200px]"
                 placeholder="Anmerkungen">
               </form-textarea>
             </form-group>
           </div>
         </div>
-        <div class="col-span-4 lg:col-span-3 lg:col-start-13" v-if="isDirty">
+        <div class="col-span-full md:col-span-6 md:col-start-2 xl:col-span-3 xl:col-start-13" v-if="isDirty">
           <heading-two>Zusammenfassung</heading-two>
           <form-group class="border-b border-midnight-300 mb-8 h-36" v-if="arrivalDate">
             <form-label>Anreise</form-label>
@@ -244,7 +250,6 @@
             <form-label>Suitentyp</form-label>
             <div>{{ __(form.suite_type) }}</div>
           </form-group>
-
           <form-group class="mt-40">
             <form-checkbox :id="'privacy-statement'" v-model="form.privacy_statement" @change="toggle('privacy_statement')">
               <template v-slot:label>
@@ -252,7 +257,6 @@
               </template>
             </form-checkbox>
           </form-group>
-
           <form-group class="mt-40">
             <form-checkbox :id="'newsletter'" v-model="form.newsletter" @change="toggle('newsletter')">
               <template v-slot:label>
@@ -260,7 +264,6 @@
               </template>
             </form-checkbox>
           </form-group>
-
           <form-group class="mt-40">
             <button 
               :class="[isValid ? 'border-midnight-500 text-midnight-500' : 'border-midnight-300 text-midnight-300 pointer-events-none select-none', 'py-12 border-t border-b leading-none flex items-center w-full text-left']"

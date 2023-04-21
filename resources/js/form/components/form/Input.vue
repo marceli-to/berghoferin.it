@@ -5,7 +5,7 @@
     :value="modelValue"
     :placeholder="placeholder"
     @input="updateInput"
-    class="border-0 border-b border-b-midnight-300 focus:border-midnight-500 ring-0 focus:ring-0 px-0 py-0 h-36 text-md placeholder:text-md placeholder:text-midnight-300 text-midnight-500"
+    class="border-0 border-b border-b-midnight-300 focus:border-midnight-300 ring-0 focus:ring-0 px-0 py-0 h-36 text-md placeholder:text-md placeholder:leading-none placeholder:text-midnight-500 xl:placeholder:text-midnight-300 text-midnight-500"
   />
 </template>
 <script>

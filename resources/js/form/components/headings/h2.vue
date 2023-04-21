@@ -1,17 +1,10 @@
 <template>
-  <h2 :class="`${$props.cssClass}`">
+  <h2>
     <slot />
   </h2>
 </template>
 <script>
 export default {
   name: 'HeadingTwo',
-
-  props: {
-    cssClass: {
-      type: String,
-      default: ''
-    }
-  }
 }
 </script>
