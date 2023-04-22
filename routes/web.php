@@ -18,15 +18,3 @@ use Illuminate\Http\Request;
 // Route::statamic('example', 'example-view', [
 //    'title' => 'Example'
 // ]);
-
-Route::post('submit-testimonial', function (Request $request) {
-  $entry = Entry::make()
-    ->collection('testimonials')
-    ->slug($request->input('name'))
-    ->data([
-      'title' => $request->input('name') . "'s testimonial",
-      'name' => $request->input('name'),
-    ]);
-    $entry->save();
-  return redirect('/');
-});
