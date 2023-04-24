@@ -47,6 +47,10 @@ nav.site-menu.is-visible {
   z-index: 3000;
 }
 
+.btn-menu {
+  @apply flex justify-center items-start w-32 h-32
+}
+
 .btn-menu .icon-burger {
   display: block;
 }

@@ -1,3 +1,6 @@
+<div class="hidden xl:block mr-48">
+  {{ partial:menu/language/desktop }}
+</div>
 <a href="javascript:;" class="btn-menu" data-menu-btn>
   {{ partial:icons/burger }}
   {{ partial:icons/cross }}
@@ -8,7 +11,9 @@
       {{ nav:collection:pages menu_category:is="main" sort="order" }}
         {{ partial:menu/item :text="title" :url="url" target="_self" }}
       {{ /nav:collection:pages }}
-      {{# <li><a href="">DE/EN/IT</a></li> #}}
+      <div class="block xl:hidden">
+      {{ partial:menu/language/mobile }}
+      </div>
     </ul>
     <ul>
       <li class="flex justify-end items-center w-full">
@@ -16,7 +21,6 @@
           <a href="{{ url }}" class="text-md leading-none block text-white no-underline text-right py-8 {{ if is_current || is_parent }} !underline decoration-1 underline-offset-4 {{ /if }}">
             {{ title }}
           </a>
-          {{ if first }}<span class="block px-6 text-md text-white">+</span>{{ /if }}
         {{ /nav:collection:pages }}
       </li>
     </ul>

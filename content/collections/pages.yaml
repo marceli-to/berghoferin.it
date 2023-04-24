@@ -1,4 +1,9 @@
 title: Pages
+sites:
+  - de
+  - it
+  - en
+propagate: false
 template: templates/default
 layout: templates/layout
 revisions: false

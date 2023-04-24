@@ -7,7 +7,7 @@
       <div class="grid grid-cols-16 gap-16">
         <div class="col-span-full md:col-span-6 md:col-start-2 xl:col-span-3 xl:col-start-2">
           <div class="mb-80">
-            <heading-two>Reisezeitraum</heading-two>
+            <heading-two>{{ __('Reisezeitraum') }}</heading-two>
             <VueDatePicker 
               v-model="form.dates" 
               inline
@@ -16,7 +16,7 @@
               :min-date="new Date()"
               :enable-time-picker="false"
               month-name-format="long"
-              locale="de">
+              :locale="_getLocale()">
               <template #arrow-left>
                 <icon-chevron-left />
               </template>
@@ -26,9 +26,9 @@
             </VueDatePicker>
           </div>
           <div class="mb-80">
-            <heading-two>Suiten</heading-two>
+            <heading-two>{{ __('Suiten') }}</heading-two>
             <form-group class="mb-16">
-              <form-label>Anzahl Suiten</form-label>
+              <form-label>{{ __('Anzahl Suiten') }}</form-label>
               <div class="flex items-center">
                 <button-counter @decrement=" decrementCounter('number_suites')" :action="'decrement'">
                   <icon-minus />
@@ -46,7 +46,7 @@
               </div>
             </form-group>
             <form-group>
-              <form-label>Personen</form-label>
+              <form-label>{{ __('Personen') }}</form-label>
               <div class="flex items-center">
                 <button-counter @decrement=" decrementCounter('number_guests')" :action="'decrement'">
                   <icon-minus />
@@ -65,9 +65,9 @@
             </form-group>
           </div>
           <div class="mb-80 md:mb-0">
-            <heading-two>Bevorzugter Suitentyp</heading-two>
+            <heading-two>{{ __('Bevorzugter Suitentyp') }}</heading-two>
             <form-group class="mb-16">
-              <form-label>Freunde-Suite</form-label>
+              <form-label>{{ __('Freunde-Suite') }}</form-label>
               <a href="" 
                 @click.prevent="selectType('friends-suite')"
                 :class="[form.suite_type == 'friends-suite' ? 'text-midnight-500' : 'text-midnight-300', 'flex items-center justify-center w-32 h-32 border border-midnight-300 text-center']">
@@ -75,7 +75,7 @@
               </a>
             </form-group>
             <form-group class="mb-16">
-              <form-label>Gäste-Suite</form-label>
+              <form-label>{{ __('Gäste-Suite') }}</form-label>
               <a href="" 
                 @click.prevent="selectType('guest-suite')"
                 :class="[form.suite_type == 'guest-suite' ? 'text-midnight-500' : 'text-midnight-300', 'flex items-center justify-center w-32 h-32 border border-midnight-300 text-center']">
@@ -83,7 +83,7 @@
               </a>
             </form-group>
             <form-group class="mb-16">
-              <form-label>Chamber-Suite</form-label>
+              <form-label>{{ __('Chamber-Suite') }}</form-label>
               <a href="" 
                 @click.prevent="selectType('chamber-suite')"
                 :class="[form.suite_type == 'chamber-suite' ? 'text-midnight-500' : 'text-midnight-300', 'flex items-center justify-center w-32 h-32 border border-midnight-300 text-center']">
@@ -91,7 +91,7 @@
               </a>
             </form-group>
             <form-group class="mb-16">
-              <form-label>Master-Suite</form-label>
+              <form-label>{{ __('Master-Suite') }}</form-label>
               <a href="" 
                 @click.prevent="selectType('master-suite')"
                 :class="[form.suite_type == 'master-suite' ? 'text-midnight-500' : 'text-midnight-300', 'flex items-center justify-center w-32 h-32 border border-midnight-300 text-center']">
@@ -102,165 +102,165 @@
         </div>
         <div class="col-span-full md:col-span-6 md:col-start-10 xl:col-span-6 xl:col-start-6">
           <heading-two class="flex justify-between md:mb-48 md:relative xl:mb-20">
-            Persönliche Daten
+            {{ __('Persönliche Daten') }} 
             <div class="text-xs normal-case md:absolute md:top-48 xl:relative xl:top-0">
-              * Pflichtfelder
+              * {{ __('Pflichtfelder') }}
             </div>
           </heading-two>
           <form-group :error="errors.salutation ? true : false" class="mb-8 grid grid-cols-6">
-            <form-label class="col-span-2 hidden xl:block">Anrede *</form-label>
+            <form-label class="col-span-2 hidden xl:block">{{ __('Anrede') }} *</form-label>
             <form-input 
               type="text" 
               class="col-span-6 xl:col-span-4" 
               v-model="form.salutation" 
-              placeholder="Anrede *"
+              :placeholder="`${__('Anrede')} *`"
               @blur="validateField('salutation')"
               @focus="removeError('salutation')">
             </form-input>
           </form-group>
           <form-group :error="errors.firstname ? true : false" class="mb-8 grid grid-cols-6">
-            <form-label class="col-span-2 hidden xl:block">Vorname *</form-label>
+            <form-label class="col-span-2 hidden xl:block">{{ __('Vorname') }} *</form-label>
             <form-input 
               type="text" 
               class="col-span-6 xl:col-span-4" 
               v-model="form.firstname" 
-              placeholder="Vorname *"
+              :placeholder="`${__('Vorname')} *`"
               @blur="validateField('firstname')"
               @focus="removeError('firstname')">
             </form-input>
           </form-group>
           <form-group :error="errors.name ? true : false" class="mb-8 grid grid-cols-6">
-            <form-label class="col-span-2 hidden xl:block">Name *</form-label>
+            <form-label class="col-span-2 hidden xl:block">{{ __('Name') }} *</form-label>
             <form-input 
               type="text" 
               class="col-span-6 xl:col-span-4" 
               v-model="form.name" 
-              placeholder="Name *"
+              :placeholder="`${__('Name')} *`"
               @blur="validateField('name')"
               @focus="removeError('name')">
             </form-input>
           </form-group>
           <form-group :error="errors.street ? true : false" class="mb-8 grid grid-cols-6">
-            <form-label class="col-span-2 hidden xl:block">Strasse *</form-label>
+            <form-label class="col-span-2 hidden xl:block">{{ __('Strasse') }} *</form-label>
             <form-input 
               type="text" 
               class="col-span-6 xl:col-span-4" 
               v-model="form.street" 
-              placeholder="Strasse *"
+              :placeholder="`${__('Strasse')} *`"
               @blur="validateField('street')"
               @focus="removeError('street')">
             </form-input>
           </form-group>
           <form-group class="mb-8 grid grid-cols-6">
-            <form-label class="col-span-2 hidden xl:block">Hausnummer</form-label>
+            <form-label class="col-span-2 hidden xl:block">{{ __('Hausnummer') }}</form-label>
             <form-input 
               type="text" 
               class="col-span-6 xl:col-span-4" 
               v-model="form.street_number" 
-              placeholder="Hausnummer *">
+              :placeholder="__('Hausnummer')">
             </form-input>
           </form-group>
           <form-group :error="errors.zip ? true : false" class="mb-8 grid grid-cols-6">
-            <form-label class="col-span-2 hidden xl:block">Postleitzahl *</form-label>
+            <form-label class="col-span-2 hidden xl:block">{{ __('Postleitzahl') }} *</form-label>
             <form-input 
               type="text" 
               class="col-span-6 xl:col-span-4" 
               v-model="form.zip" 
-              placeholder="Postleitzahl *"
+              :placeholder="`${__('Postleitzahl')} *`"
               @blur="validateField('zip')"
               @focus="removeError('zip')">
             </form-input>
           </form-group>
           <form-group :error="errors.city ? true : false" class="mb-8 grid grid-cols-6">
-            <form-label class="col-span-2 hidden xl:block">Ort *</form-label>
+            <form-label class="col-span-2 hidden xl:block">{{ __('Ort') }} *</form-label>
             <form-input 
               type="text" 
               class="col-span-6 xl:col-span-4" 
               v-model="form.city" 
-              placeholder="Ort *"
+              :placeholder="`${__('Ort')} *`"
               @blur="validateField('city')"
               @focus="removeError('city')">
             </form-input>
           </form-group>
           <form-group :error="errors.country ? true : false" class="mb-8 grid grid-cols-6">
-            <form-label class="col-span-2 hidden xl:block">Land *</form-label>
+            <form-label class="col-span-2 hidden xl:block">{{ __('Land') }} *</form-label>
             <form-input 
               type="text" 
               class="col-span-6 xl:col-span-4" 
               v-model="form.country" 
-              placeholder="Land *"
+              :placeholder="`${__('Land')} *`"
               @blur="validateField('country')"
               @focus="removeError('country')">
             </form-input>
           </form-group>
           <form-group :error="errors.email ? true : false" class="mb-8 grid grid-cols-6">
-            <form-label class="col-span-2 hidden xl:block">E-Mail *</form-label>
+            <form-label class="col-span-2 hidden xl:block">{{ __('E-Mail') }} *</form-label>
             <form-input 
               type="email" 
               class="col-span-6 xl:col-span-4" 
               v-model="form.email" 
-              placeholder="E-Mail *"
+              :placeholder="`${__('E-Mail')} *`"
               @blur="validateEmail()"
               @focus="removeError('email')">
             </form-input>
           </form-group>
           <form-group :error="errors.phone ? true : false" class="mb-8 grid grid-cols-6">
-            <form-label class="col-span-2 hidden xl:block">Telefon *</form-label>
+            <form-label class="col-span-2 hidden xl:block">{{ __('Telefon') }} *</form-label>
             <form-input 
               type="text" 
               class="col-span-6 xl:col-span-4" 
               v-model="form.phone" 
-              placeholder="Telefon *"
+              :placeholder="`${__('Telefon')} *`"
               @blur="validateField('phone')"
               @focus="removeError('phone')">
             </form-input>
           </form-group>
 
           <div class="mt-80 mb-80 md:mb-0">
-            <heading-two>Anmerkungen</heading-two>
+            <heading-two>{{ __('Anmerkungen') }}</heading-two>
             <form-group>
               <form-textarea 
                 name="message"
                 v-model="form.message" 
                 class="min-h-[80px] md:min-h-[200px]"
-                placeholder="Anmerkungen">
+                :placeholder="__('Anmerkungen')">
               </form-textarea>
             </form-group>
           </div>
         </div>
         <div class="col-span-full md:col-span-6 md:col-start-2 xl:col-span-3 xl:col-start-13" v-if="isDirty">
-          <heading-two>Zusammenfassung</heading-two>
+          <heading-two>{{ __('Zusammenfassung') }}</heading-two>
           <form-group class="border-b border-midnight-300 mb-8 h-36" v-if="arrivalDate">
-            <form-label>Anreise</form-label>
+            <form-label>{{ __('Anreise') }}</form-label>
             <div>{{ arrivalDate }}</div>
           </form-group>
           <form-group class="border-b border-midnight-300 mb-8 h-36" v-if="departureDate">
-            <form-label>Abreise</form-label>
+            <form-label>{{ __('Abreise') }}</form-label>
             <div>{{ departureDate }}</div>
           </form-group>
           <form-group class="border-b border-midnight-300 mb-8 h-36" v-if="form.number_suites > 0">
-            <form-label>Anzahl Suiten</form-label>
+            <form-label>{{ __('Anzahl Suiten') }}</form-label>
             <div>{{ form.number_suites }}</div>
           </form-group>
           <form-group class="border-b border-midnight-300 mb-8 h-36" v-if="form.number_guests > 0">
-            <form-label>Personen</form-label>
+            <form-label>{{ __('Personen') }}</form-label>
             <div>{{ form.number_guests }}</div>
           </form-group>
           <form-group class="border-b border-midnight-300 mb-8 h-36" v-if="form.suite_type">
-            <form-label>Suitentyp</form-label>
+            <form-label>{{ __('Suitentyp') }}</form-label>
             <div>{{ __(form.suite_type) }}</div>
           </form-group>
           <form-group class="mt-40">
             <form-checkbox :id="'privacy-statement'" v-model="form.privacy_statement" @change="toggle('privacy_statement')">
               <template v-slot:label>
-                Hiermit stimme ich der Datenschutzerklärung zu.
+                {{__('Hiermit stimme ich der Datenschutzerklärung zu.') }}
               </template>
             </form-checkbox>
           </form-group>
           <form-group class="mt-40">
             <form-checkbox :id="'newsletter'" v-model="form.newsletter" @change="toggle('newsletter')">
               <template v-slot:label>
-                Ich bin an Mitteilungen und Neuigkeiten interessiert.
+                {{ __('Ich bin an Mitteilungen und Neuigkeiten interessiert.') }}
               </template>
             </form-checkbox>
           </form-group>
@@ -269,7 +269,7 @@
               :class="[isValid ? 'border-midnight-500 text-midnight-500' : 'border-midnight-300 text-midnight-300 pointer-events-none select-none', 'py-12 border-t border-b leading-none flex items-center w-full text-left']"
               @click.prevent="submit()">
               <icon-chevron-right :class="[isValid ? 'text-black' : 'text-midnight-400', '-mt-1 mr-8']" />
-              Unverbindlich anfragen
+              {{ __('Unverbindlich anfragen') }}
             </button>
           </form-group>
         </div>

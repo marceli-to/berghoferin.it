@@ -10,6 +10,7 @@ sections:
           required: true
           validate:
             - required
+          localizable: true
       -
         handle: content
         field:
@@ -40,6 +41,7 @@ sections:
           visibility: visible
           validate:
             - required
+          localizable: false
       -
         handle: theme
         field:
@@ -59,6 +61,7 @@ sections:
           listable: hidden
           instructions_position: above
           visibility: visible
+          localizable: false
       -
         handle: template
         field:

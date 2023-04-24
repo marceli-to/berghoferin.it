@@ -1,4 +1,9 @@
 title: Inquiries
+sites:
+  - de
+  - it
+  - en
+propagate: false
 revisions: false
 date_behavior:
   past: public

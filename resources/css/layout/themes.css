@@ -26,6 +26,15 @@
   @apply text-midnight-500;
 }
 
+.theme-midnight .language-switcher a,
+.theme-midnight .language-switcher span {
+  @apply text-midnight-500;
+}
+
+.theme-midnight .language-switcher a {
+  @apply !py-0
+}
+
 .theme-burgundy {
   @apply text-burgundy;
 }
@@ -45,4 +54,14 @@
 .theme-burgundy .logo {
   @apply text-burgundy;
 }
+
+.theme-burgundy .language-switcher a,
+.theme-burgundy .language-switcher span {
+  @apply text-burgundy;
+}
+
+.theme-burgundy .language-switcher a {
+  @apply !py-0
+}
+
 
