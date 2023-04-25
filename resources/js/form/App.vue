@@ -13,7 +13,9 @@
               inline
               range
               auto-apply
-              :min-date="new Date()"
+              :start-date="new Date(2023, 4, 1)"
+              :min-date="new Date(2023, 4, 26)"
+              :max-date="new Date(2023, 9, 29)"
               :enable-time-picker="false"
               month-name-format="long"
               :locale="_getLocale()">

@@ -4,7 +4,7 @@ sites:
   - it
   - en
 propagate: false
-template: templates/default
+template: templates/content/default
 layout: templates/layout
 revisions: false
 route: '{parent_uri}/{slug}'

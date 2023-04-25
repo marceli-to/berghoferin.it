@@ -26,7 +26,6 @@ class InquiryController extends Controller
       ->slug($title)
       ->data(array_merge(['title' => $title], $request->all()));
     $inquiry->save();
-
     Notification::route('mail', env('MAIL_TO'))->notify(new InquiryNotification($inquiry));
     Notification::route('mail', $request->input('email'))->notify(new ConfirmationNotification($inquiry));
     return response()->json($inquiry->id, 201);

@@ -1,0 +1,19 @@
+.btn-menu {
+  @apply flex justify-center items-start w-32 h-32
+}
+
+.btn-menu .icon-burger {
+  display: block;
+}
+
+.btn-menu .icon-cross {
+  display: none;
+}
+
+.btn-menu.is-active .icon-burger {
+  display: none;
+}
+
+.btn-menu.is-active .icon-cross {
+  display: block;
+}

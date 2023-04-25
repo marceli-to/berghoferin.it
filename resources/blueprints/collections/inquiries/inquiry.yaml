@@ -9,6 +9,7 @@ sections:
           required: true
           validate:
             - required
+          localizable: false
       -
         handle: salutation
         field:
@@ -22,6 +23,7 @@ sections:
           visibility: visible
           validate:
             - required
+          localizable: false
       -
         handle: firstname
         field:
@@ -35,6 +37,7 @@ sections:
           visibility: visible
           validate:
             - required
+          localizable: false
       -
         handle: name
         field:
@@ -48,6 +51,7 @@ sections:
           visibility: visible
           validate:
             - required
+          localizable: false
       -
         handle: street
         field:
@@ -61,6 +65,7 @@ sections:
           visibility: visible
           validate:
             - required
+          localizable: false
       -
         handle: street_number
         field:
@@ -72,6 +77,7 @@ sections:
           listable: hidden
           instructions_position: above
           visibility: visible
+          localizable: false
       -
         handle: zip
         field:
@@ -85,6 +91,7 @@ sections:
           visibility: visible
           validate:
             - required
+          localizable: false
       -
         handle: city
         field:
@@ -98,6 +105,7 @@ sections:
           visibility: visible
           validate:
             - required
+          localizable: false
       -
         handle: country
         field:
@@ -111,6 +119,7 @@ sections:
           visibility: visible
           validate:
             - required
+          localizable: false
       -
         handle: email
         field:
@@ -125,6 +134,7 @@ sections:
           validate:
             - required
             - email
+          localizable: false
       -
         handle: phone
         field:
@@ -138,6 +148,7 @@ sections:
           visibility: visible
           validate:
             - required
+          localizable: false
       -
         handle: message
         field:
@@ -148,6 +159,7 @@ sections:
           listable: hidden
           instructions_position: above
           visibility: visible
+          localizable: false
       -
         handle: number_suites
         field:
@@ -162,6 +174,7 @@ sections:
           validate:
             - required
             - 'gt:0'
+          localizable: false
       -
         handle: number_guests
         field:
@@ -176,6 +189,7 @@ sections:
           validate:
             - required
             - 'gt:0'
+          localizable: false
       -
         handle: suite_type
         field:
@@ -189,6 +203,7 @@ sections:
           visibility: visible
           validate:
             - required
+          localizable: false
       -
         handle: arrival_date
         field:
@@ -202,6 +217,7 @@ sections:
           visibility: visible
           validate:
             - required
+          localizable: false
       -
         handle: departure_date
         field:
@@ -215,6 +231,7 @@ sections:
           visibility: visible
           validate:
             - required
+          localizable: false
   sidebar:
     display: Sidebar
     fields:
@@ -223,4 +240,23 @@ sections:
         field:
           type: slug
           localizable: true
+      -
+        handle: state
+        field:
+          options:
+            open: Offen
+            send: Versenden
+          multiple: false
+          clearable: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          display: Status
+          type: select
+          icon: select
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
 title: Inquiry

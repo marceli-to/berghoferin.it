@@ -18,7 +18,7 @@
   @apply text-midnight-500;
 }
 
-.theme-midnight .site-menu {
+.theme-midnight .site-menu .site-container > div {
   @apply bg-midnight-500;
 }
 
@@ -35,32 +35,32 @@
   @apply !py-0
 }
 
-.theme-burgundy {
-  @apply text-burgundy;
+.theme-chestnut {
+  @apply text-chestnut;
 }
 
-.theme-burgundy h2 {
-  @apply border-burgundy
+.theme-chestnut h2 {
+  @apply border-chestnut
 }
 
-.theme-burgundy .btn-menu {
-  @apply text-burgundy;
+.theme-chestnut .btn-menu {
+  @apply text-chestnut;
 }
 
-.theme-burgundy .site-menu {
-  @apply bg-burgundy;
+.theme-chestnut .site-menu .site-container > div {
+  @apply bg-chestnut;
 }
 
-.theme-burgundy .logo {
-  @apply text-burgundy;
+.theme-chestnut .logo {
+  @apply text-chestnut;
 }
 
-.theme-burgundy .language-switcher a,
-.theme-burgundy .language-switcher span {
-  @apply text-burgundy;
+.theme-chestnut .language-switcher a,
+.theme-chestnut .language-switcher span {
+  @apply text-chestnut;
 }
 
-.theme-burgundy .language-switcher a {
+.theme-chestnut .language-switcher a {
   @apply !py-0
 }
 

@@ -10,59 +10,14 @@ body {
   @apply font-regular text-midnight-500 text-md
 }
 
-main.site,
-header.site-header,
-footer.site-footer {
-  @apply mx-auto max-w-[400px] md:max-w-[900px] xl:max-w-[1600px] w-full
-}
-
 header.site-header {
-  left: calc(100%/2 - 200px);
-  width: calc(100% - 40px);
-  @apply fixed bg-white z-10 md:relative md:left-auto md:w-full;
+  @apply bg-white h-83 md:h-120 fixed w-full z-10
 }
 
-nav.site-menu {
-  height: calc(100% - 124px);
-  left: calc(100%/2 - 200px);
-  max-width: 400px;
-  width: calc(100% - 40px);
-  z-index: -1;
-  @apply block opacity-0 pointer-events-none fixed top-84;
+.site-container {
+  @apply px-20 xs:px-0 mx-auto max-w-[414px] md:max-w-[920px] xl:max-w-[1600px]
 }
 
-@media (min-width: 768px) {
-  nav.site-menu {
-    height: calc(100vh - (116px + 40px));
-    left: auto;
-    right: calc(100% / 16);
-    position: absolute;
-    top: 116px;
-  }
-}
-
-nav.site-menu.is-visible {
-  opacity: 1;
-  pointer-events: all;
-  z-index: 3000;
-}
-
-.btn-menu {
-  @apply flex justify-center items-start w-32 h-32
-}
-
-.btn-menu .icon-burger {
-  display: block;
-}
-
-.btn-menu .icon-cross {
-  display: none;
-}
-
-.btn-menu.is-active .icon-burger {
-  display: none;
-}
-
-.btn-menu.is-active .icon-cross {
-  display: block;
+.site-grid {
+  @apply md:grid md:grid-cols-16 gap-16 w-full
 }

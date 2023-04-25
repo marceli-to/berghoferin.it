@@ -47,14 +47,14 @@ sections:
         field:
           options:
             midnight: Midnight
-            burgundy: Burgundy
+            chestnut: Chestnut
           multiple: false
           clearable: false
           searchable: true
           taggable: false
           push_tags: false
           cast_booleans: false
-          default: burgundy
+          default: chestnut
           display: Theme
           type: select
           icon: select
@@ -68,6 +68,12 @@ sections:
           type: template
           display: Template
           localizable: true
+          instructions_position: above
+          listable: hidden
+          visibility: visible
+          hide_partials: true
+          blueprint: false
+          folder: templates/content
   sidebar:
     display: Sidebar
     fields:

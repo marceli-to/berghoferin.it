@@ -15,10 +15,12 @@
 <meta name="theme-color" content="#ffffff">
 {{ vite src="resources/js/app.js" }}
 </head>
-<body class="theme-{{ theme }} px-20 md:px-0">
+<body class="theme-{{ theme }}">
   {{ partial:layout/header }}
-  <main class="site pt-170 md:pt-60">
-    {{ template_content }}
+  <main class="site {{ if is_homepage }} pt-84 md:pt-120 xl:pt-240 {{ else }} pt-174 {{ /if }}">
+    <div class="site-container site-grid">
+      {{ template_content }}
+    </div>
   </main>
   {{ partial:layout/footer }}
 </body>

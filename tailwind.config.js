@@ -14,7 +14,7 @@ module.exports = {
     extend: {
       
       colors: {
-        'burgundy': '#87362b',
+        'chestnut': '#87362b',
         'midnight': {
           //100: '#435464',
           //200: '#c0ccdc',
@@ -22,6 +22,11 @@ module.exports = {
           400: '#c0ccdc',
           500: '#435464',
         },
+      },
+
+      screens: {
+        xs: '444px',
+        xl: '1448px',
       },
 
       fontFamily: {

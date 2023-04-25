@@ -1,28 +1,23 @@
-<div class="hidden xl:block mr-48">
-  {{ partial:menu/language/desktop }}
-</div>
-<a href="javascript:;" class="btn-menu" data-menu-btn>
-  {{ partial:icons/burger }}
-  {{ partial:icons/cross }}
-</a>
-<nav class="site-menu" data-menu>
-  <div class="flex flex-col justify-between w-full h-full pb-20 pt-30 pr-30">
-    <ul>
-      {{ nav:collection:pages menu_category:is="main" sort="order" }}
-        {{ partial:menu/item :text="title" :url="url" target="_self" }}
-      {{ /nav:collection:pages }}
-      <div class="block xl:hidden">
-      {{ partial:menu/language/mobile }}
-      </div>
-    </ul>
-    <ul>
-      <li class="flex justify-end items-center w-full">
-        {{ nav:collection:pages menu_category:is="meta" sort="order" }}
-          <a href="{{ url }}" class="text-md leading-none block text-white no-underline text-right py-8 {{ if is_current || is_parent }} !underline decoration-1 underline-offset-4 {{ /if }}">
-            {{ title }}
-          </a>
+<nav class="site-menu block opacity-0 pointer-events-none fixed left-0 top-83 md:top-119 w-full -z-50" data-menu>
+  <div class="site-container site-grid h-full">
+    <div class="md:col-span-7 md:col-start-9 xl:col-span-4 xl:col-start-12 h-full flex flex-col justify-between py-24 px-30">
+      <ul class="mr-10">
+        {{ nav:collection:pages menu_category:is="main" sort="order" }}
+          {{ partial:menu/item :text="title" :url="url" target="_self" }}
         {{ /nav:collection:pages }}
-      </li>
-    </ul>
+        <div class="block xl:hidden">
+        {{ partial:menu/language/mobile }}
+        </div>
+      </ul>
+      <ul class="mr-10">
+        <li class="flex justify-end items-center w-full">
+          {{ nav:collection:pages menu_category:is="meta" sort="order" }}
+            <a href="{{ url }}" class="text-md leading-none block text-white no-underline text-right py-8 {{ if is_current || is_parent }} !underline decoration-1 underline-offset-4 {{ /if }}">
+              {{ title }}
+            </a>
+          {{ /nav:collection:pages }}
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
