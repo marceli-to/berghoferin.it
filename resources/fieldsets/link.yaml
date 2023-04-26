@@ -1,0 +1,67 @@
+title: Link
+fields:
+  -
+    handle: description
+    field:
+      input_type: text
+      antlers: false
+      display: Description
+      type: text
+      icon: text
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - required
+  -
+    handle: url
+    field:
+      display: URL
+      type: link
+      icon: link
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - required
+  -
+    handle: target
+    field:
+      options:
+        _self: 'Open in same window'
+        _blank: 'Open a new window'
+      multiple: false
+      max_items: 1
+      clearable: false
+      searchable: true
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      display: Target
+      type: select
+      icon: select
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      default: _self
+  -
+    handle: icon
+    field:
+      options:
+        chevron-right: 'Chevron (right)'
+      multiple: false
+      clearable: false
+      searchable: true
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      display: Icon
+      type: select
+      icon: select
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible

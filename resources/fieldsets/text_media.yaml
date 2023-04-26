@@ -20,7 +20,7 @@ fields:
       validate:
         - required
   -
-    handle: text
+    handle: content_text
     field:
       collapse: false
       always_show_set_button: false
@@ -43,13 +43,19 @@ fields:
       enable_paste_rules: true
       antlers: false
       remove_empty_nodes: false
-      display: Text
+      display: Content
       type: bard
       icon: bard
       localizable: true
       listable: hidden
       instructions_position: above
       visibility: visible
+      sets:
+        link:
+          display: Link
+          fields:
+            -
+              import: link
   -
     handle: image
     field:

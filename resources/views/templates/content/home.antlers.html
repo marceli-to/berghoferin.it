@@ -5,9 +5,26 @@
     {{ if header_image }}
       {{ partial:components/image :image="header_image" :width="'166'" :height="'50'" :caption="header_image:alt" class="w-166 h-50" }}
     {{ /if }}
-    {{ if text }}
+    {{ if content_text }}
       <div class="mt-32">
-        {{ text }}
+        {{ content_text }}
+          {{ if type == 'text' }}
+            {{ text }}
+          {{ /if }}
+          {{ if type == 'link' }}
+            <a href="{{ url }}" class="text-burgundy-500 mt-32 inline-flex items-center leading-none group">
+              {{ if icon }}
+                {{ partial:icons/{{icon}} :class="'block mr-8 -mt-2 w-7 h-12'" }}
+              {{ /if }}
+              <span class="group-hover:underline group-hover:decoration-1 group-hover:underline-offset-4">
+                {{ description }}
+              </span>
+            </a>
+          {{ /if }}
+        {{ /content_text}}
+
+
+
       </div>
     {{ /if }}
   </article>
