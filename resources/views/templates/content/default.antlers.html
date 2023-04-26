@@ -1,4 +1,5 @@
-{{ partial:icons/logo-type :class="'md:hidden'" }}
 {{ content }}
-
+  {{ if type == 'restaurant' }}
+    {{ partial:components/restaurant :restaurant="restaurant" }}
+  {{ /if }}
 {{ /content }}

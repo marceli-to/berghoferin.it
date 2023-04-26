@@ -1,0 +1,88 @@
+{{ if category == 'gastro-theque-alpine' }}
+  <section class="md:col-span-full">
+    <article class="content md:grid md:grid-cols-16 gap-16 w-full">
+      {{ if header_image }}
+        <div class="md:col-span-4 md:col-start-11 xl:col-span-6 xl:col-start-10 md:order-2 xl:order-1">
+          {{ partial:components/image :image="header_image" :width="'180'" :height="'75'" :caption="header_image:alt" class="w-180 h-auto" }}
+        </div>
+      {{ /if }}
+
+      {{ if image }}
+        <figure class="mt-32 md:mt-0 xl:mt-22 md:col-span-8 md:col-start-2 xl:col-span-7 xl:col-start-2 md:order-1 xl:order-2">
+          {{ partial:components/image :image="image" :width="'1200'" :height="'815'" :caption="image:alt" }}
+        </figure>
+      {{ /if }}
+
+      {{ if content_text }}
+        <div class="mt-32 xl:mt-16 md:col-span-14 md:col-start-2 xl:col-span-5 xl:col-start-10 md:order-3 xl:order-3">
+          {{ content_text }}
+            {{ if type == 'text' }}
+              {{ text }}
+            {{ /if }}
+          {{ /content_text}}
+        </div>
+      {{ /if }}
+    </article>
+  </section>
+{{ /if }}
+
+{{ if category == 'die-saligen-fine-dining' }}
+  <section class="mt-80 md:col-span-full">
+    <article class="content md:grid md:grid-cols-16 gap-16 w-full">
+      {{ if header_image }}
+        <div class="md:col-span-3 md:col-start-5 xl:col-span-2 xl:col-start-3 md:order-1 xl:order-1">
+          {{ partial:components/image :image="header_image" :width="'180'" :height="'75'" :caption="header_image:alt" class="w-180 h-auto" }}
+        </div>
+      {{ /if }}
+
+      {{ if image }}
+        <figure class="mt-32 md:mt-0 xl:mt-0 md:col-span-6 md:col-start-10 xl:col-span-4 xl:col-start-12 md:order-2 xl:order-3">
+          {{ partial:components/image :image="image" :width="'1200'" :height="'815'" :caption="image:alt" }}
+        </figure>
+      {{ /if }}
+
+      {{ if content_text }}
+        <div class="mt-32 xl:-mt-5 md:col-span-14 md:col-start-2 xl:col-span-5 xl:col-start-6 md:order-3 xl:order-2">
+          {{ content_text }}
+            {{ if type == 'text' }}
+              {{ text }}
+            {{ /if }}
+          {{ /content_text}}
+        </div>
+      {{ /if }}
+    </article>
+  </section>
+{{ /if }}
+
+{{ if category == 'zenos' }}
+  <section class="mt-80 md:col-span-full">
+    <article class="content md:grid md:grid-cols-16 gap-16 w-full">
+      {{ if header_image }}
+        <div class="md:col-span-2 md:col-start-9 xl:col-span-6 xl:hidden md:order-2">
+          {{ partial:components/image :image="header_image" :width="'180'" :height="'75'" :caption="header_image:alt" class="w-180 h-auto" }}
+        </div>
+      {{ /if }}
+
+      {{ if image }}
+        <figure class="mt-32 md:mt-0 xl:mt-0 md:col-span-6 md:col-start-2 xl:col-span-4 xl:col-start-2 md:order-1 xl:order-1">
+          {{ partial:components/image :image="image" :width="'1200'" :height="'815'" :caption="image:alt" }}
+        </figure>
+      {{ /if }}
+
+      {{ if content_text }}
+        <div class="mt-32 xl:mt-0 md:col-span-14 md:col-start-2 xl:col-span-5 xl:col-start-7 md:order-3 xl:order-3">
+          {{ if header_image }}
+            <div class="hidden xl:block xl:mb-32">
+              {{ partial:components/image :image="header_image" :width="'180'" :height="'75'" :caption="header_image:alt" class="w-180 h-auto" }}
+            </div>
+          {{ /if }}
+          {{ content_text }}
+            {{ if type == 'text' }}
+              {{ text }}
+            {{ /if }}
+          {{ /content_text}}
+        </div>
+      {{ /if }}
+    </article>
+  </section>
+{{ /if }}

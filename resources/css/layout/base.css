@@ -14,6 +14,14 @@ header.site-header {
   @apply bg-white h-83 md:h-120 fixed w-full z-10
 }
 
+article.content p {
+  @apply mb-30
+}
+
+article.content p:last-of-type {
+  @apply mb-0
+}
+
 .site-container {
   @apply px-20 xs:px-0 mx-auto max-w-[414px] md:max-w-[920px] xl:max-w-[1600px]
 }

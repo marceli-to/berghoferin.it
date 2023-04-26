@@ -44,7 +44,7 @@ sections:
           display: Content
           type: bard
           icon: bard
-          localizable: false
+          localizable: true
           listable: hidden
           instructions_position: above
           visibility: visible
@@ -54,9 +54,44 @@ sections:
               fields:
                 -
                   import: text_media
-  settings:
-    display: Settings
+            restaurant:
+              display: Restaurant
+              fields:
+                -
+                  import: restaurant
+            link:
+              display: Link
+              fields:
+                -
+                  import: link
+  sidebar:
+    display: Sidebar
     fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: theme
+        field:
+          options:
+            midnight: Midnight
+            chestnut: Chestnut
+          multiple: false
+          clearable: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          default: chestnut
+          display: Theme
+          type: select
+          icon: select
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          localizable: false
       -
         handle: menu_category
         field:
@@ -80,26 +115,6 @@ sections:
             - required
           localizable: false
       -
-        handle: theme
-        field:
-          options:
-            midnight: Midnight
-            chestnut: Chestnut
-          multiple: false
-          clearable: false
-          searchable: true
-          taggable: false
-          push_tags: false
-          cast_booleans: false
-          default: chestnut
-          display: Theme
-          type: select
-          icon: select
-          listable: hidden
-          instructions_position: above
-          visibility: visible
-          localizable: false
-      -
         handle: template
         field:
           type: template
@@ -111,14 +126,6 @@ sections:
           hide_partials: true
           blueprint: false
           folder: templates/content
-  sidebar:
-    display: Sidebar
-    fields:
-      -
-        handle: slug
-        field:
-          type: slug
-          localizable: true
       -
         handle: parent
         field:
