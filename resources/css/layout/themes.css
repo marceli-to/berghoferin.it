@@ -1,3 +1,7 @@
+/**
+ * Midnight
+ */
+  
 .theme-midnight {
   @apply text-midnight-500;
 }
@@ -35,6 +39,14 @@
   @apply !py-0
 }
 
+.theme-midnight .site-footer * {
+  @apply text-midnight-500;
+}
+
+/**
+ * Chestnut
+ */
+  
 .theme-chestnut {
   @apply text-chestnut;
 }
@@ -62,6 +74,10 @@
 
 .theme-chestnut .language-switcher a {
   @apply !py-0
+}
+
+.theme-chestnut .site-footer * {
+  @apply text-chestnut;
 }
 
 

@@ -1,8 +1,22 @@
-<footer class="w-full mt-100">
-  <div class="site-container site-grid py-20 md:py-40">
-    <address class="md:col-span-14 md:col-start-2 font-regular not-italic">
-      Oberradein 54 39040 Aldein/Radein Südtirol – Italien
-      contact@berghoferin.it +39 0471 887 150
+<footer class="site-footer w-full mt-100">
+  <div class="site-container site-grid py-20 md:py-32">
+    <address class="md:col-span-14 md:col-start-2 xl:flex xl:justify-between font-regular not-italic">
+      <div>
+        <p class="mb-12 xl:mb-0 xl:mr-12 xl:inline">
+          <span class="block xl:inline">Oberradein 54</span><em class="hidden xl:inline">, </em>
+          <span class="block xl:inline">39040 Aldein/Radein</span><em class="hidden xl:inline">, </em>
+          <span class="block xl:inline">Südtirol – Italien</span>
+        </p>
+        <p class="mb-14 xl:mb-0 xl:inline">
+          <a href="mailto:contact@berghoferin.it" title="{{ "Schreiben Sie uns eine E-Mail" | trans }}" class="block xl:inline-block xl:mr-12 hover:underline hover:decoration-1 hover:underline-offset-4">contact@berghoferin.it</a>
+          <a href="tel:+390471887150" title="{{ "Rufen Sie uns an" | trans }}" class="block xl:inline hover:underline hover:decoration-1 hover:underline-offset-4">+39 0471 887 150</a>
+        </p>
+      </div>
+      <div>
+        <a href="" title="{{ "Berghoferin auf Instagram" | trans }}">
+          {{ partial:icons/instagram }}
+        </a>
+      </div>
     </address>
   </div>
 </footer>

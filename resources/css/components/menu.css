@@ -10,7 +10,7 @@ nav.site-menu.is-visible {
 
 @media (min-width: 768px) {
   nav.site-menu {
-    height: calc(100vh - (120px + 40px));
+    height: calc(100vh - (120px + 16px));
   }
 }
 
