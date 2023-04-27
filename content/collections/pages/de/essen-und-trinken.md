@@ -4,7 +4,7 @@ blueprint: page
 title: 'Essen und Trinken'
 theme: midnight
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1682596805
+updated_at: 1682603925
 menu_category: main
 template: templates/content/default
 content:
@@ -67,6 +67,7 @@ content:
                 type: text
                 text: "Die Bar des Fine Hotel & Hideaway Berghoferin, das Zeno's, zentral im Haus am Ende der Lobby gelegen und von früh morgens bis spät abends geöffnet, ist der Angelpunkt des Hauses. Mit Kaminecke, Lesezimmer und Rauchersalon, die ebenso zur Bar gehören wie die Vielzahl an Büchern der auf diversen Standorten im Parterre verteilten umfangreichen Bibliothek, bietet das Zeno’s etliche Rückzugsnischen und Verweilecken. Seine diskret-vertrauliche Salonatmosphäre und das schicke, mondäne Ambiente laden dabei gleichermaßen zu aromatischen Kaffee-Spezialitäten und erlesenem Teegenuss wie zu klassischen Aperitif-Cocktails oder gediegenen After-Dinner-Drinks."
         category: zenos
+        image: content/berghoferin-zenos.jpg
   -
     type: set
     attrs:

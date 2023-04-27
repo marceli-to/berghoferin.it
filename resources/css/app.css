@@ -2,11 +2,13 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@import "typo/utils.css";
 @import "typo/webfonts.css";
 
 @import "forms/input.css";
 
 @import "components/buttons.css";
+@import "components/collapsible.css";
 @import "components/headings.css";
 @import "components/menu.css";
 

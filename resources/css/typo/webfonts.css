@@ -23,3 +23,10 @@
   font-weight: 300;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'VolteMedium';
+  src: local('Volte Medium'), local('Volte-Medium'), url('../fonts/Volte-Medium.woff2') format('woff2'), url('../fonts/Volte-Medium.woff') format('woff'), url('../fonts/Volte-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}

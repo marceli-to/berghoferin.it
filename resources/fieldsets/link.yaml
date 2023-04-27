@@ -52,6 +52,7 @@ fields:
     field:
       options:
         chevron-right: 'Chevron (right)'
+        external: External
       multiple: false
       clearable: false
       searchable: true

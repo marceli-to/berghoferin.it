@@ -59,6 +59,11 @@ sections:
               fields:
                 -
                   import: link
+            collapsible:
+              display: Collapsible
+              fields:
+                -
+                  import: collapsible
   sidebar:
     display: Sidebar
     fields:

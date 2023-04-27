@@ -1,0 +1,7 @@
+details[open] .chevron-down {
+  @apply hidden
+}
+
+details .chevron-up {
+  @apply hidden
+}

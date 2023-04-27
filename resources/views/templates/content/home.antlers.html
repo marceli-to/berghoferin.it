@@ -1,34 +1,6 @@
 {{ partial:icons/logo-type :class="'md:block md:col-span-full md:col-start-2 xl:hidden'" }}
 {{ content }}
-<section class="flex flex-col md:col-span-full md:grid md:grid-cols-16 gap-16 w-full">
-  <article class="pt-32 order-2 md:order-1 md:col-span-7 md:col-start-2 xl:col-span-4 xl:col-start-4 md:mt-200 xl:mt-240 border-t border-burgundy-500 text-midnight-500">
-    {{ if header_image }}
-      {{ partial:components/image :image="header_image" :width="'166'" :height="'50'" :caption="header_image:alt" class="w-166 h-50" }}
-    {{ /if }}
-    {{ if content_text }}
-      <div class="mt-32">
-        {{ content_text }}
-          {{ if type == 'text' }}
-            {{ text }}
-          {{ /if }}
-          {{ if type == 'link' }}
-            <a href="{{ url }}" class="text-burgundy-500 mt-32 inline-flex items-center leading-none group">
-              {{ if icon }}
-                {{ partial:icons/{{icon}} :class="'block mr-8 -mt-2 w-7 h-12'" }}
-              {{ /if }}
-              <span class="group-hover:underline group-hover:decoration-1 group-hover:underline-offset-4">
-                {{ description }}
-              </span>
-            </a>
-          {{ /if }}
-        {{ /content_text}}
-      </div>
-    {{ /if }}
-  </article>
-  {{ if image }}
-    <figure class="flex justify-end my-80 md:my-0 order-1 md:order-2  md:col-span-6 md:col-start-10 xl:col-span-6 xl:col-start-9">
-      {{ partial:components/image :image="image" :width="'640'" :height="'1000'" :caption="image:alt" class="max-w-[80%] md:max-w-none" }}
-    </figure>
+  {{ if type == 'text_image' }}
+    {{ partial:components/text-media }}
   {{ /if }}
-</section>
 {{ /content }}

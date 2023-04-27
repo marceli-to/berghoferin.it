@@ -11,6 +11,18 @@
     "file": "assets/Volte-Light-c484dabe.woff2",
     "src": "resources/css/fonts/Volte-Light.woff2"
   },
+  "resources/css/fonts/Volte-Medium.ttf": {
+    "file": "assets/Volte-Medium-528a2656.ttf",
+    "src": "resources/css/fonts/Volte-Medium.ttf"
+  },
+  "resources/css/fonts/Volte-Medium.woff": {
+    "file": "assets/Volte-Medium-1afa8a03.woff",
+    "src": "resources/css/fonts/Volte-Medium.woff"
+  },
+  "resources/css/fonts/Volte-Medium.woff2": {
+    "file": "assets/Volte-Medium-d3133821.woff2",
+    "src": "resources/css/fonts/Volte-Medium.woff2"
+  },
   "resources/css/fonts/Volte-Regular.ttf": {
     "file": "assets/Volte-Regular-df3c356f.ttf",
     "src": "resources/css/fonts/Volte-Regular.ttf"
@@ -36,7 +48,7 @@
     "src": "resources/css/fonts/Volte-RegularItalic.woff2"
   },
   "resources/js/app.css": {
-    "file": "assets/app-23aecce0.css",
+    "file": "assets/app-adf8e83d.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -49,12 +61,15 @@
       "assets/Volte-RegularItalic-1bb41d94.ttf",
       "assets/Volte-Light-c484dabe.woff2",
       "assets/Volte-Light-e5ec8963.woff",
-      "assets/Volte-Light-8a7a2638.ttf"
+      "assets/Volte-Light-8a7a2638.ttf",
+      "assets/Volte-Medium-d3133821.woff2",
+      "assets/Volte-Medium-1afa8a03.woff",
+      "assets/Volte-Medium-528a2656.ttf"
     ],
     "css": [
-      "assets/app-23aecce0.css"
+      "assets/app-adf8e83d.css"
     ],
-    "file": "assets/app-a1fd358b.js",
+    "file": "assets/app-e6af5473.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },

@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  @apply font-regular text-midnight-500 text-md
+  @apply font-regular text-midnight-500 text-md leading-6
 }
 
 header.site-header {
