@@ -4,17 +4,16 @@ blueprint: page
 title: 'Essen und Trinken'
 theme: midnight
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1682520258
+updated_at: 1682596805
 menu_category: main
 template: templates/content/default
 content:
   -
     type: set
     attrs:
-      id: lgxsbw9n
+      id: lgz2ia9p
       values:
-        type: restaurant
-        category: gastro-theque-alpine
+        type: text_image
         header_image: content/svg/gastro-theque-alpine.svg
         content_text:
           -
@@ -30,13 +29,13 @@ content:
                 type: text
                 text: 'Dazu kann aus einem umfangreichen Getränke- und Weinangebot mit einem besonderen Schwerpunkt auf ausgesuchten lokalen Produkten und Besonderheiten gewählt werden.'
         image: content/berghoferin-gastro-theque-alpine.jpg
+        category: gastro-theque-alpine
   -
     type: set
     attrs:
-      id: lgxschso
+      id: lgz2lljj
       values:
-        type: restaurant
-        category: die-saligen-fine-dining
+        type: text_image
         header_image: content/svg/die-saligen-fine-dining.svg
         content_text:
           -
@@ -52,13 +51,13 @@ content:
                 type: text
                 text: 'Eine umfangreiche Weinkarte sowie auf Wunsch eine individuelle fein abgestimmte Weinbegleitung, ein um höchste Diskretion und Aufmerksamkeit bemühter Service und die jeweils eigene, indes immer besondere Atmosphäre der verschiedenen den Gästen zur Verfügung stehenden Restaurantbereichen, vom Saal über die Veranda und Terrasse bis hin zur gotischen Stube, runden ein kulinarisches Fine-Dining-Erlebnis in den Saligen ab.'
         image: content/berghoferin-die-saligen-fine-dining.jpg
+        category: die-saligen-fine-dining
   -
     type: set
     attrs:
-      id: lgxsf5dd
+      id: lgz2mhfx
       values:
-        type: restaurant
-        category: zenos
+        type: text_image
         header_image: content/svg/zenos.svg
         content_text:
           -
@@ -66,15 +65,14 @@ content:
             content:
               -
                 type: text
-                text: 'Die Bar des Fine Hotel & Hideaway Berghoferin, das Zeno›s, zentral im Haus am Ende der Lobby gelegen und von früh morgens bis spät abends geöffnet, ist der Angelpunkt des Hauses. Mit Kaminecke, Lesezimmer und Rauchersalon, die ebenso zur Bar gehören wie die Vielzahl an Büchern der auf diversen Standorten im Parterre verteilten umfangreichen Bibliothek, bietet das Zeno’s etliche Rückzugsnischen und Verweilecken. Seine diskret-vertrauliche Salonatmosphäre und das schicke, mondäne Ambiente laden dabei gleichermaßen zu aromatischen Kaffee-Spezialitäten und erlesenem Teegenuss wie zu klassischen Aperitif-Cocktails oder gediegenen After-Dinner-Drinks.'
-        image: content/berghoferin-zenos.jpg
+                text: "Die Bar des Fine Hotel & Hideaway Berghoferin, das Zeno's, zentral im Haus am Ende der Lobby gelegen und von früh morgens bis spät abends geöffnet, ist der Angelpunkt des Hauses. Mit Kaminecke, Lesezimmer und Rauchersalon, die ebenso zur Bar gehören wie die Vielzahl an Büchern der auf diversen Standorten im Parterre verteilten umfangreichen Bibliothek, bietet das Zeno’s etliche Rückzugsnischen und Verweilecken. Seine diskret-vertrauliche Salonatmosphäre und das schicke, mondäne Ambiente laden dabei gleichermaßen zu aromatischen Kaffee-Spezialitäten und erlesenem Teegenuss wie zu klassischen Aperitif-Cocktails oder gediegenen After-Dinner-Drinks."
+        category: zenos
   -
     type: set
     attrs:
-      id: lgxsgbhm
+      id: lgz2offc
       values:
-        type: restaurant
-        category: corner-pool-bar
+        type: text_image
         header_image: content/svg/corner-pool-bar.svg
         content_text:
           -
@@ -90,4 +88,5 @@ content:
                 type: text
                 text: 'Eine umfangreiche Weinkarte sowie auf Wunsch eine individuelle fein abgestimmte Weinbegleitung, ein um höchste Diskretion und Aufmerksamkeit bemühter Service und die jeweils eigene, indes immer besondere Atmosphäre der verschiedenen den Gästen zur Verfügung stehenden Restaurantbereichen, vom Saal über die Veranda und Terrasse bis hin zur gotischen Stube, runden ein kulinarisches Fine-Dining-Erlebnis in den Saligen ab.'
         image: content/berghoferin-corner-pool-bar.jpg
+        category: corner-pool-bar
 ---

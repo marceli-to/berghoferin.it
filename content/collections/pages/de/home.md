@@ -4,7 +4,7 @@ blueprint: pages
 title: Home
 template: templates/content/home
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1682518050
+updated_at: 1682596402
 theme: chestnut
 menu_category: main
 content:
@@ -35,4 +35,5 @@ content:
                 description: Buchungsanfrage
           -
             type: paragraph
+        category: winter-break
 ---

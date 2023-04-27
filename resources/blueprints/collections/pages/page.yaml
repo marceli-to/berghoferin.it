@@ -54,11 +54,6 @@ sections:
               fields:
                 -
                   import: text_media
-            restaurant:
-              display: Restaurant
-              fields:
-                -
-                  import: restaurant
             link:
               display: Link
               fields:

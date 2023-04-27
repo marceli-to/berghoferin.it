@@ -72,3 +72,28 @@ fields:
       listable: hidden
       instructions_position: above
       visibility: visible
+  -
+    handle: category
+    field:
+      options:
+        gastro-theque-alpine: 'Essen und Trinken – Gastro Thèque Alpine'
+        die-saligen-fine-dining: 'Essen und Trinken – Die Saligen Fine Dining'
+        zenos: "Essen und Trinken – Zeno's"
+        corner-pool-bar: 'Essen und Trinken – Corner Pool-Bar'
+        winter-break: 'Home - Winterpause'
+      multiple: false
+      max_items: 1
+      clearable: false
+      searchable: true
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      display: Category
+      type: select
+      icon: select
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - required
