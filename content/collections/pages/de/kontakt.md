@@ -5,7 +5,7 @@ title: Kontakt
 menu_category: main
 theme: midnight
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1682606145
+updated_at: 1682608066
 template: templates/content/default
 content:
   -
@@ -104,5 +104,39 @@ content:
                       -
                         type: text
                         text: 'Der Radein nächstgelegene Bahnhof ist jener von Auer.'
+          -
+            type: set
+            attrs:
+              id: lgz9dwve
+              values:
+                type: collapsible
+                title: Taxi-/Limousinenservice
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Gerne ist die Rezeption bei der Organisation von privaten Flughafentransfers, Taxi- und Limousinenservices behilflich.'
+          -
+            type: set
+            attrs:
+              id: lgz9e58r
+              values:
+                type: collapsible
+                title: 'Zutritt Hotelgelände'
+                text:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Das Fine Hotel & Hideaway Berghoferin ist um den bestmöglichen Schutz der Privatsphäre seiner Gäste bemüht.'
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Um diesen zu gewähren, ist das Hotelgelände nicht frei zugänglich und Gästen mit bestätigter Hotel-, Restaurant- oder Day Spa-Buchung vorbehalten.'
         category: contact
 ---

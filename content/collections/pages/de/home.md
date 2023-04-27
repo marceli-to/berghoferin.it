@@ -4,7 +4,7 @@ blueprint: pages
 title: Home
 template: templates/content/home
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1682596402
+updated_at: 1682608260
 theme: chestnut
 menu_category: main
 content:
@@ -22,7 +22,7 @@ content:
             content:
               -
                 type: text
-                text: 'Das Fine Hotel & Hideaway Berghoferin befindet sich in Winterpause; es öffnet seine Tore wieder im Frühsommer. Die Saison 2023 beginnt am 26. Mai und endet am 29. Oktober.'
+                text: 'Das Fine Hotel & Hideaway Berghoferin befindet sich in Winterpause; es öffnet seine Tore wieder im Frühsommer. Die Saison 2023 beginnt am 26. Mai und endet am 29. Oktober. '
           -
             type: set
             attrs:
@@ -33,7 +33,5 @@ content:
                 target: _self
                 icon: chevron-right
                 description: Buchungsanfrage
-          -
-            type: paragraph
         category: winter-break
 ---

@@ -81,12 +81,13 @@ fields:
     handle: category
     field:
       options:
+        winter-break: 'Home - Winterpause'
         gastro-theque-alpine: 'Essen und Trinken – Gastro Thèque Alpine'
         die-saligen-fine-dining: 'Essen und Trinken – Die Saligen Fine Dining'
         zenos: "Essen und Trinken – Zeno's"
         corner-pool-bar: 'Essen und Trinken – Corner Pool-Bar'
-        winter-break: 'Home - Winterpause'
         spa-and-wellness: 'Spa und Wellness'
+        information: Information
         contact: Kontakt
       multiple: false
       max_items: 1

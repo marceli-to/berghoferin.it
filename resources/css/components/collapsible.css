@@ -2,6 +2,6 @@ details[open] .chevron-down {
   @apply hidden
 }
 
-details .chevron-up {
-  @apply hidden
+details[open] .chevron-up {
+  @apply block
 }
