@@ -86,3 +86,31 @@
     </article>
   </section>
 {{ /if }}
+
+{{ if category == 'corner-pool-bar' }}
+  <section class="mt-80 md:col-span-full">
+    <article class="content md:grid md:grid-cols-16 gap-16 w-full">
+      {{ if header_image }}
+        <div class="md:col-span-4 md:col-start-11 xl:col-span-6 xl:col-start-10 md:order-2 xl:order-1">
+          {{ partial:components/image :image="header_image" :width="'180'" :height="'75'" :caption="header_image:alt" class="w-180 h-auto" }}
+        </div>
+      {{ /if }}
+
+      {{ if image }}
+        <figure class="mt-32 md:mt-0 xl:mt-22 md:col-span-8 md:col-start-2 xl:col-span-4 xl:col-start-5 md:order-1 xl:order-2">
+          {{ partial:components/image :image="image" :width="'1200'" :height="'815'" :caption="image:alt" }}
+        </figure>
+      {{ /if }}
+
+      {{ if content_text }}
+        <div class="mt-32 xl:mt-16 md:col-span-14 md:col-start-2 xl:col-span-5 xl:col-start-10 md:order-3 xl:order-3">
+          {{ content_text }}
+            {{ if type == 'text' }}
+              {{ text }}
+            {{ /if }}
+          {{ /content_text}}
+        </div>
+      {{ /if }}
+    </article>
+  </section>
+{{ /if }}
