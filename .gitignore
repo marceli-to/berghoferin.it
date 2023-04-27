@@ -2,6 +2,7 @@
 /public/hot
 /public/storage
 /public/vendor/statamic
+/public/.htaccess
 /storage/*.key
 /vendor
 .env
