@@ -22,6 +22,7 @@
     "@popperjs/core": "^2.11.7",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vuepic/vue-datepicker": "^4.4.0",
+    "swiper": "^9.2.4",
     "v-calendar": "^3.0.3",
     "vue": "^3.2.36",
     "vue-tailwind-datepicker": "^1.4.3",
