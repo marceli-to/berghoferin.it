@@ -1,19 +1,5 @@
-title: Collapsible
+title: 'Rooms outro'
 fields:
-  -
-    handle: title
-    field:
-      input_type: text
-      antlers: false
-      display: Title
-      type: text
-      icon: text
-      localizable: true
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      validate:
-        - required
   -
     handle: text
     field:
@@ -26,6 +12,8 @@ fields:
         - h3
         - bold
         - italic
+        - unorderedlist
+        - anchor
       save_html: false
       inline: false
       toolbar_mode: fixed
@@ -42,7 +30,7 @@ fields:
       display: Text
       type: bard
       icon: bard
-      localizable: true
+      localizable: false
       listable: hidden
       instructions_position: above
       visibility: visible

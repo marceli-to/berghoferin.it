@@ -13,7 +13,7 @@ content:
     attrs:
       id: lgz31pxp
       values:
-        type: text_image
+        type: text_media
         header_image: content/svg/lido-alpin-pool-spa.svg
         content_text:
           -

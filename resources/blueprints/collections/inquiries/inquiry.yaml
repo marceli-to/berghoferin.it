@@ -244,8 +244,11 @@ sections:
         handle: state
         field:
           options:
-            open: Offen
-            send: Versenden
+            new: Neu
+            pending: 'Angebot im Versand'
+            offered: 'Angebot versendet'
+            accepted: 'Angebot akzeptiert'
+            denied: 'Angebot abgelehnt'
           multiple: false
           clearable: false
           searchable: true
@@ -259,4 +262,5 @@ sections:
           listable: hidden
           instructions_position: above
           visibility: visible
+          default: new
 title: Inquiry

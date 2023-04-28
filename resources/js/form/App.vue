@@ -1,10 +1,12 @@
 <template>
   <form>
-    <template v-if="isSent">
-      Vielen Dank für Ihre Anfrage. Wir werden diese bearbeiten und melden uns bei Ihnen.
-    </template>
-    <template v-else>
-      <div class="grid grid-cols-16 gap-16">
+    <div class="grid grid-cols-16 gap-16">
+      <template v-if="isSent">
+        <div class="col-span-full md:col-start-2 xl:col-span-5 xl:col-start-5">
+          {{ __('Herzlichen Dank für Ihre Anfrage. Gerne unterbreiten wir Ihnen in den nächsten Tagen ein Angebot.') }}
+        </div>
+      </template>
+      <template v-else>
         <div class="col-span-full md:col-span-6 md:col-start-2 xl:col-span-3 xl:col-start-2">
           <div class="mb-80">
             <heading-two>{{ __('Reisezeitraum') }}</heading-two>
@@ -275,8 +277,8 @@
             </button>
           </form-group>
         </div>
-      </div>
-    </template>
+      </template>
+    </div>
   </form>
 </template>
 <script>

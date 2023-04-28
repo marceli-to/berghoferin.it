@@ -1,0 +1,14 @@
+<article class="content mb-80 md:mb-0 md:col-span-4">
+  {{ if image }}
+    <figure class="mb-40">
+      {{ partial:components/image :image="image" :width="'750'" :height="'1000'" :caption="image:alt" }}
+    </figure>
+  {{ /if }}
+  <header class="mb-32 ml-25">
+    <h2>{{ title }}</h2>
+    <div>{{ "ab" | trans }} {{ rate }} &euro;</div>
+  </header>
+  <div>
+    {{ description }}
+  </div>
+</article>

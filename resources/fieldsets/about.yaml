@@ -1,19 +1,5 @@
-title: Collapsible
+title: About
 fields:
-  -
-    handle: title
-    field:
-      input_type: text
-      antlers: false
-      display: Title
-      type: text
-      icon: text
-      localizable: true
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      validate:
-        - required
   -
     handle: text
     field:
@@ -26,6 +12,8 @@ fields:
         - h3
         - bold
         - italic
+        - unorderedlist
+        - anchor
       save_html: false
       inline: false
       toolbar_mode: fixed
@@ -43,6 +31,21 @@ fields:
       type: bard
       icon: bard
       localizable: true
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: images
+    field:
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      display: Images
+      type: assets
+      icon: assets
+      localizable: false
       listable: hidden
       instructions_position: above
       visibility: visible

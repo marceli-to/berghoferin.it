@@ -13,7 +13,7 @@ content:
     attrs:
       id: lgxlndka
       values:
-        type: text_image
+        type: text_media
         header_image: content/svg/heading-winter-break.svg
         image: content/berghoferin-home.jpg
         content_text:

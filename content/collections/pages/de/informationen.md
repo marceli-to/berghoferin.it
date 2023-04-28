@@ -13,7 +13,7 @@ content:
     attrs:
       id: lgz9nbph
       values:
-        type: text_image
+        type: text_media
         image: content/berghoferin-informationen.jpg
         content_text:
           -

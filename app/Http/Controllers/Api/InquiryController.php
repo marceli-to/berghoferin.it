@@ -21,10 +21,26 @@ class InquiryController extends Controller
   public function store(InquiryStoreRequest $request )
   { 
     $title = $request->input('firstname') . ' ' . $request->input('name') . ', ' . $request->input('city');
+
+    $departure_date = date('Y-m-d', strtotime($request->input('departure_date')));
+    $arrival_date = date('Y-m-d', strtotime($request->input('arrival_date')));
+
     $inquiry = Entry::make()
       ->collection('inquiries')
       ->slug($title)
-      ->data(array_merge(['title' => $title], $request->all()));
+      ->data(
+        array_merge(
+          [
+            'title' => $title,
+            'arrival_date' => $arrival_date,
+            'departure_date' => $departure_date,
+            'state' => 'new'
+          ], 
+          $request->except(
+            ['departure_date', 'arrival_date']
+          )
+        )
+      );
     $inquiry->save();
     Notification::route('mail', env('MAIL_TO'))->notify(new InquiryNotification($inquiry));
     Notification::route('mail', $request->input('email'))->notify(new ConfirmationNotification($inquiry));

@@ -10,4 +10,4 @@ preferences:
         - arrival_date
         - departure_date
         - email
-        - phone
+        - state

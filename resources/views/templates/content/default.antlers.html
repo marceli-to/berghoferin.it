@@ -1,5 +1,25 @@
 {{ content }}
-  {{ if type == 'text_image' }}
-    {{ partial:components/text-media }}
+
+  {{ if type == 'text_media' }}
+    {{ partial:components/text_media }}
   {{ /if }}
+
+  {{# About (Haus und Lage) #}}
+  {{ if type == 'about' }}
+    {{ partial:views/about/index }}
+  {{ /if }}
+
+  {{# Rooms (Suiten und Service) #}}
+  {{ if type == 'rooms_intro'}}
+    {{ partial:views/rooms/intro }}
+  {{ /if }}
+
+  {{ if type == 'rooms_outro'}}
+    {{ partial:views/rooms/outro }}
+  {{ /if }}
+
+  {{ if rooms }}
+    {{ partial:views/rooms/index }}
+  {{ /if }}
+
 {{ /content }}

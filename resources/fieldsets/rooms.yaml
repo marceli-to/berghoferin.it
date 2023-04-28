@@ -1,0 +1,13 @@
+title: Rooms
+fields:
+  -
+    handle: rooms
+    field:
+      mode: default
+      display: Rooms
+      type: collections
+      icon: collections
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible

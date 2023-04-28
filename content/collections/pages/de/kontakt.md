@@ -5,7 +5,7 @@ title: Kontakt
 menu_category: main
 theme: midnight
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1682608066
+updated_at: 1682688569
 template: templates/content/default
 content:
   -
@@ -13,7 +13,7 @@ content:
     attrs:
       id: lgz6ai4u
       values:
-        type: text_image
+        type: text_media
         image: content/berghoferin-contact.png
         content_text:
           -

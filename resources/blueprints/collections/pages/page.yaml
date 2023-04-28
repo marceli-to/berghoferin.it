@@ -49,8 +49,8 @@ sections:
           instructions_position: above
           visibility: visible
           sets:
-            text_image:
-              display: 'Text Image'
+            text_media:
+              display: 'Text Media'
               fields:
                 -
                   import: text_media
@@ -64,6 +64,38 @@ sections:
               fields:
                 -
                   import: collapsible
+            rooms:
+              display: Rooms
+              fields:
+                -
+                  handle: rooms
+                  field:
+                    mode: default
+                    create: true
+                    collections:
+                      - rooms
+                    display: Rooms
+                    type: entries
+                    icon: entries
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+            rooms_intro:
+              display: 'Rooms intro'
+              fields:
+                -
+                  import: rooms_intro
+            rooms_outro:
+              display: 'Rooms outro'
+              fields:
+                -
+                  import: rooms_outro
+            about:
+              display: About
+              fields:
+                -
+                  import: about
   sidebar:
     display: Sidebar
     fields:

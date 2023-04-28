@@ -1,19 +1,39 @@
-title: Collapsible
+title: 'Rooms intro'
 fields:
   -
-    handle: title
+    handle: intro
     field:
-      input_type: text
+      collapse: false
+      always_show_set_button: false
+      previews: true
+      smart_typography: false
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - anchor
+      save_html: false
+      inline: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: true
+      allow_source: true
+      enable_input_rules: true
+      enable_paste_rules: true
       antlers: false
-      display: Title
-      type: text
-      icon: text
-      localizable: true
+      remove_empty_nodes: true
+      display: Intro
+      type: bard
+      icon: bard
+      localizable: false
       listable: hidden
       instructions_position: above
       visibility: visible
-      validate:
-        - required
   -
     handle: text
     field:
@@ -26,6 +46,8 @@ fields:
         - h3
         - bold
         - italic
+        - unorderedlist
+        - anchor
       save_html: false
       inline: false
       toolbar_mode: fixed
@@ -42,7 +64,7 @@ fields:
       display: Text
       type: bard
       icon: bard
-      localizable: true
+      localizable: false
       listable: hidden
       instructions_position: above
       visibility: visible
