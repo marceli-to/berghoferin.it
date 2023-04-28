@@ -18,3 +18,8 @@ use Illuminate\Http\Request;
 // Route::statamic('example', 'example-view', [
 //    'title' => 'Example'
 // ]);
+
+Route::get('/mailable', function () {
+  $entry = Entry::find('b2195ee4-0b6e-4bdb-a146-b42650644457');
+  return (new \App\Notifications\Confirmation($entry))->toMail($entry->email);
+});

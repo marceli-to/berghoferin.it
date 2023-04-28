@@ -1,6 +1,12 @@
 input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+input::-webkit-inner-spin-button,
+::-webkit-details-marker {
   display: none;
+}
+
+
+summary {
+  @apply outline-none
 }
 
 input[type='text'],

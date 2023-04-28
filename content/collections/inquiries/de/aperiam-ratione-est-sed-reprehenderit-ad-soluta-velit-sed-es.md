@@ -8,9 +8,9 @@ state: offered
 number_suites: 1
 number_guests: 1
 suite_type: friends-suite
-salutation: 'Duis in proident au'
-name: 'Sed reprehenderit ad'
-firstname: 'Aperiam ratione est'
+salutation: 'Herr'
+name: 'Stadelmann'
+firstname: 'Marcel'
 street: 'Consequatur Laborum'
 street_number: 'Nihil et debitis rep'
 zip: 'Enim beatae deleniti'
