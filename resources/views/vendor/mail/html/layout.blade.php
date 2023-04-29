@@ -52,7 +52,6 @@
     padding-bottom: 24px !important;
   }
 }
-
 </style>
 </head>
 <body>

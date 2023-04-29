@@ -5,6 +5,7 @@ import 'swiper/css/navigation';
 const swiper = new Swiper('.swiper', {
   modules: [Navigation, Autoplay],
   direction: 'horizontal',
+  spaceBetween: 30,
   loop: true,
   autoplay: true,
   navigation: {
