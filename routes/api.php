@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\TranslationController;
 use App\Http\Controllers\Api\InquiryController;
+use App\Http\Controllers\Api\RoomController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,5 +18,6 @@ use App\Http\Controllers\Api\InquiryController;
 */
 
 Route::get('/translations/{locale}', [TranslationController::class, 'fetch']);
+Route::get('/rooms', [RoomController::class, 'get']);
 Route::post('/inquiry', [InquiryController::class, 'store']);
 

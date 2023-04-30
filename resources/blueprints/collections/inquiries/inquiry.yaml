@@ -161,6 +161,41 @@ sections:
           visibility: visible
           localizable: false
       -
+        handle: arrival_date
+        field:
+          mode: single
+          format: d.m.Y
+          time_enabled: false
+          time_seconds_enabled: false
+          full_width: false
+          inline: false
+          columns: 1
+          rows: 1
+          display: 'Arrival date'
+          type: date
+          icon: date
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: departure_date
+        field:
+          mode: single
+          time_enabled: false
+          time_seconds_enabled: false
+          full_width: false
+          inline: false
+          columns: 1
+          rows: 1
+          display: 'Departure date'
+          type: date
+          icon: date
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
         handle: number_suites
         field:
           input_type: number
@@ -205,33 +240,22 @@ sections:
             - required
           localizable: false
       -
-        handle: arrival_date
+        handle: created_at
         field:
-          input_type: date
-          antlers: false
-          display: 'Arrival date'
-          type: text
-          icon: text
+          mode: single
+          time_enabled: false
+          time_seconds_enabled: false
+          full_width: false
+          inline: false
+          columns: 1
+          rows: 1
+          display: 'Created at'
+          type: date
+          icon: date
+          localizable: false
           listable: hidden
           instructions_position: above
           visibility: visible
-          validate:
-            - required
-          localizable: false
-      -
-        handle: departure_date
-        field:
-          input_type: date
-          antlers: false
-          display: 'Departure date'
-          type: text
-          icon: text
-          listable: hidden
-          instructions_position: above
-          visibility: visible
-          validate:
-            - required
-          localizable: false
   sidebar:
     display: Sidebar
     fields:

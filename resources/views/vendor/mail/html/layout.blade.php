@@ -41,15 +41,7 @@
   }
 
   .text-xsmall {
-    font-size: 11px !important;
-  }
-
-  .pb-base {
-    padding-bottom: 12px !important;
-  }
-
-  .pb-large {
-    padding-bottom: 24px !important;
+    font-size: 12px !important;
   }
 }
 </style>
@@ -58,7 +50,7 @@
 <table class="wrapper" width="100%" cellpadding="0" cellspacing="0" role="presentation">
 <tr>
 <td align="center">
-<table class="content" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+<table class="content text-base" width="100%" cellpadding="0" cellspacing="0" role="presentation">
 <!-- Email Body -->
 <tr>
 <td class="body" width="100%" cellpadding="0" cellspacing="0" style="border: hidden !important;">

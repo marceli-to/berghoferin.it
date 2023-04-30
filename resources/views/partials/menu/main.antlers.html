@@ -12,7 +12,7 @@
       <ul class="mr-10">
         <li class="flex justify-end items-center w-full">
           {{ nav:collection:pages menu_category:is="meta" sort="order" }}
-            <a href="{{ url }}" class="text-md leading-none block text-white no-underline text-right py-8 {{ if is_current || is_parent }} !underline decoration-1 underline-offset-4 {{ /if }}">
+            <a href="{{ url }}" class="text-md leading-none block text-white text-right py-8 hover:underline hover:decoration-1 hover:underline-offset-4 {{ if is_current || is_parent }} underline decoration-1 underline-offset-4 {{ /if }}">
               {{ title }}
             </a>
           {{ /nav:collection:pages }}

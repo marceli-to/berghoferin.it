@@ -4,7 +4,15 @@ sites:
   - it
   - en
 propagate: false
+template: default
+layout: layout
 revisions: false
+sort_dir: asc
+default_status: draft
 date_behavior:
   past: public
   future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'

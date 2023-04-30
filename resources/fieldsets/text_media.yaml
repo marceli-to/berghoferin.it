@@ -89,6 +89,7 @@ fields:
         spa-and-wellness: 'Spa und Wellness'
         information: Information
         contact: Kontakt
+        imprint-privacy: 'Impressum und Datenschutz'
       multiple: false
       max_items: 1
       clearable: false

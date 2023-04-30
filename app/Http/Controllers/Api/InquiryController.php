@@ -18,12 +18,12 @@ class InquiryController extends Controller
    * @param InquiryStoreRequest $request 
    * @return \Illuminate\Http\Response
    */
-  public function store(InquiryStoreRequest $request )
+  public function store(InquiryStoreRequest $request)
   { 
     $title = $request->input('firstname') . ' ' . $request->input('name') . ', ' . $request->input('city');
-
-    $departure_date = date('Y-m-d', strtotime($request->input('departure_date')));
-    $arrival_date = date('Y-m-d', strtotime($request->input('arrival_date')));
+    $departure_date = date('d.m.Y', strtotime($request->input('departure_date')));
+    $arrival_date = date('d.m.Y', strtotime($request->input('arrival_date')));
+    $created_at = date('d.m.Y', time());
 
     $inquiry = Entry::make()
       ->collection('inquiries')
@@ -34,6 +34,7 @@ class InquiryController extends Controller
             'title' => $title,
             'arrival_date' => $arrival_date,
             'departure_date' => $departure_date,
+            'created_at' => $created_at,
             'state' => 'new'
           ], 
           $request->except(

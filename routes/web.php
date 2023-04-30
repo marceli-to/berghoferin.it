@@ -19,7 +19,12 @@ use Illuminate\Http\Request;
 //    'title' => 'Example'
 // ]);
 
-Route::get('/mailable', function () {
-  $entry = Entry::find('b2195ee4-0b6e-4bdb-a146-b42650644457');
+Route::get('/mailable/confirmation', function () {
+  $entry = Entry::find('c66c2e3e-1ba2-42e7-8784-6a6b42f17f36');
   return (new \App\Notifications\Confirmation($entry))->toMail($entry->email);
+});
+
+Route::get('/mailable/inquiry', function () {
+  $entry = Entry::find('c66c2e3e-1ba2-42e7-8784-6a6b42f17f36');
+  return (new \App\Notifications\Inquiry($entry))->toMail($entry->email);
 });

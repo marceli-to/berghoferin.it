@@ -38,6 +38,10 @@ article.content ul li:before {
   @apply content-['\2013'] absolute -ml-25
 }
 
+article.content a:hover {
+  @apply underline decoration-1 underline-offset-4
+}
+
 .site-container {
   @apply px-20 xs:px-0 mx-auto max-w-[414px] md:max-w-[920px] xl:max-w-[1600px]
 }

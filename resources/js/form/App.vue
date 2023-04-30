@@ -2,8 +2,36 @@
   <form>
     <div class="grid grid-cols-16 gap-16">
       <template v-if="isSent">
-        <div class="col-span-full md:col-start-2 xl:col-span-5 xl:col-start-5">
-          {{ __('Herzlichen Dank für Ihre Anfrage. Gerne unterbreiten wir Ihnen in den nächsten Tagen ein Angebot.') }}
+        <div class="col-span-full md:col-span-14 md:col-start-2 md:grid md:grid-cols-14 md:gap-16">
+          <div class="md:col-span-7 xl:col-start-4 xl:col-span-5">
+            {{ __('Herzlichen Dank für Ihre Anfrage. Gerne unterbreiten wir Ihnen in den nächsten Tagen ein Angebot.') }}
+          </div>
+          <div class="mt-80 md:mt-0 md:col-span-5 md:col-start-10 xl:col-start-12 xl:col-span-3">
+            <h2>{{ __('Zusammenfassung') }}</h2>
+            <form-group class="border-b border-midnight-300 mb-8 h-36" v-if="form.arrival_date">
+              <form-label>{{ __('Anreise') }}</form-label>
+              <div>{{ form.arrival_date }}</div>
+            </form-group>
+            <form-group class="border-b border-midnight-300 mb-8 h-36" v-if="form.departure_date">
+              <form-label>{{ __('Abreise') }}</form-label>
+              <div>{{ form.departure_date }}</div>
+            </form-group>
+            <form-group class="border-b border-midnight-300 mb-8 h-36" v-if="form.number_suites">
+              <form-label>{{ __('Anzahl Suiten') }}</form-label>
+              <div>{{ form.number_suites }}</div>
+            </form-group>
+            <form-group class="border-b border-midnight-300 mb-8 h-36" v-if="form.number_guests">
+              <form-label>{{ __('Personen') }}</form-label>
+              <div>{{ form.number_guests }}</div>
+            </form-group>
+            <form-group class="border-b border-midnight-300 mb-8 h-36" v-if="form.suite_type">
+              <form-label>{{ __('Suitentyp') }}</form-label>
+              <div>{{ __(form.suite_type) }}</div>
+            </form-group>
+          </div>
+          <figure class="hidden md:block md:col-span-6 xl:col-span-5 md:-mt-120">
+            <img :src="'/assets/content/berghoferin-inquiry.jpg'" height="660" width="480" class="block w-full h-auto" alt="{{ __('Buchungsanfrage') }}">
+          </figure>
         </div>
       </template>
       <template v-else>
@@ -70,35 +98,11 @@
           </div>
           <div class="mb-80 md:mb-0">
             <heading-two>{{ __('Bevorzugter Suitentyp') }}</heading-two>
-            <form-group class="mb-16">
-              <form-label>{{ __('Freunde-Suite') }}</form-label>
+            <form-group class="mb-16" v-for="room in rooms" :key="room.id">
+              <form-label>{{ __(room.slug) }}</form-label>
               <a href="" 
-                @click.prevent="selectType('friends-suite')"
-                :class="[form.suite_type == 'friends-suite' ? 'text-midnight-500' : 'text-midnight-300', 'flex items-center justify-center w-32 h-32 border border-midnight-300 text-center']">
-                <icon-cross />
-              </a>
-            </form-group>
-            <form-group class="mb-16">
-              <form-label>{{ __('Gäste-Suite') }}</form-label>
-              <a href="" 
-                @click.prevent="selectType('guest-suite')"
-                :class="[form.suite_type == 'guest-suite' ? 'text-midnight-500' : 'text-midnight-300', 'flex items-center justify-center w-32 h-32 border border-midnight-300 text-center']">
-                <icon-cross />
-              </a>
-            </form-group>
-            <form-group class="mb-16">
-              <form-label>{{ __('Chamber-Suite') }}</form-label>
-              <a href="" 
-                @click.prevent="selectType('chamber-suite')"
-                :class="[form.suite_type == 'chamber-suite' ? 'text-midnight-500' : 'text-midnight-300', 'flex items-center justify-center w-32 h-32 border border-midnight-300 text-center']">
-                <icon-cross />
-              </a>
-            </form-group>
-            <form-group class="mb-16">
-              <form-label>{{ __('Master-Suite') }}</form-label>
-              <a href="" 
-                @click.prevent="selectType('master-suite')"
-                :class="[form.suite_type == 'master-suite' ? 'text-midnight-500' : 'text-midnight-300', 'flex items-center justify-center w-32 h-32 border border-midnight-300 text-center']">
+                @click.prevent="selectType(room.slug)"
+                :class="[form.suite_type == room.slug ? 'text-midnight-500' : 'text-midnight-300', 'flex items-center justify-center w-32 h-32 border border-midnight-300 text-center']">
                 <icon-cross />
               </a>
             </form-group>
@@ -354,26 +358,40 @@ export default {
         email: false
       },
 
+      rooms: null,
+
       routes: {
-        store: '/api/inquiry'
+        store: '/api/inquiry',
+        getRooms: '/api/rooms'
       },
 
       isSent: false,
     }
   },
 
+  mounted() {
+    this.getRooms();
+  },
+  
   methods: {
+
+    getRooms() {
+      this.axios.get(this.routes.getRooms).then(response => {
+        this.rooms = response.data;
+        console.log(this.rooms);
+      });
+    },
 
     submit() {
       NProgress.start();
       this.isSent = false;
       this.form.arrival_date = this.arrivalDate;
       this.form.departure_date = this.departureDate; 
-
       this.axios.post(this.routes.store, this.form).then(response => {
-        NProgress.done();
         this.reset();
+        //window.scrollTo(0,0);
         this.isSent = true;
+        NProgress.done();
       })
       .catch(error => {
         NProgress.done();
@@ -440,28 +458,12 @@ export default {
       this.errors[field] = null;
     },
 
+    // reset the form
     reset() {
-      this.form = {
-        name: null,
-        firstname: null,
-        street: null,
-        street_number: null,
-        zip: null,
-        city: null,
-        country: null,
-        phone: null,
-        email: null,
-        message: null,
-        arrival_date: null,
-        departure_date: null,
-        dates: {},
-        number_guests: 0,
-        number_suites: 0,
-        suite_type: null,
-      };
       this.errors = {};
     },
 
+    // format a date
     formatedDate(date) {
       if (date) {
         return date.toLocaleDateString('de-DE', {day: '2-digit', month: '2-digit', year: 'numeric'});
@@ -472,6 +474,7 @@ export default {
 
   computed: {
 
+    // show the summary if true
     isDirty() {
       if (
           this.form.dates[0] || 
@@ -485,6 +488,7 @@ export default {
       return false;
     },
 
+    // show the submit button if true
     isValid() { 
       if (
         this.form.number_suites > 0 &&
@@ -499,6 +503,8 @@ export default {
         this.form.country &&
         this.form.phone &&
         this.form.privacy_statement &&
+        this.arrivalDate && 
+        this.departureDate &&
         this.validateEmail()
         ) {
         return true;
@@ -506,12 +512,20 @@ export default {
       return false;
     },
 
+    // format the arrival date
     arrivalDate() {
-      return this.formatedDate(this.form.dates[0]);
+      if (this.form.dates[0]) {
+        return this.formatedDate(this.form.dates[0]);
+      }
+      return false;
     },
 
+    // format the departure date
     departureDate() {
-      return this.formatedDate(this.form.dates[1]);
+      if (this.form.dates[1]) {
+        return this.formatedDate(this.form.dates[1]);
+      }
+      return false;
     },
   },
 }

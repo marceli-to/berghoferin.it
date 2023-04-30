@@ -5,7 +5,6 @@ body *:not(html):not(style):not(br):not(tr):not(code) {
   box-sizing: border-box;
   font-family: Verdana, Helvetica, Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   font-weight: 400;
-  font-size: 16px;
   position: relative;
 }
 
@@ -14,7 +13,6 @@ body {
   background-color: #ffffff;
   color: #435464;
   height: 100%;
-  line-height: 1.4;
   margin: 0;
   padding: 0;
   width: 100% !important;
@@ -184,6 +182,14 @@ table.header__content {
   word-break: break-all;
 }
 
+.font-bold {
+  font-weight: bold;
+}
+
+.font-regular {
+  font-weight: 400;
+}
+
 .text-chestnut {
   color: #87362b
 }
@@ -193,7 +199,7 @@ table.header__content {
 }
 
 .text-base {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.5;
 }
 
@@ -207,9 +213,9 @@ table.header__content {
 }
 
 .pb-base {
-  padding-bottom: 20px;
+  padding-bottom: 16px;
 }
 
 .pb-large {
-  padding-bottom: 40px;
+  padding-bottom: 30px;
 }

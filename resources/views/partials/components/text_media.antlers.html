@@ -112,6 +112,7 @@
               {{ partial:components/image :image="header_image" :width="'110'" :height="'21'" :caption="header_image:alt" class="w-110 h-auto" }}
             </div>
           {{ /if }}
+          
           {{ content_text }}
             {{ if type == 'text' }}
               {{ text }}
@@ -187,10 +188,13 @@
 
       {{ if content_text }}
         <div class="mt-36 xl:mt-0 md:col-span-14 md:col-start-2 xl:col-span-6 xl:col-start-2">
+
           {{ content_text }}
+
             {{ if type == 'text' }}
               {{ text }}
             {{ /if }}
+
             {{ if type == 'link' }}
               <p>
                 <a href="{{ url }}" class="font-medium inline-flex items-center leading-none group">
@@ -207,8 +211,7 @@
             {{ if type == 'collapsible' }}
               {{ partial:components/collapsible }}
             {{ /if }}
-
-
+            
           {{ /content_text}}
         </div>
       {{ /if }}
@@ -263,3 +266,28 @@
     </article>
   </section>
 {{ /if }}
+
+{{# Imprint and Privacy #}}
+{{ if category == 'imprint-privacy' }}
+  <section class="md:col-span-full">
+    <article class="content md:grid md:grid-cols-16 gap-16">
+      {{ if image }}
+        <figure class="hidden xl:block xl:col-span-5 xl:col-start-2">
+          {{ partial:components/image :image="image" :width="'1200'" :height="'815'" :caption="image:alt" }}
+        </figure>
+      {{ /if }}
+
+      {{ if content_text }}
+        <div class="mt-36 xl:-mt-3 md:col-span-14 md:col-start-2 xl:col-span-6 xl:col-start-10">
+          {{ content_text }}
+            {{ if type == 'text' }}
+              {{ text }}
+            {{ /if }}
+          {{ /content_text}}
+        </div>
+      {{ /if }}
+    </article>
+  </section>
+{{ /if }}
+
+

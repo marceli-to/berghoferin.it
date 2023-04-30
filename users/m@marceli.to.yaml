@@ -11,3 +11,7 @@ preferences:
         - departure_date
         - email
         - state
+  locale: en
+  favorites:
+    -
+      id: lh3bv6sc

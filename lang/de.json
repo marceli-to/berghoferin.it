@@ -1,6 +1,8 @@
 {
-  "friends-suite": "Freunde-Suite",
-  "guest-suite": "Gäste-Suite",
+  "freunde-suite": "Freunde-Suite",
+  "gaeste-suite": "Gäste-Suite",
   "chamber-suite": "Chamber-Suite",
-  "master-suite": "Master-Suite"
+  "master-suite": "Master-Suite",
+  "familien-suite": "Familien-Suite",
+  "signature-suite": "Signature-Suite"
 }
