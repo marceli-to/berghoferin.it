@@ -2,7 +2,7 @@
 <div class="text-base pb-base">Sehr geehrte/r {{$data->salutation }} {{ $data->firstname }} {{ $data->name }},</div>
 <div class="text-base pb-large">Herzlichen Dank für Ihre Anfrage.</div>
 <div class="text-base pb-base">
-  Anreise<br>{{ $data->arrival_date ? \Carbon\Carbon::parse($data->arrival_date)->translatedFormat('d.m.Y') : '-' }}
+  <strong>Anreise</strong><br>{{ $data->arrival_date ? \Carbon\Carbon::parse($data->arrival_date)->translatedFormat('d.m.Y') : '-' }}
 </div>
 <div class="text-base pb-base">
   Abreise<br>{{ $data->departure_date ? \Carbon\Carbon::parse($data->departure_date)->translatedFormat('d.m.Y') : '-' }}

@@ -58,6 +58,10 @@ img {
   max-width: 100%;
 }
 
+strong, b {
+  font-weight: bold !important;
+}
+
 /* Layout */
 .wrapper {
   -premailer-cellpadding: 0;
