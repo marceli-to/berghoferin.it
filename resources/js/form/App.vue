@@ -379,7 +379,6 @@ export default {
     getRooms() {
       this.axios.get(this.routes.getRooms).then(response => {
         this.rooms = response.data;
-        console.log(this.rooms);
       });
     },
 
