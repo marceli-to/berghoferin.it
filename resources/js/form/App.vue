@@ -236,7 +236,7 @@
             </form-group>
           </div>
         </div>
-        <div class="col-span-full md:col-span-6 md:col-start-2 xl:col-span-3 xl:col-start-13" v-if="isDirty">
+        <div class="col-span-full mt-80 xl:mt-0 md:col-span-6 md:col-start-2 xl:col-span-3 xl:col-start-13" v-if="isDirty">
           <heading-two>{{ __('Zusammenfassung') }}</heading-two>
           <form-group class="border-b border-midnight-300 mb-8 h-36" v-if="arrivalDate">
             <form-label>{{ __('Anreise') }}</form-label>

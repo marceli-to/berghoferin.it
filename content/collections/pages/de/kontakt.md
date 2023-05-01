@@ -5,7 +5,7 @@ title: Kontakt
 menu_category: main
 theme: midnight
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1682688569
+updated_at: 1682970613
 template: templates/content/default
 content:
   -
@@ -50,6 +50,36 @@ content:
               -
                 type: text
                 text: Italien
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: link
+                    attrs:
+                      href: 'tel:+390471887150'
+                      rel: null
+                      target: _blank
+                      title: null
+                text: '+39 0471 887 150'
+              -
+                type: hardBreak
+              -
+                type: text
+                marks:
+                  -
+                    type: link
+                    attrs:
+                      href: 'mailto:contact@berghoferin.it'
+                      rel: null
+                      target: null
+                      title: null
+                text: contact@berghoferin.it
+              -
+                type: text
+                text: "\_"
           -
             type: set
             attrs:

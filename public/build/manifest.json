@@ -1,4 +1,7 @@
 {
+  "__commonjsHelpers-28e086c5.js": {
+    "file": "assets/_commonjsHelpers-28e086c5.js"
+  },
   "resources/css/fonts/Volte-Light.ttf": {
     "file": "assets/Volte-Light-8a7a2638.ttf",
     "src": "resources/css/fonts/Volte-Light.ttf"
@@ -48,7 +51,7 @@
     "src": "resources/css/fonts/Volte-RegularItalic.woff2"
   },
   "resources/js/app.css": {
-    "file": "assets/app-b50ad7a5.css",
+    "file": "assets/app-3740b732.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -67,9 +70,12 @@
       "assets/Volte-Medium-528a2656.ttf"
     ],
     "css": [
-      "assets/app-b50ad7a5.css"
+      "assets/app-3740b732.css"
     ],
-    "file": "assets/app-b0a0e1cf.js",
+    "file": "assets/app-2e4e4db3.js",
+    "imports": [
+      "__commonjsHelpers-28e086c5.js"
+    ],
     "isEntry": true,
     "src": "resources/js/app.js"
   },
@@ -81,7 +87,10 @@
     "css": [
       "assets/app-f0b5d7b1.css"
     ],
-    "file": "assets/app-ba6623fb.js",
+    "file": "assets/app-f147cc02.js",
+    "imports": [
+      "__commonjsHelpers-28e086c5.js"
+    ],
     "isEntry": true,
     "src": "resources/js/form/app.js"
   }

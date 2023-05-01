@@ -86,7 +86,7 @@ strong, b {
 .header {
   background-color: #ffffff;
   border-bottom: 1px solid #cfafaa;
-  color: #723414;
+  color: #87362b;
   padding: 40px 0;
   text-align: left;
 }
@@ -191,7 +191,7 @@ table.header__content {
 }
 
 .text-chestnut {
-  color: #723414
+  color: #87362b
 }
 
 .text-midnight {

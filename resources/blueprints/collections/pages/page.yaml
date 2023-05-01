@@ -91,11 +91,6 @@ sections:
               fields:
                 -
                   import: rooms_outro
-            about:
-              display: About
-              fields:
-                -
-                  import: about
   sidebar:
     display: Sidebar
     fields:

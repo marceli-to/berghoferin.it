@@ -125,12 +125,25 @@
   @apply !bg-midnight-300 !text-midnight-500 !rounded-none
 }
 
+.dp__month_year_row {
+  @apply relative
+}
+
+.dp__month_year_col_nav {
+  @apply absolute 
+}
+
+
 .dp__month_year_col_nav:first-of-type {
-  @apply !ml-1
+  @apply left-0 -top-8
+}
+
+.dp__month_year_col_nav:last-of-type {
+  @apply right-0 -top-8
 }
 
 .dp__inner_nav {
-  @apply !rounded-none !w-auto !h-auto
+  @apply !rounded-none !h-32 !w-32 !border !border-midnight-300
 }
 
 .dp__inner_nav:hover {

@@ -5,7 +5,7 @@ title: 'Impressum + Datenschutz'
 menu_category: meta
 theme: midnight
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1682857183
+updated_at: 1682970579
 template: templates/content/default
 content:
   -
@@ -146,7 +146,29 @@ content:
             content:
               -
                 type: text
-                text: 'WBG AG – Visuelle Kommunikation / marceli.to'
+                marks:
+                  -
+                    type: link
+                    attrs:
+                      href: 'https://wbg.ch'
+                      rel: null
+                      target: _blank
+                      title: null
+                text: 'WBG AG – Visuelle Kommunikation'
+              -
+                type: text
+                text: ' / '
+              -
+                type: text
+                marks:
+                  -
+                    type: link
+                    attrs:
+                      href: 'https://marceli.to'
+                      rel: null
+                      target: _blank
+                      title: null
+                text: marceli.to
           -
             type: heading
             attrs:

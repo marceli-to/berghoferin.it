@@ -4,7 +4,7 @@ blueprint: page
 title: 'Spa und Wellness'
 theme: midnight
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1682597653
+updated_at: 1682970485
 menu_category: main
 template: templates/content/default
 content:
@@ -52,6 +52,40 @@ content:
               -
                 type: text
                 text: 'Mit dem landschaftlich abwechslungsreichen Wanderparadies, das direkt vor dem Tor der Berghoferin beginnt und die nähere wie auch weitere Umgebung umfasst, sind die Möglichkeiten zum Wandern, Aktivseins und Sporttreiben an der frischen Luft vielfältige. Aber auch das weitläufige Hotelgelände und seine unmittelbare Umgebung bieten eine herrliche Kulisse und eine Reihe wahrer Kraftorte für das persönliche Sportprogramm und für Indoor-Training steht Gästen indes der Lido-Alpin-Gym-Corner zur Verfügung.'
-        image: content/berghoferin-lido-spa-wellness.jpg
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Anfrage Day-Spa-Buchung für externe Gäste: '
+              -
+                type: text
+                marks:
+                  -
+                    type: link
+                    attrs:
+                      href: 'tel:+390471887150'
+                      rel: null
+                      target: _blank
+                      title: null
+                text: '+39 0471 887 150'
+              -
+                type: text
+                text: " oder\_"
+              -
+                type: text
+                marks:
+                  -
+                    type: link
+                    attrs:
+                      href: 'mailto:contact@berghoferin.it'
+                      rel: null
+                      target: null
+                      title: null
+                text: contact@berghoferin.it
         category: spa-and-wellness
+        images:
+          - content/berghoferin-haus-und-lage-1.jpg
+          - content/berghoferin-haus-und-lage-2.jpg
+          - content/berghoferin-haus-und-lage-3.jpg
 ---

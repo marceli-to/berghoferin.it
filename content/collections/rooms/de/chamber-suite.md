@@ -1,7 +1,7 @@
 ---
 id: 2f841f8e-d277-456f-bbb4-79fdaba1632b
 blueprint: room
-title: Test-Suite
+title: Chamber-Suite
 description:
   -
     type: bulletList
@@ -78,5 +78,5 @@ description:
 rate: 520
 image: content/rooms/room-3.jpg
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1682956987
+updated_at: 1682970710
 ---

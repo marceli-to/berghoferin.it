@@ -4,7 +4,7 @@ blueprint: page
 title: 'Suiten und Service'
 theme: midnight
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1682691364
+updated_at: 1682970848
 menu_category: main
 template: templates/content/default
 content:

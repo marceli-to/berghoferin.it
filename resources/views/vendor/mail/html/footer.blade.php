@@ -9,8 +9,8 @@ Oberradein 54<br>
 Südtirol – Italien
 </div>
 <div class="text-chestnut text-small pb-large">
-<a href="tel:+390471887150" class="text-chestnut text-small" style="text-decoration: none; color:#723414">+39 0471 887 150</a><br>
-<a href="mailto:contact@berghoferin.it" class="text-chestnut text-small" style="text-decoration: none; color:#723414">contact@berghoferin.it</a>
+<a href="tel:+390471887150" class="text-chestnut text-small" style="text-decoration: none; color:#87362b">+39 0471 887 150</a><br>
+<a href="mailto:contact@berghoferin.it" class="text-chestnut text-small" style="text-decoration: none; color:#87362b">contact@berghoferin.it</a>
 </div>
 <div>
   <a href="https://www.instagram.com/berghoferin/" target="_blank" rel="noopener" title="{{ __("Berghoferin auf Instagram") }}">

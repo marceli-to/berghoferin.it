@@ -1,0 +1,21 @@
+<div class="swiper">
+  <div class="swiper-wrapper">
+    {{ images from="images" }}
+      <figure class="swiper-slide">
+        <img 
+        src="{{ glide :src="url" :height="'1000'" }}" 
+        class="lazy block w-full h-auto" 
+        width="1000" 
+        height="1000" 
+        alt="{{ alt }}"
+      />
+      </figure>
+    {{ /images }}
+  </div>
+  <a href="javascript:;" class="btn-swiper-prev text-midnight-500 absolute left-16 top-[50%] translate-y-[-100%] z-[1000]">
+    {{ partial:icons/chevron-left-large }}
+  </a>
+  <a href="javascript:;" class="btn-swiper-next text-midnight-500 absolute right-16 top-[50%] translate-y-[-100%] z-[1000]">
+    {{ partial:icons/chevron-right-large }}
+  </a>
+</div>

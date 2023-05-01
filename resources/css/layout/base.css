@@ -7,7 +7,11 @@ html {
 }
 
 body {
-  @apply font-regular text-midnight-500 text-md leading-6
+  @apply font-regular text-midnight-500 text-md leading-6 flex min-h-screen flex-col
+}
+
+main {
+  @apply flex-1
 }
 
 header.site-header {
@@ -48,16 +52,4 @@ article.content a:hover {
 
 .site-grid {
   @apply md:grid md:grid-cols-16 gap-16 w-full
-}
-
-
-
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
-main {
-  flex: 1;
 }
