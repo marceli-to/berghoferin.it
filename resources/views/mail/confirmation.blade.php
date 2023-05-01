@@ -14,7 +14,7 @@
   <strong>{{ __('Personen') }}</strong><br>{{ $data->number_guests ? __($data->number_guests) : '-' }}
 </div>
 <div class="text-base pb-large">
-  <strong>{{ __('Bevorzugter Suitentyp') }}</strong><br>{{ $data->suite_type ? __($data->suite_type) : '-' }}
+  <strong>{{ __('Bevorzugter Suitentyp') }}</strong><br>{{ $data->room->slug ? __($data->room->slug) : '-' }}
 </div>
 <div class="text-base pb-base">
   {{ __('Gerne unterbreiten wir Ihnen in den nächsten Tagen ein Angebot.') }}

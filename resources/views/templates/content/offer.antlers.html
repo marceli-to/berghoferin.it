@@ -1,14 +1,25 @@
 
 <section class="md:col-span-10 md:col-start-5">
 
+  <article class="content text-midnight-500">
   <p>{{ greeting | nl2br }}</p>
 
+
+
+  {{# {{ title }}<br> #}}
+  {{ firstname }} {{ name }}<br>
+
+  {{ room:title }}<br>
+
+  {{ arrival_date iso_format="dddd, DD. MMMM YYYY" }}<br>
+  {{ departure_date iso_format="dddd, DD. MMMM YYYY" }}<br>
+
+  {{ room:rate }} &euro;<br>
+  {{ room:rate * number_nights }} &euro;<br>
+
+
   <div>{{ closing | nl2br }}</div>
-
-  {{ title }}
-  {{ firstname }}
-  {{ name }}
-
+</article>
 
 {{ content }}
 

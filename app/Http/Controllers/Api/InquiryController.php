@@ -21,9 +21,11 @@ class InquiryController extends Controller
   public function store(InquiryStoreRequest $request)
   { 
     $title = $request->input('firstname') . ' ' . $request->input('name') . ', ' . $request->input('city');
-    $departure_date = date('d.m.Y', strtotime($request->input('departure_date')));
-    $arrival_date = date('d.m.Y', strtotime($request->input('arrival_date')));
+    $departure_date = \Carbon\Carbon::createFromFormat('d.m.Y', $request->input('departure_date'));
+    $arrival_date = \Carbon\Carbon::createFromFormat('d.m.Y', $request->input('arrival_date'));
+    $nights = $arrival_date->diffInDays($departure_date);
     $created_at = date('d.m.Y', time());
+    $room = $request->input('room_id');
 
     $inquiry = Entry::make()
       ->collection('inquiries')
@@ -34,13 +36,15 @@ class InquiryController extends Controller
             'title' => $title,
             'arrival_date' => $arrival_date,
             'departure_date' => $departure_date,
+            'nights' => $nights,
+            'room' => $room,
             'created_at' => $created_at,
             'state' => 'new',
             'is_offer' => '1',
             'theme' => 'chestnut',
           ], 
           $request->except(
-            ['departure_date', 'arrival_date']
+            ['departure_date', 'arrival_date', 'room']
           )
         )
       );
@@ -49,7 +53,6 @@ class InquiryController extends Controller
     // Update inquire to extend slug with id
     $inquiry->slug($inquiry->slug() . '-' . $inquiry->id());
     $inquiry->save();
-
 
     Notification::route('mail', env('MAIL_TO'))->notify(new InquiryNotification($inquiry));
     Notification::route('mail', $request->input('email'))->notify(new ConfirmationNotification($inquiry));

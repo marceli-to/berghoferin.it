@@ -51,6 +51,6 @@
   <strong>Anzahl Personen</strong><br>{{ $data->number_guests ? __($data->number_guests) : '-' }}
 </div>
 <div class="text-base pb-large">
-  <strong>Bevorzugter Suitentyp</strong><br>{{ $data->suite_type ? __($data->suite_type, [], 'de') : '-' }}
+  <strong>Bevorzugter Suitentyp</strong><br>{{ $data->room->slug ? __($data->room->slug, [], 'de') : '-' }}
 </div>
 </x-mail::message>

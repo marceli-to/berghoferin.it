@@ -24,9 +24,9 @@
               <form-label>{{ __('Personen') }}</form-label>
               <div>{{ form.number_guests }}</div>
             </form-group>
-            <form-group class="border-b border-midnight-300 mb-8 h-36" v-if="form.suite_type">
+            <form-group class="border-b border-midnight-300 mb-8 h-36" v-if="form.room">
               <form-label>{{ __('Suitentyp') }}</form-label>
-              <div>{{ __(form.suite_type) }}</div>
+              <div>{{ __(form.room.slug) }}</div>
             </form-group>
           </div>
           <figure class="hidden md:block md:col-span-6 xl:col-span-5 md:-mt-120">
@@ -101,8 +101,8 @@
             <form-group class="mb-16" v-for="room in rooms" :key="room.id">
               <form-label>{{ __(room.slug) }}</form-label>
               <a href="" 
-                @click.prevent="selectType(room.id)"
-                :class="[form.suite_type_id == room.id ? 'text-midnight-500' : 'text-midnight-300', 'flex items-center justify-center w-32 h-32 border border-midnight-300 text-center']">
+                @click.prevent="selectRoom(room.id)"
+                :class="[form.room && form.room.id == room.id ? 'text-midnight-500' : 'text-midnight-300', 'flex items-center justify-center w-32 h-32 border border-midnight-300 text-center']">
                 <icon-cross />
               </a>
             </form-group>
@@ -254,9 +254,9 @@
             <form-label>{{ __('Personen') }}</form-label>
             <div>{{ form.number_guests }}</div>
           </form-group>
-          <form-group class="border-b border-midnight-300 mb-8 h-36" v-if="form.suite_type">
+          <form-group class="border-b border-midnight-300 mb-8 h-36" v-if="form.room">
             <form-label>{{ __('Suitentyp') }}</form-label>
-            <div>{{ __(form.suite_type) }}</div>
+            <div>{{ __(form.room.slug) }}</div>
           </form-group>
           <form-group class="mt-40">
             <form-checkbox :id="'privacy-statement'" v-model="form.privacy_statement" @change="toggle('privacy_statement')">
@@ -327,8 +327,8 @@ export default {
       form: {
         number_suites: 0,
         number_guests: 0,
-        suite_type: null,
-        suite_type_id: null,
+        room: null,
+        room_id: null,
         salutation: null,
         name: null,
         firstname: null,
@@ -409,10 +409,10 @@ export default {
       }
     },
 
-    selectType(id) {
-      this.form.suite_type_id = id;
-      let type = this.rooms.find(room => room.id === id).slug;
-      this.form.suite_type = type;
+    selectRoom(id) {
+      let room = this.rooms.find(room => room.id === id);
+      this.form.room = room;
+      this.form.room_id = room.id;
     },
 
     toggle(field) {
@@ -483,7 +483,7 @@ export default {
           this.form.dates[1] ||
           this.form.number_suites > 0 ||
           this.form.number_guests > 0 ||
-          this.form.suite_type
+          this.form.room
         ) {
         return true;
       }
@@ -495,7 +495,7 @@ export default {
       if (
         this.form.number_suites > 0 &&
         this.form.number_guests > 0 &&
-        this.form.suite_type_id &&
+        this.form.room &&
         this.form.salutation &&
         this.form.name &&
         this.form.firstname &&

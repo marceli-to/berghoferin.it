@@ -196,6 +196,17 @@ sections:
           instructions_position: above
           visibility: visible
       -
+        handle: number_nights
+        field:
+          default: '1'
+          display: 'Number of nights'
+          type: integer
+          icon: integer
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
         handle: number_suites
         field:
           input_type: number
@@ -226,20 +237,20 @@ sections:
             - 'gt:0'
           localizable: false
       -
-        handle: suite_type_id
+        handle: room
         field:
+          max_items: 1
           mode: default
-          create: false
+          create: true
           collections:
             - rooms
-          display: 'Suite type'
+          display: Room
           type: entries
           icon: entries
           localizable: false
           listable: hidden
           instructions_position: above
           visibility: visible
-          max_items: 1
       -
         handle: created_at
         field:
