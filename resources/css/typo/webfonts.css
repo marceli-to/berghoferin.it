@@ -10,11 +10,19 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'VolteRegularItalic';
-  src: local('Volte Italic'), local('Volte-Italic'), url('../fonts/Volte-RegularItalic.woff2') format('woff2'), url('../fonts/Volte-RegularItalic.woff') format('woff'), url('../fonts/Volte-RegularItalic.ttf') format('truetype');
-  font-weight: 400;
+/* @font-face {
+  font-family: 'VolteItalic';
+  src: local('Volte Italic'), local('Volte-Italic'), url('../fonts/Volte-RegularItalic.woff2') format('woff2'), url('../fonts/Volte-RegularItalic.woff') format('woff'),  url('../fonts/Volte-RegularItalic.ttf') format('truetype');
+  font-weight: normal;
   font-style: italic;
+} */
+
+@font-face {
+  font-family: 'VolteItalic';
+  src: url('../fonts/Volte-RegularItalic.woff2') format('woff2'), url('../fonts/Volte-RegularItalic.woff') format('woff'),  url('../fonts/Volte-RegularItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {

@@ -31,7 +31,7 @@ module.exports = {
 
       fontFamily: {
         'regular': ['VolteRegular', ...defaultTheme.fontFamily.sans],
-        'regular-italic': ['VolteRegularItalic', ...defaultTheme.fontFamily.sans],
+        'italic': ['VolteItalic', ...defaultTheme.fontFamily.sans],
         'light': ['VolteLight', ...defaultTheme.fontFamily.sans],
         'medium': ['VolteMedium', ...defaultTheme.fontFamily.sans],
       },

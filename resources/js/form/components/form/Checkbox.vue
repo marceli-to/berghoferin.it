@@ -1,6 +1,6 @@
 <template>
   <div class="relative">
-    <label :for="id" class="break-words block hyphens-auto font-regular-italic text-midnight-300 cursor-pointer pl-20 select-none">
+    <label :for="id" class="break-words block hyphens-auto text-midnight-300 cursor-pointer pl-20 select-none">
       <input
         :id="id"
         type="checkbox"
@@ -9,7 +9,7 @@
         @input="updateInput"
         class="opacity-0 absolute cursor-pointer h-0 w-0 t-8"
       />
-      <span class="block w-12 h-12 rounded-full border border-midnight-300 absolute left-0 top-8"></span>
+      <span class="block w-12 h-12 rounded-full border border-midnight-300 absolute left-0 top-6"></span>
       <slot name="label"></slot>
     </label>
   </div>
