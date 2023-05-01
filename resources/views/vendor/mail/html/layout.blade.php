@@ -9,7 +9,7 @@
 @media only screen and (max-width: 600px) {
 
   .wrapper {
-    width: 90% !important;
+    width: 85% !important;
   }
 
   .header {
