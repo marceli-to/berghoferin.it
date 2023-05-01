@@ -17,7 +17,7 @@
 </head>
 <body class="theme-{{ theme }}">
   {{ partial:layout/header }}
-  <main class="site {{ if is_homepage }} pt-84 md:pt-120 xl:pt-240 {{ else }} pt-180 {{ /if }}">
+  <main class="site {{ if is_homepage || is_offer }} pt-84 md:pt-120 xl:pt-240 {{ else }} pt-180 {{ /if }}">
     <div class="site-container site-grid">
       {{ template_content }}
     </div>

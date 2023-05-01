@@ -1,6 +1,6 @@
 sections:
-  main:
-    display: Main
+  form_data:
+    display: 'Form data'
     fields:
       -
         handle: title
@@ -287,4 +287,69 @@ sections:
           instructions_position: above
           visibility: visible
           default: new
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - inquiries
+          max_items: 1
+          listable: false
+          localizable: true
+      -
+        handle: theme
+        field:
+          options:
+            midnight: Midnight
+            chestnut: Chestnut
+          multiple: false
+          clearable: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          default: chestnut
+          display: Theme
+          type: select
+          icon: select
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: is_offer
+        field:
+          default: '1'
+          display: Offer
+          type: hidden
+          icon: hidden
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+  quote:
+    display: Quote
+    fields:
+      -
+        handle: greeting
+        field:
+          antlers: false
+          display: Greeting
+          type: textarea
+          icon: textarea
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: closing
+        field:
+          antlers: false
+          display: Closing
+          type: textarea
+          icon: textarea
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
 title: Inquiry

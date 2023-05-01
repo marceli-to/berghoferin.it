@@ -1,8 +1,12 @@
-{{ if is_homepage }}
+{{ if is_homepage || is_offer }}
   <header class="site-header">
     <div class="site-container site-grid h-full pt-32 md:pt-52 flex justify-between items-start relative">
       <a href="{{ site:url }}" class="logo md:col-span-5 md:col-start-2 xl:col-span-3 xl:col-start-2 text-midnight-500">
-        {{ partial:icons/logo-type :class="'hidden xl:block'" }}
+        {{ if !is_offer }}
+          {{ partial:icons/logo-type :class="'hidden xl:block'" }}
+        {{ else }}
+          {{ partial:icons/logo-type }}
+        {{ /if }}
       </a>
       <div class="md:col-span-9 xl:col-span-11 flex justify-end">
         {{ partial:menu/helpers }}

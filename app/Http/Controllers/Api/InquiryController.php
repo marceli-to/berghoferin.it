@@ -35,7 +35,9 @@ class InquiryController extends Controller
             'arrival_date' => $arrival_date,
             'departure_date' => $departure_date,
             'created_at' => $created_at,
-            'state' => 'new'
+            'state' => 'new',
+            'is_offer' => '1',
+            'theme' => 'chestnut',
           ], 
           $request->except(
             ['departure_date', 'arrival_date']
@@ -43,6 +45,12 @@ class InquiryController extends Controller
         )
       );
     $inquiry->save();
+
+    // Update inquire to extend slug with id
+    $inquiry->slug($inquiry->slug() . '-' . $inquiry->id());
+    $inquiry->save();
+
+
     Notification::route('mail', env('MAIL_TO'))->notify(new InquiryNotification($inquiry));
     Notification::route('mail', $request->input('email'))->notify(new ConfirmationNotification($inquiry));
     return response()->json($inquiry->id, 201);

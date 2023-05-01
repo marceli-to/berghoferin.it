@@ -4,11 +4,14 @@ sites:
   - it
   - en
 propagate: false
-template: default
-layout: layout
+template: templates/content/offer
+layout: templates/layout
 revisions: false
+route:
+  de: 'angebot/{slug}'
+  it: 'it/offerta/{slug}'
+  en: 'en/offer/{slug}'
 sort_dir: asc
-default_status: draft
 date_behavior:
   past: public
   future: private
@@ -16,3 +19,5 @@ preview_targets:
   -
     label: Entry
     url: '{permalink}'
+structure:
+  root: false

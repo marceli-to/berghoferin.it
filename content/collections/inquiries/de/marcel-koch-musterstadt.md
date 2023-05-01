@@ -5,7 +5,7 @@ title: 'Marcel Koch, Musterstadt'
 arrival_date: 29.05.2023
 departure_date: '2023-05-31'
 created_at: '2023-04-30'
-state: new
+state: pending
 number_suites: 1
 number_guests: 2
 suite_type: friends-suite
@@ -26,5 +26,7 @@ dates:
 newsletter: 0
 privacy_statement: 1
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1682854044
+updated_at: 1682939595
+is_offer: true
+theme: chestnut
 ---
