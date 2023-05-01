@@ -101,8 +101,8 @@
             <form-group class="mb-16" v-for="room in rooms" :key="room.id">
               <form-label>{{ __(room.slug) }}</form-label>
               <a href="" 
-                @click.prevent="selectType(room.slug)"
-                :class="[form.suite_type == room.slug ? 'text-midnight-500' : 'text-midnight-300', 'flex items-center justify-center w-32 h-32 border border-midnight-300 text-center']">
+                @click.prevent="selectType(room.id)"
+                :class="[form.suite_type_id == room.id ? 'text-midnight-500' : 'text-midnight-300', 'flex items-center justify-center w-32 h-32 border border-midnight-300 text-center']">
                 <icon-cross />
               </a>
             </form-group>
@@ -328,6 +328,7 @@ export default {
         number_suites: 0,
         number_guests: 0,
         suite_type: null,
+        suite_type_id: null,
         salutation: null,
         name: null,
         firstname: null,
@@ -409,7 +410,9 @@ export default {
       }
     },
 
-    selectType(type) {
+    selectType(id) {
+      this.form.suite_type_id = id;
+      let type = this.rooms.find(room => room.id === id).slug;
       this.form.suite_type = type;
     },
 
@@ -493,7 +496,7 @@ export default {
       if (
         this.form.number_suites > 0 &&
         this.form.number_guests > 0 &&
-        this.form.suite_type &&
+        this.form.suite_type_id &&
         this.form.salutation &&
         this.form.name &&
         this.form.firstname &&

@@ -68,9 +68,15 @@ description:
             content:
               -
                 type: text
-                text: 'ca. 40 m2'
+                text: 'ca. 40 m'
+              -
+                type: text
+                marks:
+                  -
+                    type: superscript
+                text: '2'
 rate: 450
 image: content/rooms/room-2.jpg
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1682668285
+updated_at: 1682956434
 ---

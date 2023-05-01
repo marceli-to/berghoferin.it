@@ -19,6 +19,7 @@ sections:
           smart_typography: false
           buttons:
             - unorderedlist
+            - superscript
           save_html: false
           inline: false
           toolbar_mode: fixed
@@ -76,5 +77,14 @@ sections:
         handle: slug
         field:
           type: slug
+          localizable: true
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - rooms
+          max_items: 1
+          listable: false
           localizable: true
 title: Room

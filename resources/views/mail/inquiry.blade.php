@@ -9,7 +9,7 @@
   <strong>Anrede</strong><br>{{ $data->salutation ? $data->salutation : '-' }}
 </div>
 <div class="text-base pb-base">
-  <strong>Vorname</strong><br>{{ $data->firstname ? $data->number_suites : '-' }}
+  <strong>Vorname</strong><br>{{ $data->firstname ? $data->firstname : '-' }}
 </div>
 <div class="text-base pb-base">
   <strong>Name</strong><br>{{ $data->name ? $data->name : '-' }}

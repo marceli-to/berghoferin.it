@@ -226,19 +226,20 @@ sections:
             - 'gt:0'
           localizable: false
       -
-        handle: suite_type
+        handle: suite_type_id
         field:
-          input_type: text
-          antlers: false
+          mode: default
+          create: false
+          collections:
+            - rooms
           display: 'Suite type'
-          type: text
-          icon: text
+          type: entries
+          icon: entries
+          localizable: false
           listable: hidden
           instructions_position: above
           visibility: visible
-          validate:
-            - required
-          localizable: false
+          max_items: 1
       -
         handle: created_at
         field:
@@ -269,7 +270,7 @@ sections:
         field:
           options:
             new: Neu
-            pending: 'Angebot im Versand'
+            queued: 'Angebot im Versand'
             offered: 'Angebot versendet'
             accepted: 'Angebot akzeptiert'
             denied: 'Angebot abgelehnt'
@@ -352,4 +353,49 @@ sections:
           listable: hidden
           instructions_position: above
           visibility: visible
+      -
+        handle: discount_description
+        field:
+          input_type: text
+          antlers: false
+          display: 'Discount description'
+          type: text
+          icon: text
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: discount_type
+        field:
+          options:
+            percent: Percent
+            fixed_amount: 'Fixed amount'
+          multiple: false
+          clearable: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          default: percent
+          display: 'Discount type'
+          type: select
+          icon: select
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          width: 50
+      -
+        handle: discount_amount
+        field:
+          default: '0'
+          display: 'Discount amount'
+          type: float
+          icon: float
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          width: 50
 title: Inquiry

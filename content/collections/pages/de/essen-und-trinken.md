@@ -4,7 +4,7 @@ blueprint: page
 title: 'Essen und Trinken'
 theme: midnight
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1682694512
+updated_at: 1682956810
 menu_category: main
 template: templates/content/default
 content:
@@ -33,13 +33,7 @@ content:
             content:
               -
                 type: text
-                text: 'Eine Reservierung wird dringend empfohlen.'
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Anfrage Reservierung: '
+                text: 'Eine Reservierung wird dringend empfohlen. Anfrage Reservierung: '
               -
                 type: text
                 marks:
@@ -92,13 +86,7 @@ content:
             content:
               -
                 type: text
-                text: "\_Eine Reservierung ist erforderlich."
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Anfrage Reservierung: '
+                text: 'Eine Reservierung ist erforderlich: '
               -
                 type: text
                 marks:
@@ -164,13 +152,13 @@ content:
             content:
               -
                 type: text
-                text: 'Das Fine Dining Die Saligen vereint feine Kochkunst, hohe Weinkultur, leidenschaftlichen Service und besonderes Ambiente. In raffiniert-eleganter Atmosphäre wird hier abends und am Wochenende auch mittags eine vom Bemühen um tiefes Verständnis für Produkte und ihre optimale Zubereitung geleitete Küche serviert, weitgehend saisonal und regional, frisch zubereitet, lokal inspiriert und innovativ weiterentwickelt.'
+                text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, dolores unde. Nihil, totam pariatur! Iusto autem, quos repellat explicabo nobis officiis maiores vel! Doloremque facilis deleniti soluta, est officiis tempora!'
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'Eine umfangreiche Weinkarte sowie auf Wunsch eine individuelle fein abgestimmte Weinbegleitung, ein um höchste Diskretion und Aufmerksamkeit bemühter Service und die jeweils eigene, indes immer besondere Atmosphäre der verschiedenen den Gästen zur Verfügung stehenden Restaurantbereichen, vom Saal über die Veranda und Terrasse bis hin zur gotischen Stube, runden ein kulinarisches Fine-Dining-Erlebnis in den Saligen ab.'
+                text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, dolores unde. Nihil, totam pariatur! Iusto autem, quos repellat explicabo nobis officiis maiores vel! Doloremque facilis deleniti soluta, est officiis tempora!'
         image: content/berghoferin-corner-pool-bar.jpg
         category: corner-pool-bar
 ---

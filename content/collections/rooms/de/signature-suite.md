@@ -77,9 +77,15 @@ description:
             content:
               -
                 type: text
-                text: 'ca. 80 m2'
+                text: 'ca. 80 m'
+              -
+                type: text
+                marks:
+                  -
+                    type: superscript
+                text: '2'
 rate: 750
 image: content/rooms/room-2.jpg
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1682668403
+updated_at: 1682956445
 ---

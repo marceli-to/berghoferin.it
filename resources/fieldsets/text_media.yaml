@@ -29,6 +29,7 @@ fields:
         - bold
         - italic
         - anchor
+        - table
       save_html: false
       inline: false
       toolbar_mode: fixed

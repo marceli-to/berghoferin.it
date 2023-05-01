@@ -12,6 +12,7 @@ route:
   it: 'it/offerta/{slug}'
   en: 'en/offer/{slug}'
 sort_dir: asc
+default_status: draft
 date_behavior:
   past: public
   future: private

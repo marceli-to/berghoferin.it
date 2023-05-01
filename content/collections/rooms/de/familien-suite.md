@@ -50,7 +50,7 @@ description:
             content:
               -
                 type: text
-                text: '1-2 Badezimmer mit jeweils geräumiger Walk-in-Regendusche'
+                text: '1–2 Badezimmer mit jeweils geräumiger Walk-in-Regendusche'
       -
         type: listItem
         content:
@@ -86,9 +86,15 @@ description:
             content:
               -
                 type: text
-                text: 'ca. 65–70 m2'
+                text: 'ca. 65–70 m'
+              -
+                type: text
+                marks:
+                  -
+                    type: superscript
+                text: '2'
 rate: 600
 image: content/rooms/room-3.jpg
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1682686001
+updated_at: 1682956480
 ---

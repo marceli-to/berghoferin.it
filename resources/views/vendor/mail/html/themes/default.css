@@ -11,7 +11,7 @@ body *:not(html):not(style):not(br):not(tr):not(code) {
 body {
   -webkit-text-size-adjust: none;
   background-color: #ffffff;
-  color: #435464;
+  color: #344452;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -37,7 +37,7 @@ a img {
 /* Typography */
 
 h1 {
-  color: #435464;
+  color: #344452;
   font-size: 16px;
   font-weight: bold;
   margin-top: 0;
@@ -86,7 +86,7 @@ strong, b {
 .header {
   background-color: #ffffff;
   border-bottom: 1px solid #cfafaa;
-  color: #87362b;
+  color: #723414;
   padding: 40px 0;
   text-align: left;
 }
@@ -164,7 +164,7 @@ table.header__content {
 }
 
 .table td {
-  color: #435464;
+  color: #344452;
   font-size: 14px;
   line-height: 1.2;
   margin: 0;
@@ -191,11 +191,11 @@ table.header__content {
 }
 
 .text-chestnut {
-  color: #87362b
+  color: #723414
 }
 
 .text-midnight {
-  color: #435464;
+  color: #344452;
 }
 
 .text-base {

@@ -1,7 +1,7 @@
 ---
 id: 2f841f8e-d277-456f-bbb4-79fdaba1632b
 blueprint: room
-title: Chamber-Suite
+title: Test-Suite
 description:
   -
     type: bulletList
@@ -68,9 +68,15 @@ description:
             content:
               -
                 type: text
-                text: 'ca. 55 m2'
+                text: 'ca. 55 m'
+              -
+                type: text
+                marks:
+                  -
+                    type: superscript
+                text: '2'
 rate: 520
 image: content/rooms/room-3.jpg
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1682685811
+updated_at: 1682956987
 ---

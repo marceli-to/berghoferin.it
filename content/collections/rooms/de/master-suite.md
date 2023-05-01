@@ -50,7 +50,7 @@ description:
             content:
               -
                 type: text
-                text: '1-2 Badezimmer mit geräumiger Walk-in-Regendusche bzw. kleiner Walk-in-Eckdusche'
+                text: '1–2 Badezimmer mit geräumiger Walk-in-Regendusche bzw. kleiner Walk-in-Eckdusche'
       -
         type: listItem
         content:
@@ -59,7 +59,7 @@ description:
             content:
               -
                 type: text
-                text: '1-2 großzügige (Loggia)-Balkone mit Bergpanoramasicht'
+                text: '1–2 großzügige (Loggia)-Balkone mit Bergpanoramasicht'
       -
         type: listItem
         content:
@@ -86,9 +86,15 @@ description:
             content:
               -
                 type: text
-                text: 'ca. 60 m2'
+                text: 'ca. 60 m'
+              -
+                type: text
+                marks:
+                  -
+                    type: superscript
+                text: '2'
 rate: 580
 image: content/rooms/room-4.jpg
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1682668349
+updated_at: 1682956488
 ---

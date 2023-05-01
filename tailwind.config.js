@@ -14,13 +14,13 @@ module.exports = {
     extend: {
       
       colors: {
-        'chestnut': '#87362b',
+        'chestnut': '#723414',
         'midnight': {
-          //100: '#435464',
+          //100: '#344452',
           //200: '#c0ccdc',
           300: '#deeafa',
           400: '#c0ccdc',
-          500: '#435464',
+          500: '#344452',
         },
       },
 
