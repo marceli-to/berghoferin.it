@@ -1,2 +1,2 @@
 import vhCheck from 'vh-check';
-const vhc = vhCheck();
+const vhc = vhCheck('browser-address-bar');

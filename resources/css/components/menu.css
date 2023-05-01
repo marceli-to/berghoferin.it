@@ -1,6 +1,6 @@
 nav.site-menu {
   height: calc(100% - (84px + 20px));
-  height: calc((var(--vh, 1vh) * 100) - (84px + 20px));
+  height: calc((100vh - var(--browser-address-bar, 0px)) - (84px + 20px));
 }
 
 nav.site-menu.is-visible {
