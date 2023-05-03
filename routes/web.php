@@ -20,11 +20,11 @@ use Illuminate\Http\Request;
 // ]);
 
 Route::get('/mailable/confirmation', function () {
-  $entry = Entry::find('49bf9d5c-f470-410a-92be-5e0fb6e74834');
+  $entry = Entry::find('c80cd251-f09b-4f83-942d-0a94bc77e839');
   return (new \App\Notifications\Confirmation($entry))->toMail($entry->email);
 });
 
 Route::get('/mailable/inquiry', function () {
-  $entry = Entry::find('49bf9d5c-f470-410a-92be-5e0fb6e74834');
+  $entry = Entry::find('c80cd251-f09b-4f83-942d-0a94bc77e839');
   return (new \App\Notifications\Inquiry($entry))->toMail($entry->email);
 });

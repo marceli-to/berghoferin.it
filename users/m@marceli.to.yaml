@@ -11,6 +11,7 @@ preferences:
         - departure_date
         - email
         - state
+      after_save: continue_editing
   locale: en
   favorites:
     -

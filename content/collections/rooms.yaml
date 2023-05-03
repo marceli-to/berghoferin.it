@@ -1,6 +1,8 @@
 title: Rooms
 sites:
   - de
+  - en
+  - it
 propagate: false
 template: default
 layout: layout

@@ -1,35 +1,149 @@
 
-<section class="md:col-span-10 md:col-start-5">
+<article class="content text-midnight-500 md:col-span-full md:grid md:grid-cols-16 md:gap-16">
 
-  <article class="content text-midnight-500">
-  <p>{{ greeting | nl2br }}</p>
+  <div class="mb-30 md:col-span-14 md:col-start-2 xl:col-span-5 xl:col-start-5 ">
+    <div>
+      {{ greeting | nl2br }}
+    </div>
+  </div>
 
+  <div class="md:col-span-14 md:col-start-2 xl:col-span-5 xl:col-start-5">
+    {{ partial:components/list-item :class="'border-midnight-500'" }}
+      <div>{{ "Anreise" | trans }}</div>
+      <div>{{ arrival_date iso_format="dddd, DD. MMMM YYYY" }}</div>
+    {{ /partial:components/list-item }}
 
+    {{ partial:components/list-item }}
+      <div>{{ "Abreise" | trans }}</div>
+      <div>{{ departure_date iso_format="dddd, DD. MMMM YYYY" }}</div>
+    {{ /partial:components/list-item }}
 
-  {{# {{ title }}<br> #}}
-  {{ firstname }} {{ name }}<br>
+    {{ partial:components/list-item }}
+      <div>{{ "Anzahl Nächte" | trans }}</div>
+      <div>{{ number_nights }}</div>
+    {{ /partial:components/list-item }}
 
-  {{ room:title }}<br>
+    {{ partial:components/list-item }}
+      <div>{{ "Anzahl Suiten" | trans }}</div>
+      <div>{{ number_suites }}</div>
+    {{ /partial:components/list-item }}
 
-  {{ arrival_date iso_format="dddd, DD. MMMM YYYY" }}<br>
-  {{ departure_date iso_format="dddd, DD. MMMM YYYY" }}<br>
+    {{ partial:components/list-item }}
+      <div>{{ "Personen" | trans }}</div>
+      <div>{{ number_guests }}</div>
+    {{ /partial:components/list-item }}
 
-  {{ room:rate }} &euro;<br>
-  {{ room:rate * number_nights }} &euro;<br>
+    {{ partial:components/list-item :class="'border-b border-midnight-300 mb-40'" }}
+      <div>{{ "Suitentyp" | trans }}</div>
+      <div>{{ room:title }}</div>
+    {{ /partial:components/list-item }}
 
+    {{ partial:components/list-item :class="'border-midnight-500'" }}
+      <div>{{ "Preis pro Nacht" | trans }}</div>
+      <div>{{ (room:rate * number_suites) | format_number(2, ',', ',') }} &euro;</div>
+    {{ /partial:components/list-item }}
 
-  <div>{{ closing | nl2br }}</div>
-</article>
+    {{ if discount }}
+      {{ partial:components/list-item }}
+        <div>{{ "Zwischensumme" | trans }}</div>
+        <div>{{ (room:rate * number_suites * number_nights) | format_number(2, ',', ',') }} &euro;</div>
+      {{ /partial:components/list-item }}
 
-{{ content }}
+      {{ partial:components/list-item }}
+        <div>{{ discount_description }}{{ if discount_type == 'percent' }}, {{ discount_amount }}%{{ /if }}</div>
+        <div>
+          {{ if discount_type == 'percent' }}
+            – {{ (room:rate * number_suites * number_nights * discount_amount / 100) | format_number(2, ',', ',') }} &euro;
+          {{ else }}
+            – {{ discount_amount | format_number(2, ',', ',') }} &euro;
+          {{ /if }}
+        </div>
+      {{ /partial:components/list-item }}
 
+      {{ partial:components/list-item }}
+        <div>{{ "Gesamtbetrag inkl. MwSt & Service" | trans }}</div>
+        <div>
+          {{ if discount_type == 'percent' }}
+            {{ (room:rate * number_suites * number_nights - room:rate * number_nights * discount_amount / 100) | format_number(2, ',', ',') }} &euro;
+          {{ else }}
+            {{ (room:rate * number_suites * number_nights - discount_amount) | format_number(2, ',', ',') }} &euro;
+          {{ /if }}
+        </div>
+      {{ /partial:components/list-item }}
 
-{{ content_text }}
-
-  {{ if type == 'text' }}
-      {{ text }}
+    {{ else }}
+      {{ partial:components/list-item }}
+        <div>{{ "Gesamtbetrag inkl. MwSt & Service" | trans }}</div>
+        <div>{{ (room:rate * number_nights) | format_number(2, ',', ',') }} &euro;</div>
+      {{ /partial:components/list-item }}
     {{ /if }}
-  {{ /content_text }}
-{{ /content }}
+
+    {{ if state == 'new' }}
+      <a href="" title="{{ "Angebot annehmen" | trans }}" class="flex justify-start items-center pb-6 pt-8 mt-30 border-t border-b border-chestnut text-chestnut !no-underline">
+        {{ partial:icons/chevron-right :class="'mr-8 -mt-3'" }}
+        {{ "Angebot annehmen" | trans }}
+      </a>
+      <a href="" title="{{ "Angebot ablehnen" | trans }}" class="flex justify-start items-center pb-6 pt-8 mt-30 border-t border-b border-midnight-500 !no-underline">
+        {{ partial:icons/chevron-right :class="'mr-8 -mt-3'" }}
+        {{ "Angebot ablehnen" | trans }}
+      </a>
+    {{ /if }}
+   
+    <div class="mt-60">
+      {{ closing | nl2br }}
+    </div>
+
+  </div>
+
+  <div class="md:mt-80 xl:mt-0 md:col-span-14 md:col-start-2 xl:col-span-5 xl:col-start-11">
+
+    {{ 
+      partial:components/collapsible 
+      :class="'min-h-[auto] pb-12'"
+      :innerClass="'pb-12'"
+      :title="'Im Preis inbegriffen'"
+      :text="'Frühstück, eine Auswahl an Getränken aus der Minibar, Gepäckservice, Parkservice inklusive kostenlosen Parkplatzes, Nutzung des WLAN sowie freien Zugang zum Lido alpin Pool & Spa.'"
+    }}
+
+    {{ 
+      partial:components/collapsible 
+      :class="'min-h-[auto] pb-12'"
+      :innerClass="'pb-12'"
+      :title="'Ortstaxe'"
+      :text="'Die Ortstaxe in Höhe von 1,60 Euro pro Person und Nacht wird separat berechnet und kann nur vor Ort bezahlt werden. Kinder und Jugendliche bis zum vollendeten 14. Lebensjahr sind von der Zahlungspflicht der Ortstaxe ausgenommen.'"
+    }}
+
+    {{ 
+      partial:components/collapsible 
+      :class="'min-h-[auto] pb-12'"
+      :innerClass="'pb-12'"
+      :title="'Buchung'"
+      :text="'Für eine Buchung ist eine schriftliche Annahme des Angebots erforderlich; sie kommt durch unsere schriftliche Buchungsbestätigung zustande und wird durch eine Angeldzahlung in Höhe von 50% des Gesamtpreises (innerhalb von zehn Tagen) fixiert. Angeldzahlungen können durch Belastung der angegebenen Kreditkarte (Visa, MasterCard, American Express) erfolgen.'"
+    }}
+
+    {{ 
+      partial:components/collapsible 
+      :class="'min-h-[auto] pb-12'"
+      :innerClass="'pb-12'"
+      :title="'Stornokonditionen'"
+      :text="'Es besteht kein Rücktrittsrecht im Sinne des Konsumentenschutzkodex (Mitteilung gemäß Teil III, Titel III, Abschnitt I des Konsumentenschutzkodex – GvD 206/2005); dennoch werden folgende Stornokonditionen eingeräumt: Bei Stornierung bis 30 Tage vor Anreise wird die geleistete Angeldzahlung vollumfänglich rückerstattet; bei Stornierung bis sieben Tage vor Anreise wird die geleistete Anzahlung in Höhe von 50% des gesamten Arrangementpreises einbehalten; bei Stornierung innerhalb der letzten sieben Tage vor Anreise, Nichtankunft oder vorzeitiger Abreise wird der gesamte Preis für das gebuchte Arrangement in Rechnung gestellt.<br><br>Diese Stornierungskonditionen gelten unabhängig von einer etwaigen Weitervermietung der stornierten Suiten.<br><br>Eine Stornierung muss schriftlich erfolgen und erlangt ihre Wirksamkeit durch eine schriftliche Bestätigung des Fine Hotel & Hideaway Berghoferin.<br><br>Zur persönlichen Absicherung wird der Abschluss einer Reiserücktrittsversicherung empfohlen.'"
+    }}
+
+    {{ 
+      partial:components/collapsible 
+      :class="'min-h-[auto] pb-12'"
+      :innerClass="'pb-12'"
+      :title="'Check-In & Check-Out'"
+      :text="'Am Anreisetag steht die reservierte Suite ab 15 Uhr, am Abreisetag bis 11 Uhr zur Verfügung.<br><br>Für eine bestmögliche Organisation von Abend- und Nachtankünften wird bei Anreisen nach 20 Uhr um eine Vorabankündigung gebeten.<br><br>Auf Anfrage besteht bei Verfügbarkeit die Möglichkeit zu einem Late Check-out (bis 18 Uhr des Abreisetages); hierfür werden pro Person 100 Euro verrechnet.'"
+    }}
+
+    {{ 
+      partial:components/collapsible 
+      :class="'min-h-[auto] pb-12'"
+      :innerClass="'pb-12'"
+      :title="'Zahlungsmittel'"
+      :text="'Als Zahlungsmittel werden Bargeld, Debit- und Kreditkarten (Visa, MasterCard, American Express) akzeptiert.'"
+    }}
+  </div>
 
 </section>

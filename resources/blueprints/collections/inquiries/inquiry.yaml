@@ -268,6 +268,17 @@ sections:
           listable: hidden
           instructions_position: above
           visibility: visible
+      -
+        handle: user_language
+        field:
+          default: de
+          display: 'User language'
+          type: hidden
+          icon: hidden
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
   sidebar:
     display: Sidebar
     fields:
@@ -365,6 +376,17 @@ sections:
           instructions_position: above
           visibility: visible
       -
+        handle: discount
+        field:
+          default: false
+          display: Discount
+          type: toggle
+          icon: toggle
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
         handle: discount_description
         field:
           input_type: text
@@ -376,6 +398,8 @@ sections:
           listable: hidden
           instructions_position: above
           visibility: visible
+          if:
+            discount: 'equals 1'
       -
         handle: discount_type
         field:
@@ -397,6 +421,8 @@ sections:
           instructions_position: above
           visibility: visible
           width: 50
+          if:
+            discount: 'equals 1'
       -
         handle: discount_amount
         field:
@@ -409,4 +435,6 @@ sections:
           instructions_position: above
           visibility: visible
           width: 50
+          if:
+            discount: 'equals 1'
 title: Inquiry

@@ -4,7 +4,7 @@ blueprint: pages
 title: Home
 template: templates/content/home
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1682608260
+updated_at: 1683052872
 theme: chestnut
 menu_category: main
 content:
@@ -15,7 +15,7 @@ content:
       values:
         type: text_media
         header_image: content/svg/heading-winter-break.svg
-        image: content/berghoferin-home.jpg
+        image: content/berghoferin_fine_hotel_and_hideaway_home_01.jpg
         content_text:
           -
             type: paragraph

@@ -1,5 +1,5 @@
 <template>
-  <form>
+  <form v-if="!isLoading">
     <div class="grid grid-cols-16 gap-16">
       <template v-if="isSent">
         <div class="col-span-full md:col-span-14 md:col-start-2 md:grid md:grid-cols-14 md:gap-16">
@@ -275,7 +275,8 @@
           <form-group class="mt-40">
             <button 
               :class="[isValid ? 'border-midnight-500 text-midnight-500' : 'border-midnight-300 text-midnight-300 pointer-events-none select-none', 'py-12 border-t border-b leading-none flex items-center w-full text-left']"
-              @click.prevent="submit()">
+              @click.prevent="submit()"
+              :disabled="isLoading ? true : false">
               <icon-chevron-right :class="[isValid ? 'text-black' : 'text-midnight-400', '-mt-1 mr-8']" />
               {{ __('Unverbindlich anfragen') }}
             </button>
@@ -345,6 +346,7 @@ export default {
         dates: {},
         newsletter: 0,
         privacy_statement: 0,
+        user_lang: null,
       },
 
       errors: {
@@ -367,30 +369,37 @@ export default {
       },
 
       isSent: false,
+      isLoading: false,
     }
   },
 
   mounted() {
     this.getRooms();
+    this.form.user_lang = this._getLocale();
+    console.log(this.form.user_lang);
   },
   
   methods: {
 
     getRooms() {
+      this.isLoading = true;
       this.axios.get(this.routes.getRooms).then(response => {
         this.rooms = response.data;
+        this.isLoading = false;
       });
     },
 
     submit() {
       NProgress.start();
       this.isSent = false;
+      this.isLoading = true;
       this.form.arrival_date = this.arrivalDate;
       this.form.departure_date = this.departureDate; 
       this.axios.post(this.routes.store, this.form).then(response => {
         this.reset();
-        //window.scrollTo(0,0);
+        window.scrollTo(0,0);
         this.isSent = true;
+        this.isLoading = false;
         NProgress.done();
       })
       .catch(error => {

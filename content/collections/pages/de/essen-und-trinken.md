@@ -4,7 +4,7 @@ blueprint: page
 title: 'Essen und Trinken'
 theme: midnight
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1682956810
+updated_at: 1683052823
 menu_category: main
 template: templates/content/default
 content:
@@ -59,7 +59,7 @@ content:
                       target: _blank
                       title: null
                 text: contact@berghoferin.it
-        image: content/berghoferin-gastro-theque-alpine.jpg
+        image: content/berghoferin_essen_und_trinken_gastrotheque_alpine_01.jpg
         category: gastro-theque-alpine
   -
     type: set
@@ -115,7 +115,7 @@ content:
               -
                 type: text
                 text: ' '
-        image: content/berghoferin-die-saligen-fine-dining.jpg
+        image: content/berghoferin_essen_und_trinken_die_saligen_fine_dining_01.jpg
         category: die-saligen-fine-dining
   -
     type: set
@@ -138,7 +138,7 @@ content:
                 type: text
                 text: 'Externen Gästen steht das Zeno’s nur im Rahmen einer Reservierung im Fine Dining Die Saligen oder einer Day Spa-Buchung offen.'
         category: zenos
-        image: content/berghoferin-zenos.jpg
+        image: content/berghoferin_essen_und_trinken_zenos_01.jpg
   -
     type: set
     attrs:
@@ -159,6 +159,6 @@ content:
               -
                 type: text
                 text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, dolores unde. Nihil, totam pariatur! Iusto autem, quos repellat explicabo nobis officiis maiores vel! Doloremque facilis deleniti soluta, est officiis tempora!'
-        image: content/berghoferin-corner-pool-bar.jpg
+        image: content/berghoferin_essen_und_trinken_corner_pool_bar_01.jpg
         category: corner-pool-bar
 ---

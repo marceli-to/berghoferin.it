@@ -36,7 +36,7 @@ sections:
           display: Description
           type: bard
           icon: bard
-          localizable: false
+          localizable: true
           listable: hidden
           instructions_position: above
           visibility: visible

@@ -1,6 +1,6 @@
 {{ if is_homepage || is_offer }}
-  <header class="site-header">
-    <div class="site-container site-grid h-full pt-32 md:pt-52 flex justify-between items-start relative">
+  <header class="site-header {{ is_offer ? 'min-h-[220px] md:min-h-[240px] xl:min-h-0' : '' }}">
+    <div class="site-container site-grid h-full pt-32 md:pt-52 flex justify-between items-start relative ">
       <a href="{{ site:url }}" class="logo md:col-span-5 md:col-start-2 xl:col-span-3 xl:col-start-2 text-midnight-500">
         {{ if !is_offer }}
           {{ partial:icons/logo-type :class="'hidden xl:block'" }}

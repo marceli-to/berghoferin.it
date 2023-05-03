@@ -85,7 +85,7 @@ description:
                     type: superscript
                 text: '2'
 rate: 750
-image: content/rooms/room-2.jpg
+image: content/berghoferin_suiten_und_service_signature_suite_01.jpg
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1682956445
+updated_at: 1683052995
 ---

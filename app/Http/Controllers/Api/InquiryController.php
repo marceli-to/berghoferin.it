@@ -23,9 +23,10 @@ class InquiryController extends Controller
     $title = $request->input('firstname') . ' ' . $request->input('name') . ', ' . $request->input('city');
     $departure_date = \Carbon\Carbon::createFromFormat('d.m.Y', $request->input('departure_date'));
     $arrival_date = \Carbon\Carbon::createFromFormat('d.m.Y', $request->input('arrival_date'));
-    $nights = $arrival_date->diffInDays($departure_date);
+    $number_nights = $arrival_date->diffInDays($departure_date);
     $created_at = date('d.m.Y', time());
     $room = $request->input('room_id');
+    $user_lang = $request->input('user_lang');
 
     $inquiry = Entry::make()
       ->collection('inquiries')
@@ -36,7 +37,7 @@ class InquiryController extends Controller
             'title' => $title,
             'arrival_date' => $arrival_date,
             'departure_date' => $departure_date,
-            'nights' => $nights,
+            'number_nights' => $number_nights,
             'room' => $room,
             'created_at' => $created_at,
             'state' => 'new',

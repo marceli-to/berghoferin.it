@@ -4,7 +4,7 @@ blueprint: page
 title: 'Spa und Wellness'
 theme: midnight
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1682970485
+updated_at: 1683052731
 menu_category: main
 template: templates/content/default
 content:
@@ -85,7 +85,8 @@ content:
                 text: contact@berghoferin.it
         category: spa-and-wellness
         images:
-          - content/berghoferin-haus-und-lage-1.jpg
-          - content/berghoferin-haus-und-lage-2.jpg
-          - content/berghoferin-haus-und-lage-3.jpg
+          - content/berghoferin_spa_und_wellness_lido_alpin_01.jpg
+          - content/berghoferin_spa_und_wellness_lido_alpin_02.jpg
+          - content/berghoferin_spa_und_wellness_lido_alpin_03.jpg
+          - content/berghoferin_spa_und_wellness_lido_alpin_04.jpg
 ---

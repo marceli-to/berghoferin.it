@@ -4,7 +4,7 @@ blueprint: page
 title: 'Haus und Lage'
 theme: midnight
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1682968164
+updated_at: 1683052611
 menu_category: main
 template: templates/content/default
 content:
@@ -29,7 +29,12 @@ content:
                 text: 'Das Fine Hotel & Hideaway Berghoferin bietet seinen Gästen ein mit hohem Anspruch an Ästhetik und Qualität gestaltetes Haus, das mit viel Bemühen um die es beheimatende Landschaft, ihre Historie und Werte umgebaut und mit bewusstem Blick für die besonderen Dinge ausgestattet wurde. Dabei versteht es sich sowohl als ein Ort des Savoir-vivre, der das Versprechen von Genuss und Begegnung in kulturaffinem, mondänem Ambiente birgt, als auch als Refugium der Ruhe und Entschleunigung für Gäste, die Erholung suchen und vielfältige Möglichkeiten zu einem wahren Naturerleben schätzen. Berghoferin ist gleichermaßen Fine Hotel & Hideaway.'
         category: about
         images:
-          - content/berghoferin-haus-und-lage-1.jpg
-          - content/berghoferin-haus-und-lage-2.jpg
-          - content/berghoferin-haus-und-lage-3.jpg
+          - content/berghoferin_haus_und_lage_01.jpg
+          - content/berghoferin_haus_und_lage_02.jpg
+          - content/berghoferin_haus_und_lage_03.jpg
+          - content/berghoferin_haus_und_lage_05.jpg
+          - content/berghoferin_haus_und_lage_04.jpg
+          - content/berghoferin_haus_und_lage_06.jpg
+          - content/berghoferin_haus_und_lage_07.jpg
+          - content/berghoferin_haus_und_lage_08.jpg
 ---
