@@ -5,7 +5,7 @@ title: Kontakt
 menu_category: main
 theme: midnight
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1682970613
+updated_at: 1683116660
 template: templates/content/default
 content:
   -
@@ -14,7 +14,6 @@ content:
       id: lgz6ai4u
       values:
         type: text_media
-        image: content/berghoferin-contact.png
         content_text:
           -
             type: heading
@@ -169,4 +168,5 @@ content:
                         type: text
                         text: 'Um diesen zu gewähren, ist das Hotelgelände nicht frei zugänglich und Gästen mit bestätigter Hotel-, Restaurant- oder Day Spa-Buchung vorbehalten.'
         category: contact
+        image: content/berghoferin_kontakt.jpg
 ---

@@ -30,7 +30,7 @@
             </form-group>
           </div>
           <figure class="hidden md:block md:col-span-6 xl:col-span-5 md:-mt-120">
-            <img :src="'/assets/content/berghoferin-inquiry.jpg'" height="660" width="480" class="block w-full h-auto" alt="{{ __('Buchungsanfrage') }}">
+            <img :src="'/assets/content/berghoferin_buchungsanfrage.jpg'" height="660" width="480" class="block w-full h-auto" alt="{{ __('Buchungsanfrage') }}">
           </figure>
         </div>
       </template>

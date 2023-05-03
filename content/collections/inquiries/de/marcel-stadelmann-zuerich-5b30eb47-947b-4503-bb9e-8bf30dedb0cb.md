@@ -31,7 +31,7 @@ privacy_statement: 1
 number_nights: 1
 user_language: de
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1683115802
+updated_at: 1683116867
 greeting: |-
   Lieber Marcel
 
@@ -42,7 +42,7 @@ closing: |-
   Herzlichst,
   Anna und Philipp
 discount: true
-discount_type: percent
-discount_amount: 10.0
+discount_type: fixed_amount
+discount_amount: 100.0
 discount_description: Eröffnungsrabatt
 ---

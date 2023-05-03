@@ -5,7 +5,7 @@ title: 'Impressum + Datenschutz'
 menu_category: meta
 theme: midnight
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1682970579
+updated_at: 1683116699
 template: templates/content/default
 content:
   -
@@ -212,5 +212,5 @@ content:
                 type: text
                 text: 'Diese Website enthält Verknüpfungen zu Websites Dritter («externe Links»), auf deren Inhalte die Phina GmbH als Betreiberin der Website keinen Einfluss hat und wofür sie deshalb auch keine Gewähr übernehmen kann. Diese Websites unterliegen vielmehr der Haftung ihrer jeweiligen Anbieter bzw. Betreiber. Als Herausgeberin dieser Website hat die Phina GmbH bei der erstmaligen Verknüpfung externer Links die fremden Inhalte daraufhin überprüft, ob etwaige Rechtsverstöße bestehen. Zum Zeitpunkt der Verlinkung waren keine ersichtlich. Eine permanente Kontrolle externer Links ist ohne konkrete Anhaltspunkte einer Rechtsverletzung bzw. Hinweise auf Rechtsverstöße nicht zumutbar. Bei Kenntnis rechtswidriger Inhalte, die eine zivil- oder strafrechtliche Verantwortlichkeit auslösen, werden die Verlinkungen zu den entsprechenden Websites umgehend entfernt.'
         category: imprint-privacy
-        image: content/berghoferin-impressum.jpg
+        image: content/berghoferin_impressum_und_datenschutz.jpg
 ---

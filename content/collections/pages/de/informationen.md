@@ -6,7 +6,7 @@ theme: midnight
 menu_category: main
 template: templates/content/default
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1682609288
+updated_at: 1683116726
 content:
   -
     type: set
@@ -14,7 +14,6 @@ content:
       id: lgz9nbph
       values:
         type: text_media
-        image: content/berghoferin-informationen.jpg
         content_text:
           -
             type: set
@@ -306,4 +305,5 @@ content:
                         type: text
                         text: 'Maßgeschneiderte Serviceleistungen und eine weithin individuelle Betreuung seiner Gäste ist erklärtes Anliegen des Fine Hotel & Hideaway Berghoferin. Um es zu gewährleisten, sind Gäste herzlich eingeladen, persönliche Vorlieben und Wünsche sowie besondere Bedürfnisse, wie etwa auch zu berücksichtigende Unverträglichkeiten etc., vorab mitzuteilen.'
         category: information
+        image: content/berghoferin_informationen.jpg
 ---
