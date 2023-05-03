@@ -20,4 +20,7 @@ yarn-error.log
 content/collections/inquiries/de
 content/collections/inquiries/en
 content/collections/inquiries/it
+content/trees/collections/de/inquiries.yaml
+content/trees/collections/en/inquiries.yaml
+content/trees/collections/it/inquiries.yaml
 INSTALL.txt
