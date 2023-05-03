@@ -5,7 +5,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class Confirmation extends Notification
+class Offer extends Notification
 {
   use Queueable;
 
@@ -40,8 +40,8 @@ class Confirmation extends Notification
   {
     return (new MailMessage)
       ->from('no-reply@berghoferin.it')
-      ->subject(__('Ihre Buchungsanfrage'))
-      ->markdown('mail.confirmation', ['data' => $this->data]);
+      ->subject(__('Unser Angebot'))
+      ->markdown('mail.offer', ['data' => $this->data]);
   }
 
   /**

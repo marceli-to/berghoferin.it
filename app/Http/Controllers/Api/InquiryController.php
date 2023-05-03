@@ -26,7 +26,6 @@ class InquiryController extends Controller
     $number_nights = $arrival_date->diffInDays($departure_date);
     $created_at = date('d.m.Y', time());
     $room = $request->input('room_id');
-    $user_lang = $request->input('user_lang');
 
     $inquiry = Entry::make()
       ->collection('inquiries')

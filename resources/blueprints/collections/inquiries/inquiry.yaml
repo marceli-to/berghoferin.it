@@ -292,10 +292,11 @@ sections:
         field:
           options:
             new: Neu
+            preview: 'Angebot Vorschau'
             queued: 'Angebot im Versand'
             offered: 'Angebot versendet'
             accepted: 'Angebot akzeptiert'
-            denied: 'Angebot abgelehnt'
+            declined: 'Angebot abgelehnt'
           multiple: false
           clearable: false
           searchable: true
@@ -354,7 +355,7 @@ sections:
     display: Quote
     fields:
       -
-        handle: greeting
+        handle: quote_greeting
         field:
           antlers: false
           display: Greeting
@@ -365,7 +366,7 @@ sections:
           instructions_position: above
           visibility: visible
       -
-        handle: closing
+        handle: quote_closing
         field:
           antlers: false
           display: Closing
@@ -437,4 +438,42 @@ sections:
           width: 50
           if:
             discount: 'equals 1'
+  e-mail:
+    display: E-Mail
+    fields:
+      -
+        handle: email_greeting
+        field:
+          antlers: false
+          display: Greeting
+          type: textarea
+          icon: textarea
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: email_button_text
+        field:
+          input_type: text
+          antlers: false
+          display: 'Button text'
+          type: text
+          icon: text
+          instructions: 'z.B. "Zu Ihrem Angebot"'
+          localizable: false
+          listable: hidden
+          instructions_position: below
+          visibility: visible
+      -
+        handle: email_closing
+        field:
+          antlers: false
+          display: Closing
+          type: textarea
+          icon: textarea
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
 title: Inquiry

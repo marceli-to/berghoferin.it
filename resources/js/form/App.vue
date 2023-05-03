@@ -346,7 +346,7 @@ export default {
         dates: {},
         newsletter: 0,
         privacy_statement: 0,
-        user_lang: null,
+        user_language: null,
       },
 
       errors: {
@@ -375,8 +375,7 @@ export default {
 
   mounted() {
     this.getRooms();
-    this.form.user_lang = this._getLocale();
-    console.log(this.form.user_lang);
+    this.form.user_language = this._getLocale();
   },
   
   methods: {

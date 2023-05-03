@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Statamic\Facades\Entry;
+use App\Http\Controllers\OfferStateController;
 use Illuminate\Http\Request;
 
 /*
@@ -18,6 +19,9 @@ use Illuminate\Http\Request;
 // Route::statamic('example', 'example-view', [
 //    'title' => 'Example'
 // ]);
+
+Route::post('/accept-offer', [OfferStateController::class, 'accept'])->name('accept-inquiry');
+Route::post('/decline-offer', [OfferStateController::class, 'decline'])->name('decline-inquiry');
 
 Route::get('/mailable/confirmation', function () {
   $entry = Entry::find('c80cd251-f09b-4f83-942d-0a94bc77e839');

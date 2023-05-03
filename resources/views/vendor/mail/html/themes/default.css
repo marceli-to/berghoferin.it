@@ -175,6 +175,21 @@ table.header__content {
   padding: 30px 0 30px 30px;
 }
 
+.btn-offer {
+  border-bottom: 1px solid #87362b;
+  border-top: 1px solid #87362b;
+  color: #87362b;
+  display: block;
+  font-weight: 500;
+  line-height: 1 !important;
+  padding: 10px 0 8px 0;
+  text-decoration: none;
+}
+
+.btn-offer span {
+  font-weight: 500;
+}
+
 
 /* Utilities */
 .break-all {
@@ -218,4 +233,8 @@ table.header__content {
 
 .pb-large {
   padding-bottom: 30px;
+}
+
+.pb-xlarge {
+  padding-bottom: 40px;
 }

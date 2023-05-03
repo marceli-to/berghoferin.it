@@ -1,16 +1,12 @@
 title: Inquiries
 sites:
   - de
-  - it
-  - en
 propagate: false
 template: templates/content/offer
 layout: templates/layout
 revisions: false
 route:
   de: 'angebot/{slug}'
-  it: 'it/offerta/{slug}'
-  en: 'en/offer/{slug}'
 sort_dir: asc
 default_status: draft
 date_behavior:
