@@ -5,8 +5,7 @@ propagate: false
 template: templates/content/offer
 layout: templates/layout
 revisions: false
-route:
-  de: 'angebot/{slug}'
+route: 'angebot/{slug}'
 sort_dir: asc
 default_status: draft
 date_behavior:

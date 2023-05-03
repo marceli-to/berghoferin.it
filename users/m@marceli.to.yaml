@@ -6,6 +6,7 @@ preferences:
   collections:
     inquiries:
       columns:
+        - created_at
         - title
         - arrival_date
         - departure_date

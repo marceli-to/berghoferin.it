@@ -77,7 +77,7 @@
       {{ /partial:components/list-item }}
     {{ /if }}
 
-    {{ if state != 'accepted' || state != 'declined' }}
+    {{ if state != 'accepted' && state != 'declined' }}
       <form method="post" action="/accept-offer">
         <input type="hidden" name="id" value="{{ id }}">
         <input type="hidden" name="_token" value="{{ csrf_token }}">
