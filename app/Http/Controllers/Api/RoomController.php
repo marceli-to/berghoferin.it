@@ -14,7 +14,7 @@ class RoomController extends Controller
    */
   public function get()
   { 
-    $rooms = Entry::query()->where('collection', 'rooms')->orderBy('order')->get();
+    $rooms = Entry::query()->where('collection', 'rooms')->where('site', 'de')->orderBy('order')->get();
     $rooms = $rooms->map(function ($room) {
       return [
         'id' => $room->id,
