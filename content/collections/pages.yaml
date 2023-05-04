@@ -1,8 +1,8 @@
 title: Pages
 sites:
   - de
-  - it
   - en
+  - it
 propagate: false
 template: templates/content/default
 layout: templates/layout

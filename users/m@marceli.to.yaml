@@ -13,6 +13,10 @@ preferences:
         - email
         - state
       after_save: continue_editing
+    pages:
+      after_save: continue_editing
+    rooms:
+      after_save: continue_editing
   locale: en
   favorites:
     -
