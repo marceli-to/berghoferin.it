@@ -40,7 +40,7 @@ class Inquiry extends Notification
   {
     return (new MailMessage)
       ->from('no-reply@berghoferin.it')
-      ->subject('Buchungsanfrage')
+      ->subject(__('Buchungsanfrage', [], $this->data->user_language))
       ->markdown('mail.inquiry', ['data' => $this->data]);
   }
 

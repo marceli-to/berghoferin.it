@@ -2,9 +2,9 @@
 id: 8da752a6-2ad6-4a67-802e-f0ea3a73c4e6
 blueprint: page
 title: 'Essen und Trinken'
-theme: chestnut
+theme: midnight
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1683125482
+updated_at: 1683186881
 menu_category: main
 template: templates/content/default
 content:
@@ -143,6 +143,7 @@ content:
     type: set
     attrs:
       id: lgz2offc
+      enabled: false
       values:
         type: text_media
         header_image: content/svg/corner-pool-bar.svg

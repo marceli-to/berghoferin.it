@@ -283,11 +283,6 @@ sections:
     display: Sidebar
     fields:
       -
-        handle: slug
-        field:
-          type: slug
-          localizable: true
-      -
         handle: state
         field:
           options:
@@ -312,15 +307,6 @@ sections:
           visibility: visible
           default: new
       -
-        handle: parent
-        field:
-          type: entries
-          collections:
-            - inquiries
-          max_items: 1
-          listable: false
-          localizable: true
-      -
         handle: theme
         field:
           options:
@@ -340,6 +326,20 @@ sections:
           listable: hidden
           instructions_position: above
           visibility: visible
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - inquiries
+          max_items: 1
+          listable: false
+          localizable: true
       -
         handle: is_offer
         field:

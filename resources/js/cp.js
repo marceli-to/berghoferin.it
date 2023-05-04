@@ -3,12 +3,11 @@
  * https://statamic.dev/extending/control-panel
  */
 
-/** Example Fieldtype
+/** Example Fieldtype */
 
-import ExampleFieldtype from './components/fieldtypes/ExampleFieldtype.vue';
+// import MailablePreviewButtonFieldtype from './components/fieldtypes/MailablePreviewButtonFieldtype.vue';
 
-Statamic.booting(() => {
-    Statamic.$components.register('example-fieldtype', ExampleFieldtype);
-});
+// Statamic.booting(() => {
+//   Statamic.$components.register('mailable_preview_button-fieldtype', MailablePreviewButtonFieldtype);
+// });
 
-*/

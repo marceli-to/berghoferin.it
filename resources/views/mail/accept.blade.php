@@ -1,6 +1,6 @@
 <x-mail::message>
 <h1 class="text-base pb-large">
-  {{ $data->firstname }} {{ $data->name }} hat das Angebot akzeptiert:
+  {{ $data->firstname }} {{ $data->name }} hat das Angebot abgelehnt:
 </h1>
 <div class="text-base pb-base">
   <strong>Anreise</strong><br>{{ $data->arrival_date ? \Carbon\Carbon::parse($data->arrival_date)->translatedFormat('d.m.Y') : '-' }}
