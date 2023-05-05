@@ -83,7 +83,7 @@
 
 {{ /if }}
 
-{{ if deposit }}
+{{ if deposit && state == 'accepted' }}
   {{ partial:components/list-item :class="'border-midnight-500'" }}
     <div>{{ trans key="Angeldzahlung" :site="user_language" }}</div>
     <div>{{ (room:rate * number_suites * number_nights / 2)  | format_number(2, ',', ',') }} &euro;</div>
