@@ -17,10 +17,5 @@ yarn-error.log
 .DS_Store
 /.idea
 /.vscode
-content/collections/inquiries/de
-content/collections/inquiries/en
-content/collections/inquiries/it
-content/trees/collections/de/inquiries.yaml
-content/trees/collections/en/inquiries.yaml
-content/trees/collections/it/inquiries.yaml
+/content
 INSTALL.txt
