@@ -42,23 +42,23 @@
 
 {{ partial:components/list-item :class="'border-midnight-500'" }}
 <div>{{ trans key="Preis pro Nacht" :site="user_language" }}</div>
-<div>{{ (room:rate * number_suites) | format_number(2, ',', ',') }} &euro;</div>
+<div>{{ (room:rate * number_suites) | format_number(2, ',', '.') }} &euro;</div>
 {{ /partial:components/list-item }}
 
 {{ if discount }}
 
   {{ partial:components/list-item }}
     <div>{{ trans key="Zwischensumme" :site="user_language" }}</div>
-    <div>{{ (room:rate * number_suites * number_nights) | format_number(2, ',', ',') }} &euro;</div>
+    <div>{{ (room:rate * number_suites * number_nights) | format_number(2, ',', '.') }} &euro;</div>
   {{ /partial:components/list-item }}
 
   {{ partial:components/list-item }}
     <div>{{ discount_description }}{{ if discount_type == 'percent' }}, {{ discount_amount }}%{{ /if }}</div>
     <div>
       {{ if discount_type == 'percent' }}
-        – {{ (room:rate * number_suites * number_nights * discount_amount / 100) | format_number(2, ',', ',') }} &euro;
+        – {{ (room:rate * number_suites * number_nights * discount_amount / 100) | format_number(2, ',', '.') }} &euro;
       {{ else }}
-        – {{ discount_amount | format_number(2, ',', ',') }} &euro;
+        – {{ discount_amount | format_number(2, ',', '.') }} &euro;
       {{ /if }}
     </div>
   {{ /partial:components/list-item }}
@@ -67,9 +67,9 @@
     <div>{{ trans key="Gesamtbetrag inkl. MwSt & Service" :site="user_language" }}</div>
     <div>
       {{ if discount_type == 'percent' }}
-        {{ (room:rate * number_suites * number_nights - room:rate * number_nights * discount_amount / 100) | format_number(2, ',', ',') }} &euro;
+        {{ (room:rate * number_suites * number_nights - room:rate * number_nights * discount_amount / 100) | format_number(2, ',', '.') }} &euro;
       {{ else }}
-        {{ (room:rate * number_suites * number_nights - discount_amount) | format_number(2, ',', ',') }} &euro;
+        {{ (room:rate * number_suites * number_nights - discount_amount) | format_number(2, ',', '.') }} &euro;
       {{ /if }}
     </div>
   {{ /partial:components/list-item }}
@@ -78,7 +78,7 @@
 
   {{ partial:components/list-item :class="'{{ deposit ? 'border-b border-midnight-300 mb-40' : ''}}'" }}
     <div>{{ trans key="Gesamtbetrag inkl. MwSt & Service" :site="user_language" }}</div>
-    <div>{{ (room:rate * number_suites * number_nights) | format_number(2, ',', ',') }} &euro;</div>
+    <div>{{ (room:rate * number_suites * number_nights) | format_number(2, ',', '.') }} &euro;</div>
   {{ /partial:components/list-item }}
 
 {{ /if }}
@@ -90,13 +90,13 @@
     {{ if discount }}
       <div>
         {{ if discount_type == 'percent' }}
-          {{ (room:rate * number_suites * number_nights / 2) - (room:rate * number_suites * number_nights - room:rate * number_nights * discount_amount / 100) | format_number(2, ',', ',') }} &euro;
+          {{ (((room:rate * number_suites * number_nights) - (room:rate * number_nights * discount_amount / 100)) / 2) | format_number(2, ',', '.') }} &euro;
         {{ else }}
-          {{ (room:rate * number_suites * number_nights / 2) - (room:rate * number_suites * number_nights - discount_amount) | format_number(2, ',', ',') }} &euro;
+          {{ ((room:rate * number_suites * number_nights - discount_amount) / 2) | format_number(2, ',', '.') }} &euro;
         {{ /if }}
       </div>
     {{ else }}
-      <div>{{ (room:rate * number_suites * number_nights / 2)  | format_number(2, ',', ',') }} &euro;</div>
+      <div>{{ (room:rate * number_suites * number_nights / 2) | format_number(2, ',', '.') }} &euro;</div>
     {{ /if }}
   {{ /partial:components/list-item }}
 {{ /if }}
