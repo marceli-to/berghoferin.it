@@ -1,8 +1,8 @@
 <li class="flex items-center justify-end">
   {{ locales current_first="false" }}
-    {{ partial:menu/language/item :text="locale.name" :url="permalink" target="_self" :class="'text-xl'" }}
+    {{ partial:menu/language/item :text="locale.name" :url="permalink" target="_self" :class="'text-md'" }}
     {{ if !last }}
-      <span class="block mx-8 mt-1 text-white text-xl leading-none">/</span>
+      <span class="block mx-8 mt-1 text-white text-md leading-none">/</span>
     {{ /endif }}
   {{ /locales }}
 </li>
