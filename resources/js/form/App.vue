@@ -45,6 +45,7 @@
               range
               auto-apply
               :start-date="new Date(2023, 5, 1)"
+              :min-range="2"
               :min-date="new Date(2023, 5, 15)"
               :max-date="new Date(2023, 9, 29)"
               :enable-time-picker="false"
@@ -57,6 +58,9 @@
                 <icon-chevron-right />
               </template>
             </VueDatePicker>
+            <div class="text-xs normal-case">
+              * {{ __('Mindestaufenthalt 2 Nächte') }}
+            </div>
           </div>
           <div class="mb-80">
             <heading-two>{{ __('Suiten') }}</heading-two>

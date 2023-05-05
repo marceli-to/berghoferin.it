@@ -30,11 +30,6 @@ article.content ul {
   @apply list-none m-0 ml-20
 }
 
-article.content ul + p,
-article.content p + ul {
-  @apply mt-15
-}
-
 article.content li {
   @apply list-item pl-5
 }
