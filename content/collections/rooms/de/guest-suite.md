@@ -1,7 +1,7 @@
 ---
-id: 822cf6a0-6b2c-4c1a-9dc2-ebcfc772a107
+id: e195d8da-efe1-4b3b-aedf-ce844cc8dc57
 blueprint: room
-title: Family-Suite
+title: Guest-Suite
 description:
   -
     type: bulletList
@@ -14,7 +14,7 @@ description:
             content:
               -
                 type: text
-                text: 'Süd- oder Nordwestlage'
+                text: 'Süd-, Nordost- oder Nordlage'
       -
         type: listItem
         content:
@@ -23,7 +23,7 @@ description:
             content:
               -
                 type: text
-                text: '2 Schlafzimmer'
+                text: 'Teiloffenes Raumgefüge mit abgegrenztem Schlafbereich und Wohnraum mit hellem Verandabereich'
       -
         type: listItem
         content:
@@ -32,7 +32,7 @@ description:
             content:
               -
                 type: text
-                text: 'Wohnraum mit hellem Verandabereich'
+                text: 'Kingsize-Bett (zum Teil Himmelbett aus Zirbenholz)'
       -
         type: listItem
         content:
@@ -41,7 +41,7 @@ description:
             content:
               -
                 type: text
-                text: '2 Kingsize-Betten oder 1 Queensize- und 1 Kingsize-Bett'
+                text: 'Badezimmer mit geräumiger Walk-in-Regendusche'
       -
         type: listItem
         content:
@@ -50,7 +50,7 @@ description:
             content:
               -
                 type: text
-                text: '1–2 Badezimmer mit jeweils geräumiger Walk-in-Regendusche'
+                text: 'Zum Teil freistehende Badewanne in der Veranda'
       -
         type: listItem
         content:
@@ -59,7 +59,7 @@ description:
             content:
               -
                 type: text
-                text: 'Zum Teil freistehende Badewanne im Badezimmer en suite'
+                text: 'Zum Teil großzügiger Loggia-Balkon mit Bergpanoramasicht bzw. kleiner Loggia-Balkon mit Bergblick'
       -
         type: listItem
         content:
@@ -68,33 +68,15 @@ description:
             content:
               -
                 type: text
-                text: '2 Loggia-Balkone mit Bergblick oder 1 großzügiger Loggia-Balkon mit Bergpanoramasicht und 1 kleiner Loggia-Balkon mit Bergblick'
-      -
-        type: listItem
-        content:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Zum Teil Loggia-Sauna mit Bergblick'
-      -
-        type: listItem
-        content:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'ca. 65–70 m'
+                text: 'ca. 40 m'
               -
                 type: text
                 marks:
                   -
                     type: superscript
                 text: '2'
-rate: 600
-image: content/berghoferin_suiten_und_service_family_suite_01.jpg
+rate: 450
+image: content/berghoferin_suiten_und_service_guest_suite_01.jpg
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1683236239
+updated_at: 1683282282
 ---

@@ -1,7 +1,7 @@
 ---
-id: e195d8da-efe1-4b3b-aedf-ce844cc8dc57
+id: 168764d0-dcc2-4262-8839-de1928ab300c
 blueprint: room
-title: Guest-Suite
+title: Signature-Suite
 description:
   -
     type: bulletList
@@ -14,7 +14,7 @@ description:
             content:
               -
                 type: text
-                text: 'Süd-, Nordost- oder Nordlage'
+                text: Nordwestlage
       -
         type: listItem
         content:
@@ -23,7 +23,7 @@ description:
             content:
               -
                 type: text
-                text: 'Teiloffenes Raumgefüge mit abgegrenztem Schlafbereich und Wohnraum mit hellem Verandabereich'
+                text: 'Loftartiger Wohn-Schlafraum mit hellem Verandabereich'
       -
         type: listItem
         content:
@@ -32,7 +32,7 @@ description:
             content:
               -
                 type: text
-                text: 'Kingsize-Bett (zum Teil Himmelbett aus Zirbenholz)'
+                text: Bibliotheksempore
       -
         type: listItem
         content:
@@ -41,7 +41,7 @@ description:
             content:
               -
                 type: text
-                text: 'Badezimmer mit geräumiger Walk-in-Regendusche'
+                text: Kingsize-Bett
       -
         type: listItem
         content:
@@ -50,7 +50,7 @@ description:
             content:
               -
                 type: text
-                text: 'Zum Teil freistehende Badewanne in der Veranda'
+                text: '2 Badezimmer, davon ein Salon-Bad mit geräumiger Walk-in-Regendusche und freistehender Badewanne'
       -
         type: listItem
         content:
@@ -59,7 +59,7 @@ description:
             content:
               -
                 type: text
-                text: 'Zum Teil großzügiger Loggia-Balkon mit Bergpanoramasicht bzw. kleiner Loggia-Balkon mit Bergblick'
+                text: 'Großzügiger Loggia-Balkon mit Bergpanoramasicht'
       -
         type: listItem
         content:
@@ -68,15 +68,24 @@ description:
             content:
               -
                 type: text
-                text: 'ca. 40 m'
+                text: 'Saunabalkon, nutzbar auch als Loggia-Freisitz'
+      -
+        type: listItem
+        content:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'ca. 80 m'
               -
                 type: text
                 marks:
                   -
                     type: superscript
                 text: '2'
-rate: 450
-image: content/berghoferin_suiten_und_service_guest_suite_01.jpg
+rate: 750
+image: content/berghoferin_suiten_und_service_signature_suite_01.jpg
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1683236200
+updated_at: 1683282288
 ---

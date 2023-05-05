@@ -96,5 +96,5 @@ description:
 rate: 580
 image: content/berghoferin_suiten_und_service_master_suite_01.jpg
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1683111541
+updated_at: 1683282279
 ---
