@@ -86,6 +86,17 @@
 {{ if deposit && state == 'accepted' }}
   {{ partial:components/list-item :class="'border-midnight-500'" }}
     <div>{{ trans key="Angeldzahlung" :site="user_language" }}</div>
-    <div>{{ (room:rate * number_suites * number_nights / 2)  | format_number(2, ',', ',') }} &euro;</div>
+
+    {{ if discount }}
+      <div>
+        {{ if discount_type == 'percent' }}
+          {{ (room:rate * number_suites * number_nights / 2) - (room:rate * number_suites * number_nights - room:rate * number_nights * discount_amount / 100) | format_number(2, ',', ',') }} &euro;
+        {{ else }}
+          {{ (room:rate * number_suites * number_nights / 2) - (room:rate * number_suites * number_nights - discount_amount) | format_number(2, ',', ',') }} &euro;
+        {{ /if }}
+      </div>
+    {{ else }}
+      <div>{{ (room:rate * number_suites * number_nights / 2)  | format_number(2, ',', ',') }} &euro;</div>
+    {{ /if }}
   {{ /partial:components/list-item }}
 {{ /if }}
