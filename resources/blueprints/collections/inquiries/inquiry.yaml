@@ -312,6 +312,7 @@ sections:
           options:
             midnight: Midnight
             chestnut: Chestnut
+            eggplant: Eggplant
           multiple: false
           clearable: false
           searchable: true
@@ -351,14 +352,14 @@ sections:
           listable: hidden
           instructions_position: above
           visibility: visible
-  quote:
-    display: Quote
+  proposal:
+    display: Proposal
     fields:
       -
-        handle: quote_greeting
+        handle: proposal_salutation
         field:
           antlers: false
-          display: Greeting
+          display: Salutation
           type: textarea
           icon: textarea
           localizable: false
@@ -366,15 +367,27 @@ sections:
           instructions_position: above
           visibility: visible
       -
-        handle: quote_closing
+        handle: proposal_remarks_greetings
         field:
           antlers: false
-          display: Closing
+          display: 'Remarks and greetings'
           type: textarea
           icon: textarea
           localizable: false
           listable: hidden
-          instructions_position: above
+          instructions_position: below
+          visibility: visible
+      -
+        handle: deposit
+        field:
+          default: false
+          display: Deposit
+          type: toggle
+          icon: toggle
+          instructions: 'Deposit required?'
+          localizable: false
+          listable: hidden
+          instructions_position: below
           visibility: visible
       -
         handle: discount
@@ -439,13 +452,24 @@ sections:
           if:
             discount: 'equals 1'
   e-mail:
-    display: E-Mail
+    display: 'Proposal E-Mail'
     fields:
       -
-        handle: email_greeting
+        handle: email_salutation
         field:
           antlers: false
-          display: Greeting
+          display: Salutation
+          type: textarea
+          icon: textarea
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: email_remarks_greetings
+        field:
+          antlers: false
+          display: 'Remarks and greetings'
           type: textarea
           icon: textarea
           localizable: false
@@ -464,16 +488,5 @@ sections:
           localizable: false
           listable: hidden
           instructions_position: below
-          visibility: visible
-      -
-        handle: email_closing
-        field:
-          antlers: false
-          display: Closing
-          type: textarea
-          icon: textarea
-          localizable: false
-          listable: hidden
-          instructions_position: above
           visibility: visible
 title: Inquiry

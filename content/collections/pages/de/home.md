@@ -4,7 +4,7 @@ blueprint: pages
 title: Home
 template: templates/content/home
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1683052872
+updated_at: 1683232861
 theme: chestnut
 menu_category: main
 content:
@@ -14,7 +14,7 @@ content:
       id: lgxlndka
       values:
         type: text_media
-        header_image: content/svg/heading-winter-break.svg
+        header_image: content/svg/sommer-saison.svg
         image: content/berghoferin_fine_hotel_and_hideaway_home_01.jpg
         content_text:
           -
@@ -33,5 +33,5 @@ content:
                 target: _self
                 icon: chevron-right
                 description: Buchungsanfrage
-        category: winter-break
+        category: home
 ---

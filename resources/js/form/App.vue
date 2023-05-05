@@ -4,7 +4,8 @@
       <template v-if="isSent">
         <div class="col-span-full md:col-span-14 md:col-start-2 md:grid md:grid-cols-14 md:gap-16">
           <div class="md:col-span-7 xl:col-start-4 xl:col-span-5">
-            {{ __('Herzlichen Dank für Ihre Anfrage. Gerne unterbreiten wir Ihnen in den nächsten Tagen ein Angebot.') }}
+            {{ __('Haben Sie herzlichen Dank für Ihre Anfrage.') }}<br><br>
+            {{ __('Sie erhalten ein entsprechendes Angebot an die angegebene E-Mail-Adresse.') }}
           </div>
           <div class="mt-80 md:mt-0 md:col-span-5 md:col-start-10 xl:col-start-12 xl:col-span-3">
             <h2>{{ __('Zusammenfassung') }}</h2>
@@ -26,7 +27,7 @@
             </form-group>
             <form-group class="border-b border-midnight-300 mb-8 h-36" v-if="form.room">
               <form-label>{{ __('Suitentyp') }}</form-label>
-              <div>{{ __(form.room.slug) }}</div>
+              <div>{{ form.room.title }}</div>
             </form-group>
           </div>
           <figure class="hidden md:block md:col-span-6 xl:col-span-5 md:-mt-120">
@@ -99,7 +100,7 @@
           <div class="mb-80 md:mb-0">
             <heading-two>{{ __('Bevorzugter Suitentyp') }}</heading-two>
             <form-group class="mb-16" v-for="room in rooms" :key="room.id">
-              <form-label>{{ __(room.slug) }}</form-label>
+              <form-label>{{ room.title }}</form-label>
               <a href="" 
                 @click.prevent="selectRoom(room.id)"
                 :class="[form.room && form.room.id == room.id ? 'text-midnight-500' : 'text-midnight-300', 'flex items-center justify-center w-32 h-32 border border-midnight-300 text-center']">
@@ -256,7 +257,7 @@
           </form-group>
           <form-group class="border-b border-midnight-300 mb-8 h-36" v-if="form.room">
             <form-label>{{ __('Suitentyp') }}</form-label>
-            <div>{{ __(form.room.slug) }}</div>
+            <div>{{ form.room.title }}</div>
           </form-group>
           <form-group class="mt-40">
             <form-checkbox :id="'privacy-statement'" v-model="form.privacy_statement" @change="toggle('privacy_statement')">

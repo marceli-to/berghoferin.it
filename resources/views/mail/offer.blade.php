@@ -5,9 +5,9 @@
 </div>
 <br><br>
 @endif
-@if ($data->email_greeting)
+@if ($data->email_salutation)
 <div class="text-base pb-xlarge">
-  {!! nl2br($data->email_greeting) !!}
+  {!! nl2br($data->email_salutation) !!}
 </div>
 @endif
 @if ($data->email_button_text)
@@ -18,9 +18,9 @@
   </a>
 </div>
 @endif
-@if ($data->email_closing)
+@if ($data->email_remarks_greetings)
 <div class="text-base">
-  {!! nl2br($data->email_closing) !!}
+  {!! nl2br($data->email_remarks_greetings) !!}
 </div>
 @endif
 </x-mail::message>

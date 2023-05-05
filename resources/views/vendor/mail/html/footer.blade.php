@@ -14,7 +14,7 @@ Südtirol – Italien
 </div>
 <div>
   <a href="https://www.instagram.com/berghoferin/" target="_blank" rel="noopener" title="{{ __("Berghoferin auf Instagram") }}">
-    <img class="logo" src="{{ config('app.url') }}/img/mail/instagram.png" title="Berghoferin" alt="Berghoferin" height="40" width="40" style="display:block; height: 20px; width: 20px;">
+    <img class="logo" src="{{ config('app.url') }}/img/mail/instagram.png" title="Berghoferin" alt="Berghoferin" height="40" width="40" style="display:block; height: 20px; width: auto">
   </a>
 </div>
 </td>

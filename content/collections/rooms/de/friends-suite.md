@@ -1,7 +1,7 @@
 ---
 id: 6475e788-7bdf-4667-945e-69026fdeb7c3
 blueprint: room
-title: Freunde-Suite
+title: Friends-Suite
 description:
   -
     type: bulletList
@@ -69,5 +69,5 @@ description:
 rate: 390
 image: content/berghoferin_suiten_und_service_friends_suite_01.jpg
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1683189301
+updated_at: 1683236211
 ---

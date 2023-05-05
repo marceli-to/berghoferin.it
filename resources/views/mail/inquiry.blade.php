@@ -51,6 +51,6 @@
   <strong>{{ __('Personen', [], $data->user_language) }}</strong><br>{{ $data->number_guests ? __($data->number_guests) : '-' }}
 </div>
 <div class="text-base pb-large">
-  <strong>{{ __('Bevorzugter Suitentyp', [], $data->user_language) }}</strong><br>{{ $data->room->slug ? __($data->room->slug, [], 'de') : '-' }}
+  <strong>{{ __('Bevorzugter Suitentyp', [], $data->user_language) }}</strong><br>{{ $data->room->title ? $data->room->title : '-'}}
 </div>
 </x-mail::message>

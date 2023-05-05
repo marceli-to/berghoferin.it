@@ -1,7 +1,7 @@
 ---
 id: 822cf6a0-6b2c-4c1a-9dc2-ebcfc772a107
 blueprint: room
-title: Familien-Suite
+title: Family-Suite
 description:
   -
     type: bulletList
@@ -96,5 +96,5 @@ description:
 rate: 600
 image: content/berghoferin_suiten_und_service_family_suite_01.jpg
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1683052969
+updated_at: 1683236239
 ---

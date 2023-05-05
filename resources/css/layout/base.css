@@ -35,7 +35,6 @@ article.content p + ul {
   @apply mt-15
 }
 
-
 article.content li {
   @apply list-item pl-5
 }

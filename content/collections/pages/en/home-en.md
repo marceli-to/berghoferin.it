@@ -2,7 +2,7 @@
 id: 0e8c5766-3d16-4fc7-9527-f9d048ee90f7
 origin: home
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1683189036
+updated_at: 1683232965
 content:
   -
     type: set
@@ -27,7 +27,7 @@ content:
                 url: 'entry::57a7b862-71c7-45f2-8834-fbbaea46f602'
                 target: _self
                 icon: chevron-right
-        category: winter-break
-        header_image: content/svg/heading-winter-break.svg
+        category: home
+        header_image: content/svg/summer-season.svg
         image: content/berghoferin_fine_hotel_and_hideaway_home_01.jpg
 ---

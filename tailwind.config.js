@@ -15,6 +15,15 @@ module.exports = {
       
       colors: {
         'chestnut': '#87362b',
+        'eggplant': '#502846',
+        'lavender-mist': '#dcd4da',
+        'forest': '#324b39',
+        'feather-grey': '#d6dbd7',
+        'bronze': '#88701e',
+        'green-tea': '#e2ddc9',
+        'arctic': '#1e5f78',
+        'icy-blue': '#d2dfe4',
+        
         'midnight': {
           //100: '#344452',
           //200: '#c0ccdc',

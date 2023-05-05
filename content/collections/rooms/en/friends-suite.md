@@ -1,7 +1,7 @@
 ---
-id: e195d8da-efe1-4b3b-aedf-ce844cc8dc57
-blueprint: room
-title: Gäste-Suite
+id: 701458bb-369f-46f6-b515-3188fa9c9763
+origin: 6475e788-7bdf-4667-945e-69026fdeb7c3
+title: Friends-Suite
 description:
   -
     type: bulletList
@@ -14,7 +14,7 @@ description:
             content:
               -
                 type: text
-                text: 'Süd-, Nordost- oder Nordlage'
+                text: 'faces south-west'
       -
         type: listItem
         content:
@@ -23,7 +23,7 @@ description:
             content:
               -
                 type: text
-                text: 'Teiloffenes Raumgefüge mit abgegrenztem Schlafbereich und Wohnraum mit hellem Verandabereich'
+                text: 'combined living & sleeping area with a bright patio'
       -
         type: listItem
         content:
@@ -32,7 +32,7 @@ description:
             content:
               -
                 type: text
-                text: 'Kingsize-Bett (zum Teil Himmelbett aus Zirbenholz)'
+                text: 'queen-sized bed'
       -
         type: listItem
         content:
@@ -41,7 +41,7 @@ description:
             content:
               -
                 type: text
-                text: 'Badezimmer mit geräumiger Walk-in-Regendusche'
+                text: 'bathroom with a large walk-in rain shower'
       -
         type: listItem
         content:
@@ -50,7 +50,7 @@ description:
             content:
               -
                 type: text
-                text: 'Zum Teil freistehende Badewanne in der Veranda'
+                text: 'small loggia balcony with a mountain view'
       -
         type: listItem
         content:
@@ -59,24 +59,13 @@ description:
             content:
               -
                 type: text
-                text: 'Zum Teil großzügiger Loggia-Balkon mit Bergpanoramasicht bzw. kleiner Loggia-Balkon mit Bergblick'
-      -
-        type: listItem
-        content:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'ca. 40 m'
+                text: 'approx. 35 m'
               -
                 type: text
                 marks:
                   -
                     type: superscript
                 text: '2'
-rate: 450
-image: content/berghoferin_suiten_und_service_guest_suite_01.jpg
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1683111686
+updated_at: 1683236214
 ---

@@ -98,7 +98,7 @@ fields:
     handle: category
     field:
       options:
-        winter-break: 'Home - Winterpause'
+        home: Home
         about: 'Haus und Lage'
         gastro-theque-alpine: 'Essen und Trinken – Gastro Thèque Alpine'
         die-saligen-fine-dining: 'Essen und Trinken – Die Saligen Fine Dining'

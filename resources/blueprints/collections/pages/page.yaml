@@ -105,6 +105,10 @@ sections:
           options:
             midnight: Midnight
             chestnut: Chestnut
+            eggplant: Eggplant
+            forest: Forest
+            bronze: Bronze
+            arctic: Arctic
           multiple: false
           clearable: false
           searchable: true

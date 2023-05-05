@@ -1,7 +1,7 @@
 ---
-id: 5d53b0dc-2db6-46cd-98db-883abb529f71
-origin: e195d8da-efe1-4b3b-aedf-ce844cc8dc57
-title: Guest-Suite
+id: e7413617-7532-47df-b000-bf67f65b6209
+origin: 822cf6a0-6b2c-4c1a-9dc2-ebcfc772a107
+title: Family-Suite
 description:
   -
     type: bulletList
@@ -14,7 +14,7 @@ description:
             content:
               -
                 type: text
-                text: 'faces south, north-east, or north'
+                text: 'faces south or north-west'
       -
         type: listItem
         content:
@@ -23,7 +23,7 @@ description:
             content:
               -
                 type: text
-                text: 'partially open room sequence with separate sleeping and living areas and a bright patio'
+                text: 'two bedrooms'
       -
         type: listItem
         content:
@@ -32,7 +32,7 @@ description:
             content:
               -
                 type: text
-                text: 'king-sized bed'
+                text: 'living area with a bright patio'
       -
         type: listItem
         content:
@@ -41,7 +41,7 @@ description:
             content:
               -
                 type: text
-                text: 'bathroom with a large walk-in rain shower'
+                text: 'two king-sized beds or one queen-sized and one king-sized bed'
       -
         type: listItem
         content:
@@ -50,7 +50,7 @@ description:
             content:
               -
                 type: text
-                text: 'some have either a large loggia balcony with a panorama mountain view or a small loggia balcony with a mountain view'
+                text: 'one or two bathrooms, each with a large walk-in rain shower'
       -
         type: listItem
         content:
@@ -59,7 +59,16 @@ description:
             content:
               -
                 type: text
-                text: 'approx. 40 m'
+                text: 'two loggia balconies with a mountain view or one large loggia balcony with a panorama mountain view and one small loggia balcony with a mountain view'
+      -
+        type: listItem
+        content:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'approx. 65–70 m'
               -
                 type: text
                 marks:
@@ -83,7 +92,7 @@ description:
             content:
               -
                 type: text
-                text: 'a partially glazed en-suite bathroom (shielded from view), or'
+                text: 'a free-standing bathtub (shielded from view) in the partially glazed en-suite bathroom, or'
       -
         type: listItem
         content:
@@ -92,16 +101,7 @@ description:
             content:
               -
                 type: text
-                text: 'a four-poster bed made from Swiss pine, or'
-      -
-        type: listItem
-        content:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'a free-standing bathtub on the patio.'
+                text: 'a loggia sauna with a mountain view'
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1683189416
+updated_at: 1683236234
 ---

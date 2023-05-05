@@ -1,0 +1,32 @@
+<section class="text-midnight-500 md:col-span-full md:grid md:grid-cols-16 md:gap-16">
+  <article class="content md:col-span-14 md:col-start-2 xl:col-span-5 xl:col-start-5">
+    <div class="mb-30">
+      <p>{{ trans key="Haben Sie herzlichen Dank für Ihre Buchung." :site="user_language" }}</p>
+      <p>{{ trans key="Wir freuen uns, dass Sie sich für einen Aufenthalt im Fine Hotel & Hideaway Berghoferin entschieden haben." :site="user_language" }}</p>
+      <p>
+        {{ trans key="Hiermit bestätigen wir die nachfolgend aufgeführte Reservierung." :site="user_language" }}
+        {{ if true }}
+          {{ trans key="Bitte beachten Sie die Hinweise zur Angeldzahlung." :site="user_language" }}
+        {{ /if }}
+      </p>
+    </div>
+    <div>
+      {{ partial:views/offer/partials/summary }}
+    </div>
+  </article>
+  <article class="content md:col-span-14 md:col-start-2 xl:col-span-5 xl:col-start-11">
+    {{ if deposit }}
+      <p>{{ trans key="Die Buchung wird durch eine Angeldzahlung in Höhe von 50% des Gesamtpreises (innerhalb von zehn Tagen) fixiert." :site="user_language" }}</p>
+      <p>{{ trans key="Angeldzahlungen können per Überweisung oder – nach Übermittlung der Kreditkartendaten – mittels Belastung der angegebenen Kreditkarte (Visa, Mastercard, American Express) erfolgen." :site="user_language" }}</p>
+      <h2>{{ trans key="Bankkoordinaten für die Angeldüberweisung" :site="user_language" }}</h2>
+      <p>{{ trans key="Phina GmbH<br>Raiffeisenkasse Unterland<br>Geschäftsstelle Branzoll<br>Reichsstraße 57<br>39051 Branzoll<br>Italien" :site="user_language" }}</p>
+      <h2>IBAN</h2>
+      <p>IT53 P081 1458 6700 0030 6035 655</p>
+      <h2>SWIFT/BIC</h2>
+      <p>RZSBIT21517</p>
+    {{ else }}
+      {{ partial:views/offer/partials/info }}
+    {{ /if }}
+  </article>
+</section>
+

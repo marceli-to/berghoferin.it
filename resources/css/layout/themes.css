@@ -79,3 +79,168 @@
 .theme-chestnut .site-footer * {
   @apply text-chestnut;
 }
+
+/**
+ * Eggplant
+ */
+  
+ .theme-eggplant {
+  @apply text-eggplant;
+}
+
+.theme-eggplant h2 {
+  @apply border-eggplant
+}
+
+.theme-eggplant hr {
+  @apply bg-lavender-mist
+}
+
+.theme-eggplant .btn-menu {
+  @apply text-eggplant;
+}
+
+.theme-eggplant .site-menu .site-container > div {
+  @apply bg-eggplant;
+}
+
+.theme-eggplant .logo {
+  @apply text-eggplant;
+}
+
+.theme-eggplant .language-switcher a,
+.theme-eggplant .language-switcher span {
+  @apply text-eggplant;
+}
+
+.theme-eggplant .language-switcher a {
+  @apply !py-0
+}
+
+.theme-eggplant .site-footer * {
+  @apply text-eggplant;
+}
+
+/**
+ * Forest
+ */
+  
+ .theme-forest {
+  @apply text-forest;
+}
+
+.theme-forest h2 {
+  @apply border-forest
+}
+
+.theme-forest hr {
+  @apply bg-feather-grey
+}
+
+.theme-forest .btn-menu {
+  @apply text-forest;
+}
+
+.theme-forest .site-menu .site-container > div {
+  @apply bg-forest;
+}
+
+.theme-forest .logo {
+  @apply text-forest;
+}
+
+.theme-forest .language-switcher a,
+.theme-forest .language-switcher span {
+  @apply text-forest;
+}
+
+.theme-forest .language-switcher a {
+  @apply !py-0
+}
+
+.theme-forest .site-footer * {
+  @apply text-forest;
+}
+
+/**
+ * Bronze
+ */
+  
+.theme-bronze {
+  @apply text-bronze;
+}
+
+.theme-bronze h2 {
+  @apply border-bronze
+}
+
+.theme-bronze hr {
+  @apply bg-icy-blue
+}
+
+.theme-bronze .btn-menu {
+  @apply text-bronze;
+}
+
+.theme-bronze .site-menu .site-container > div {
+  @apply bg-bronze;
+}
+
+.theme-bronze .logo {
+  @apply text-bronze;
+}
+
+.theme-bronze .language-switcher a,
+.theme-bronze .language-switcher span {
+  @apply text-bronze;
+}
+
+.theme-bronze .language-switcher a {
+  @apply !py-0
+}
+
+.theme-bronze .site-footer * {
+  @apply text-bronze;
+}
+
+
+/**
+ * Arctic
+ */
+  
+ .theme-arctic {
+  @apply text-arctic;
+}
+
+.theme-arctic h2 {
+  @apply border-arctic
+}
+
+.theme-arctic hr {
+  @apply bg-green-tea
+}
+
+.theme-arctic .btn-menu {
+  @apply text-arctic;
+}
+
+.theme-arctic .site-menu .site-container > div {
+  @apply bg-arctic;
+}
+
+.theme-arctic .logo {
+  @apply text-arctic;
+}
+
+.theme-arctic .language-switcher a,
+.theme-arctic .language-switcher span {
+  @apply text-arctic;
+}
+
+.theme-arctic .language-switcher a {
+  @apply !py-0
+}
+
+.theme-arctic .site-footer * {
+  @apply text-arctic;
+}

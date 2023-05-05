@@ -51,7 +51,7 @@
     "src": "resources/css/fonts/Volte-RegularItalic.woff2"
   },
   "resources/js/app.css": {
-    "file": "assets/app-d240a1e2.css",
+    "file": "assets/app-e18fff26.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -70,9 +70,9 @@
       "assets/Volte-Medium-528a2656.ttf"
     ],
     "css": [
-      "assets/app-d240a1e2.css"
+      "assets/app-e18fff26.css"
     ],
-    "file": "assets/app-89c7e396.js",
+    "file": "assets/app-a77e4e19.js",
     "imports": [
       "__commonjsHelpers-28e086c5.js"
     ],
@@ -87,7 +87,7 @@
     "css": [
       "assets/app-f0b5d7b1.css"
     ],
-    "file": "assets/app-5ba51fc6.js",
+    "file": "assets/app-6b4e7d98.js",
     "imports": [
       "__commonjsHelpers-28e086c5.js"
     ],

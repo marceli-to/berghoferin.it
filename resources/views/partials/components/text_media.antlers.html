@@ -1,9 +1,9 @@
 {{# Home #}}
-{{ if category == 'winter-break' }}
+{{ if category == 'home' }}
   <section class="flex flex-col md:col-span-full md:grid md:grid-cols-16 gap-16">
-    <article class="pt-32 order-2 md:order-1 md:col-span-6 md:col-start-2 xl:col-span-4 xl:col-start-5 md:mt-200 xl:mt-220 border-t border-midnight-500 text-midnight-500">
+    <article class="order-2 md:order-1 md:col-span-6 md:col-start-2 xl:col-span-4 xl:col-start-5 md:mt-200 xl:mt-220">
       {{ if header_image }}
-        {{ partial:components/image :image="header_image" :width="'166'" :height="'50'" :caption="header_image:alt" class="w-166 h-50" }}
+        {{ partial:components/image :image="header_image" :width="'201'" :height="'79'" :caption="header_image:alt" class="w-201 h-79" }}
       {{ /if }}
       {{ if content_text }}
         <div class="mt-32">
