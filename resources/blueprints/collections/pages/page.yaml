@@ -166,3 +166,17 @@ sections:
           max_items: 1
           listable: false
           localizable: true
+  seo:
+    display: Seo
+    fields:
+      -
+        handle: meta_description
+        field:
+          antlers: false
+          display: 'Meta description'
+          type: textarea
+          icon: textarea
+          localizable: true
+          listable: hidden
+          instructions_position: above
+          visibility: visible
