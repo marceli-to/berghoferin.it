@@ -220,9 +220,7 @@
               type="text" 
               class="col-span-6 xl:col-span-4" 
               v-model="form.phone" 
-              :placeholder="`${__('Telefon')}`"
-              @blur="validateField('phone')"
-              @focus="removeError('phone')">
+              :placeholder="`${__('Telefon')}`">
             </form-input>
           </form-group>
 
