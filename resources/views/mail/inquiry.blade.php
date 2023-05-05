@@ -15,7 +15,7 @@
   <strong>{{ __('Name', [], $data->user_language) }}</strong><br>{{ $data->name ? $data->name : '-' }}
 </div>
 <div class="text-base pb-base">
-  <strong>{{ __('Strasse', [], $data->user_language) }}</strong><br>{{ $data->street ? $data->street : '-' }}
+  <strong>{{ __('Straße', [], $data->user_language) }}</strong><br>{{ $data->street ? $data->street : '-' }}
 </div>
 <div class="text-base pb-base">
   <strong>{{ __('Hausnummer', [], $data->user_language) }}</strong><br>{{ $data->street_number ? $data->street_number : '-' }}

@@ -2,7 +2,7 @@
 id: 0e8c5766-3d16-4fc7-9527-f9d048ee90f7
 origin: home
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1683232965
+updated_at: 1683281075
 content:
   -
     type: set
@@ -29,5 +29,5 @@ content:
                 icon: chevron-right
         category: home
         header_image: content/svg/summer-season.svg
-        image: content/berghoferin_fine_hotel_and_hideaway_home_01.jpg
+        image: content/berghoferin_fine_hotel_and_hideaway_home_10.jpg
 ---

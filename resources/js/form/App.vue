@@ -44,8 +44,8 @@
               inline
               range
               auto-apply
-              :start-date="new Date(2023, 4, 1)"
-              :min-date="new Date(2023, 4, 26)"
+              :start-date="new Date(2023, 5, 1)"
+              :min-date="new Date(2023, 5, 15)"
               :max-date="new Date(2023, 9, 29)"
               :enable-time-picker="false"
               month-name-format="long"
@@ -70,6 +70,7 @@
                   type="number" 
                   class="mx-16 pt-2 border-l border-t border-r !border-midnight-300 w-32 !h-32 text-center" 
                   min="0"
+                  max="13"
                   v-model="form.number_suites"
                   @blur="validateCounter('number_suites')">
                 </form-input>
@@ -150,12 +151,12 @@
             </form-input>
           </form-group>
           <form-group :error="errors.street ? true : false" class="mb-8 grid grid-cols-6">
-            <form-label class="col-span-2 hidden xl:block">{{ __('Strasse') }} *</form-label>
+            <form-label class="col-span-2 hidden xl:block">{{ __('Straße') }} *</form-label>
             <form-input 
               type="text" 
               class="col-span-6 xl:col-span-4" 
               v-model="form.street" 
-              :placeholder="`${__('Strasse')} *`"
+              :placeholder="`${__('Straße')} *`"
               @blur="validateField('street')"
               @focus="removeError('street')">
             </form-input>
@@ -214,12 +215,12 @@
             </form-input>
           </form-group>
           <form-group :error="errors.phone ? true : false" class="mb-8 grid grid-cols-6">
-            <form-label class="col-span-2 hidden xl:block">{{ __('Telefon') }} *</form-label>
+            <form-label class="col-span-2 hidden xl:block">{{ __('Telefon') }}</form-label>
             <form-input 
               type="text" 
               class="col-span-6 xl:col-span-4" 
               v-model="form.phone" 
-              :placeholder="`${__('Telefon')} *`"
+              :placeholder="`${__('Telefon')}`"
               @blur="validateField('phone')"
               @focus="removeError('phone')">
             </form-input>
@@ -409,7 +410,16 @@ export default {
     },
 
     incrementCounter(field) {
-      this.form[field]++;
+      if (field == 'number_suites')
+      {
+        if (this.form[field] < 13) {
+          this.form[field]++;
+        }
+        return;
+      }
+      else {
+        this.form[field]++;
+      }
     },
 
     decrementCounter(field) {
@@ -453,6 +463,10 @@ export default {
     validateCounter(field) {
       if (this.form[field] < 0) {
         this.form[field] = 0;
+      }
+
+      if (field == 'number_suites' && this.form[field] > 13) {
+        this.form[field] = 13;
       }
     },
 

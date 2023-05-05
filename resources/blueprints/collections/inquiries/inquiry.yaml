@@ -146,8 +146,6 @@ sections:
           listable: hidden
           instructions_position: above
           visibility: visible
-          validate:
-            - required
           localizable: false
       -
         handle: message
