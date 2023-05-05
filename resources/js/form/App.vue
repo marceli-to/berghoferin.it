@@ -526,7 +526,6 @@ export default {
         this.form.zip &&
         this.form.city &&
         this.form.country &&
-        this.form.phone &&
         this.form.privacy_statement &&
         this.arrivalDate && 
         this.departureDate &&
