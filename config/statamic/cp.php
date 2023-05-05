@@ -43,7 +43,7 @@ return [
         'type' => 'collection',
         'collection' => 'inquiries',
         'limit' => 10,
-        'width' => 50,
+        'width' => 70,
         'sort' => 'order'
       ],
     ],
