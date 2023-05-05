@@ -102,7 +102,7 @@
 .dp__calendar_item .dp__cell_inner.dp__date_hover_end:hover,
 .dp__calendar_item .dp__cell_inner.dp__date_hover_start:hover,
 .dp__calendar_item .dp__cell_inner.dp__date_hover:hover {
-  @apply !border-midnight-400
+  @apply !border-midnight-300
 }
 
 .dp__cell_inner {
@@ -122,7 +122,7 @@
 .dp__range_end, 
 .dp__range_start, 
 .dp__active_date {
-  @apply !bg-midnight-300 !text-midnight-500 !rounded-none
+  @apply !bg-midnight-200 !text-midnight-500 !rounded-none
 }
 
 .dp__month_year_row {

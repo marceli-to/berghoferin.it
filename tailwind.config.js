@@ -25,10 +25,8 @@ module.exports = {
         'icy-blue': '#d2dfe4',
         
         'midnight': {
-          //100: '#344452',
-          //200: '#c0ccdc',
-          300: '#deeafa',
-          400: '#c0ccdc',
+          200: '#deeafa',
+          300: '#d6dadc',
           500: '#344452',
         },
       },

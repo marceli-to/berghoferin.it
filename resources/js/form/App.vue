@@ -278,7 +278,7 @@
               :class="[isValid ? 'border-midnight-500 text-midnight-500' : 'border-midnight-300 text-midnight-300 pointer-events-none select-none', 'py-12 border-t border-b leading-none flex items-center w-full text-left']"
               @click.prevent="submit()"
               :disabled="isLoading ? true : false">
-              <icon-chevron-right :class="[isValid ? 'text-black' : 'text-midnight-400', '-mt-1 mr-8']" />
+              <icon-chevron-right :class="[isValid ? 'text-black' : 'text-midnight-300', '-mt-1 mr-8']" />
               {{ __('Unverbindlich anfragen') }}
             </button>
           </form-group>
