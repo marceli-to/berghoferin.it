@@ -38,7 +38,14 @@ return [
     */
 
     'widgets' => [
-        'getting_started',
+      //'getting_started',
+      [ 
+        'type' => 'collection',
+        'collection' => 'inquiries',
+        'limit' => 10,
+        'width' => 50,
+        'sort' => 'order'
+      ],
     ],
 
     /*
