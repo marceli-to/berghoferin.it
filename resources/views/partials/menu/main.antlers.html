@@ -5,9 +5,9 @@
         {{ nav:collection:pages menu_category:is="main" sort="order" }}
           {{ partial:menu/item :text="title" :url="url" target="_self" }}
         {{ /nav:collection:pages }}
-        <div class="block xl:hidden">
+        <ul class="block xl:hidden">
         {{ partial:menu/language/mobile }}
-        </div>
+        </ul>
       </ul>
       <ul class="mr-10">
         <li class="flex justify-end items-center w-full">
