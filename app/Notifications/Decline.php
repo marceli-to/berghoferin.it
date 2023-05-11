@@ -41,7 +41,7 @@ class Decline extends Notification
     return (new MailMessage)
       ->from('no-reply@berghoferin.it')
       ->subject('Angebot abgelehnt')
-      ->markdown('mail.accept', ['data' => $this->data]);
+      ->markdown('mail.decline', ['data' => $this->data]);
   }
 
   /**
