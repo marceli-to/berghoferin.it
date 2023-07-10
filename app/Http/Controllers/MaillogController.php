@@ -11,7 +11,7 @@ class MaillogController extends Controller
 
   public function __construct()
   {
-      $this->middleware('auth');
+    $this->middleware('auth');
   }
 
   public function index()
@@ -27,20 +27,5 @@ class MaillogController extends Controller
     );
     $data = $response->json();
     return view('maillog', ['data' => $data]);
-  }
-
-  public function dump()
-  {
-    $response = Http::withBasicAuth('api', env('MAILGUN_SECRET'))
-      ->get('https://api.eu.mailgun.net/v3/mg.berghoferin.it/events',
-      [
-        'begin' => 'Fri, 3 May 2013 09:00:00 -0000',
-        'ascending' => 'yes',
-        'limit' => 100,
-        'pretty' => 'yes',
-      ]
-    );
-    $data = $response->json();
-    dd($data);
   }
 }

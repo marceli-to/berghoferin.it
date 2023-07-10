@@ -25,7 +25,6 @@ Route::post('/accept-offer', [OfferStateController::class, 'accept'])->name('acc
 Route::post('/decline-offer', [OfferStateController::class, 'decline'])->name('decline-inquiry');
 
 Route::get('/maillog', [MaillogController::class, 'index']);
-Route::get('/maillog/dump', [MaillogController::class, 'dump']);
 
 // Route::get('/mailable/confirmation', function () {
 //   $entry = Entry::find('c80cd251-f09b-4f83-942d-0a94bc77e839');
