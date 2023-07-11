@@ -26,6 +26,17 @@ class MaillogController extends Controller
       ]
     );
     $data = $response->json();
-    return view('maillog', ['data' => $data]);
+    $data = collect($data['items'])->sortByDesc('timestamp')->values()->all();
+
+    $first = collect($data)->first();
+    $last = collect($data)->last();
+    return view(
+      'templates.content.maillog', 
+      [
+        'data' => $data,
+        'first' => $first,
+        'last' => $last,
+      ]
+    );
   }
 }

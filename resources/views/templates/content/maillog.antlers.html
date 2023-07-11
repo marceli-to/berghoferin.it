@@ -33,63 +33,71 @@
       <hr class="md:col-span-14 md:col-start-2 absolute bottom-0 h-1 w-full" />
     </div>
   </header>
-  <main class="site pt-180">
+  <main class="site pt-160">
     <div class="site-container site-grid">
       <section class="md:col-span-full">
-        <article class="content md:grid md:grid-cols-16 gap-16">
-          <div class="mt-36 xl:mt-0 md:col-span-14 md:col-start-2 xl:col-span-12 xl:col-start-2">
 
-            {{ data:items sort="timestamp:desc" }}
+        <article class="content md:grid md:grid-cols-16 gap-16">
+          <h3 class="text-midnight-500 mb-8 font-medium leading-none md:col-span-14 md:col-start-2 xl:col-span-12 xl:col-start-2">
+            Zeitraum {{ last['timestamp'] | format('d.m.Y') }} – {{ first['timestamp'] | format('d.m.Y') }}
+          </h3>
+          <div class="text-sm xl:text-md mt-36 xl:mt-0 md:col-span-14 md:col-start-2 xl:col-span-12 xl:col-start-2">
+
+            {{ data }}
 
               {{ if event == 'failed'}}
-                <details class="border-t border-midnight-300 pt-12 min-h-[60px]">
-                  <summary class="select-none md:grid md:grid-cols-12 gap-16 cursor-pointer">
-                    <div class="md:col-span-2">
+                <details class="border-t border-midnight-300 py-12 min-h-[60px]">
+                  <summary class="select-none md:grid md:grid-cols-16 gap-16 cursor-pointer">
+                    <div class="md:col-span-3">
                       {{ timestamp | format('d.m.Y – H:i:s') }}
                     </div>
-                    <div class="md:col-span-4">
+                    <div class="md:col-span-5">
                       {{ recipient }}
                     </div>
-                    <div class="md:col-span-3">
+                    <div class="md:col-span-5">
                       {{ message:headers:subject }}
                     </div>
                     <div class="md:col-span-3 flex justify-end leading-none">
-                      <div class="rounded-full bg-red-400 px-16 pt-8 pb-6 text-white text-md font-medium leading-none">
-                        {{ event }}
+                      <div>
+                        <div class="text-sm xl:text-md rounded-full bg-red-400 px-12 pt-8 pb-6 text-white text-md font-medium leading-none">
+                          {{ event }}
+                        </div>
                       </div>
                     </div>
                   </summary>
-                  <div class="py-25 font-medium text-red-500">
+                  <div class="pt-8 font-medium text-red-500">
                     {{ delivery-status:message}}
                   </div>
                 </details>
               {{ else }}
-                <div class="border-t border-midnight-300 pt-12 min-h-[60px]">
-                  <div class="select-none md:grid md:grid-cols-12 gap-16">
-                    <div class="md:col-span-2">
+                <div class="border-t border-midnight-300 py-12 min-h-[60px]">
+                  <div class="select-none md:grid md:grid-cols-16 gap-16">
+                    <div class="md:col-span-3">
                       {{ timestamp | format('d.m.Y – H:i:s') }}
                     </div>
-                    <div class="md:col-span-4">
+                    <div class="md:col-span-5">
                       {{ recipient }}
                     </div>
-                    <div class="md:col-span-3">
+                    <div class="md:col-span-5">
                       {{ message:headers:subject }}
                     </div>
                     <div class="md:col-span-3 flex justify-end">
-                      {{ if event == 'delivered' }}
-                        <div class="rounded-full bg-green-400 px-16 pt-8 pb-6 text-white text-md font-medium leading-none">
-                          {{ event }}
-                        </div>
-                      {{ else }}
-                        <div class="rounded-full bg-blue-400 px-16 pt-8 pb-6 text-white text-md font-medium leading-none">
-                          {{ event }}
-                        </div>
-                      {{ /if }}
+                      <div>
+                        {{ if event == 'delivered' }}
+                          <div class="text-sm xl:text-md rounded-full bg-green-400 px-12 pt-8 pb-6 text-white text-md font-medium leading-none">
+                            {{ event }}
+                          </div>
+                        {{ else }}
+                          <div class="text-sm xl:text-md rounded-full bg-blue-400 px-12 pt-8 pb-6 text-white text-md font-medium leading-none">
+                            {{ event }}
+                          </div>
+                        {{ /if }}
+                      </div>
                     </div>
                   </div>
                 </div>
               {{ /if }}
-            {{/data:items }}
+            {{/data }}
           </div>
         </article>
       </section>
