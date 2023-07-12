@@ -1,4 +1,8 @@
 
+{{# {{ if valid_until <= now }}
+  Dieses Angebot ist nicht mehr gültig.
+{{ /if }} #}}
+
 {{ if state == 'new' || state == 'preview' || state == 'offered' }}
   {{ partial:views/offer/open }}
 {{ elseif state == 'declined'}}
