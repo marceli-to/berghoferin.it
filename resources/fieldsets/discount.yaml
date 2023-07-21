@@ -1,0 +1,63 @@
+title: Discount
+fields:
+  -
+    handle: discount
+    field:
+      default: false
+      display: Discount
+      type: toggle
+      icon: toggle
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: discount_description
+    field:
+      input_type: text
+      antlers: false
+      display: 'Discount description'
+      type: text
+      icon: text
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      if:
+        discount: 'equals true'
+  -
+    handle: discount_type
+    field:
+      options:
+        percent: Percent
+        fixed_amount: 'Fixed amount'
+      multiple: false
+      clearable: false
+      searchable: true
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      display: 'Discount type'
+      type: select
+      icon: select
+      localizable: false
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      if:
+        discount: 'equals true'
+  -
+    handle: discount_amount
+    field:
+      display: 'Discount amount'
+      type: float
+      icon: float
+      localizable: false
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      default: '0'
+      if:
+        discount: 'equals true'

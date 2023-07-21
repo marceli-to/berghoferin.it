@@ -376,6 +376,16 @@ sections:
           instructions_position: below
           visibility: visible
       -
+        handle: payment_discount_additional_charges
+        field:
+          display: 'Deposit, Discount and additional charges'
+          type: section
+          icon: section
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
         handle: deposit
         field:
           default: false
@@ -388,67 +398,36 @@ sections:
           instructions_position: below
           visibility: visible
       -
-        handle: discount
+        import: discount
+      -
+        handle: additional_charges
         field:
-          default: false
-          display: Discount
-          type: toggle
-          icon: toggle
+          collapse: false
+          previews: true
+          sets:
+            additional_charges:
+              display: 'Additional charges'
+              fields:
+                -
+                  import: additional_charges
+          display: 'Additional charges'
+          type: replicator
+          icon: replicator
           localizable: false
           listable: hidden
           instructions_position: above
           visibility: visible
       -
-        handle: discount_description
+        handle: information_section
         field:
-          input_type: text
-          antlers: false
-          display: 'Discount description'
-          type: text
-          icon: text
+          display: Information
+          type: section
+          icon: section
           localizable: false
           listable: hidden
-          instructions_position: above
+          instructions_position: below
           visibility: visible
-          if:
-            discount: 'equals 1'
-      -
-        handle: discount_type
-        field:
-          options:
-            percent: Percent
-            fixed_amount: 'Fixed amount'
-          multiple: false
-          clearable: false
-          searchable: true
-          taggable: false
-          push_tags: false
-          cast_booleans: false
-          default: percent
-          display: 'Discount type'
-          type: select
-          icon: select
-          localizable: false
-          listable: hidden
-          instructions_position: above
-          visibility: visible
-          width: 50
-          if:
-            discount: 'equals 1'
-      -
-        handle: discount_amount
-        field:
-          default: '0'
-          display: 'Discount amount'
-          type: float
-          icon: float
-          localizable: false
-          listable: hidden
-          instructions_position: above
-          visibility: visible
-          width: 50
-          if:
-            discount: 'equals 1'
+          instructions: 'Information dropdown on the right'
       -
         import: information
   e-mail:

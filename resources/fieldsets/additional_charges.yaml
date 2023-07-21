@@ -1,0 +1,38 @@
+title: 'Additional charges'
+fields:
+  -
+    handle: description
+    field:
+      input_type: text
+      antlers: false
+      display: Description
+      type: text
+      icon: text
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      width: 50
+  -
+    handle: amount
+    field:
+      default: '0'
+      display: Amount
+      type: float
+      icon: float
+      localizable: false
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: flat
+    field:
+      default: false
+      display: 'Flat?'
+      type: toggle
+      icon: toggle
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible

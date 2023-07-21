@@ -13,7 +13,7 @@
 @if ($data->email_button_text)
 <div class="text-base pb-xlarge">
   @if ($data->user_language == 'de')
-    <a href="{{ config('app.url') }}/de/angebot/{{ $data->slug}}" class="btn-offer text-chestnut" target="_blank" title="{{ $data->email_button_text }}">
+    <a href="{{ config('app.url') }}/angebot/{{ $data->slug}}" class="btn-offer text-chestnut" target="_blank" title="{{ $data->email_button_text }}">
       <img src="{{ config('app.url') }}/img/mail/chevron-right.png" height="12" width="7" style="display:inline-block; height: 12px; width: 7px;">
       <span>{{ $data->email_button_text }}</span>
     </a>

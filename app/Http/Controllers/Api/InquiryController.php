@@ -55,6 +55,17 @@ class InquiryController extends Controller
     $inquiry->slug($inquiry->slug() . '-' . $inquiry->id());
     $inquiry->save();
 
+    // Add default information items from the information collection to this inquiry
+    $information_items = Entry::query()->where('collection', 'information')->where('site', $request->input('user_language'))->where('show_in_offer', TRUE)->orderBy('order')->get();
+    $information = [];
+    foreach ($information_items as $information_item)
+    {
+      $information[] = $information_item->id;
+    }
+    
+    $inquiry->set('information', $information);
+    $inquiry->save();
+
     // Set the application language to the guest language
     app()->setLocale($request->input('user_language'));
     Notification::route('mail', env('MAIL_TO'))->notify(new InquiryNotification($inquiry));
