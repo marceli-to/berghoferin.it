@@ -1,22 +1,14 @@
 {{ partial:components/list-item :class="'border-midnight-500'" }}
 <div>{{ trans key="Anreise" :site="user_language" }}</div>
 <div>
-  {{ if user_language == 'de' }}
-    {{ arrival_date iso_format="dddd, DD. MMMM YYYY" }}
-  {{ else }}
-    {{ arrival_date | format('l, d. M Y') }}
-  {{ /if }}
+  {{ arrival_date iso_format="dddd, DD. MMMM YYYY" }}
 </div>
 {{ /partial:components/list-item }}
 
 {{ partial:components/list-item }}
 <div>{{ trans key="Abreise" :site="user_language" }}</div>
 <div>
-  {{ if user_language == 'de' }}
-    {{ departure_date iso_format="dddd, DD. MMMM YYYY" }}
-  {{ else }}
-    {{ departure_date | format('l, d. M Y') }}
-  {{ /if }}
+  {{ departure_date iso_format="dddd, DD. MMMM YYYY" }}
 </div>
 {{ /partial:components/list-item }}
 

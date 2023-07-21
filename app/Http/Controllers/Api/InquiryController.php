@@ -30,6 +30,7 @@ class InquiryController extends Controller
     $inquiry = Entry::make()
       ->collection('inquiries')
       ->slug($title)
+      ->locale($request->input('user_language'))
       ->data(
         array_merge(
           [
@@ -54,6 +55,8 @@ class InquiryController extends Controller
     $inquiry->slug($inquiry->slug() . '-' . $inquiry->id());
     $inquiry->save();
 
+    // Set the application language to the guest language
+    app()->setLocale($request->input('user_language'));
     Notification::route('mail', env('MAIL_TO'))->notify(new InquiryNotification($inquiry));
     Notification::route('mail', $request->input('email'))->notify(new ConfirmationNotification($inquiry));
     return response()->json($inquiry->id, 201);

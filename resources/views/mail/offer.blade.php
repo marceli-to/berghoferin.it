@@ -12,10 +12,24 @@
 @endif
 @if ($data->email_button_text)
 <div class="text-base pb-xlarge">
-  <a href="{{ config('app.url') }}/angebot/{{ $data->slug}}" class="btn-offer text-chestnut" target="_blank" title="{{ $data->email_button_text }}">
-    <img src="{{ config('app.url') }}/img/mail/chevron-right.png" height="12" width="7" style="display:inline-block; height: 12px; width: 7px;">
-    <span>{{ $data->email_button_text }}</span>
-  </a>
+  @if ($data->user_language == 'de')
+    <a href="{{ config('app.url') }}/de/angebot/{{ $data->slug}}" class="btn-offer text-chestnut" target="_blank" title="{{ $data->email_button_text }}">
+      <img src="{{ config('app.url') }}/img/mail/chevron-right.png" height="12" width="7" style="display:inline-block; height: 12px; width: 7px;">
+      <span>{{ $data->email_button_text }}</span>
+    </a>
+  @endif
+  @if ($data->user_language == 'it')
+    <a href="{{ config('app.url') }}/it/offerta/{{ $data->slug}}" class="btn-offer text-chestnut" target="_blank" title="{{ $data->email_button_text }}">
+      <img src="{{ config('app.url') }}/img/mail/chevron-right.png" height="12" width="7" style="display:inline-block; height: 12px; width: 7px;">
+      <span>{{ $data->email_button_text }}</span>
+    </a>
+  @endif
+  @if ($data->user_language == 'en')
+    <a href="{{ config('app.url') }}/en/offer/{{ $data->slug}}" class="btn-offer text-chestnut" target="_blank" title="{{ $data->email_button_text }}">
+      <img src="{{ config('app.url') }}/img/mail/chevron-right.png" height="12" width="7" style="display:inline-block; height: 12px; width: 7px;">
+      <span>{{ $data->email_button_text }}</span>
+    </a>
+  @endif
 </div>
 @endif
 @if ($data->email_remarks_greetings)

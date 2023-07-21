@@ -449,6 +449,8 @@ sections:
           width: 50
           if:
             discount: 'equals 1'
+      -
+        import: information
   e-mail:
     display: 'Proposal E-Mail'
     fields:

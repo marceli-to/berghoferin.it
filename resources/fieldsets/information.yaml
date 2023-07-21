@@ -1,0 +1,16 @@
+title: Information
+fields:
+  -
+    handle: information
+    field:
+      mode: default
+      create: true
+      collections:
+        - information
+      display: Information
+      type: entries
+      icon: entries
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible

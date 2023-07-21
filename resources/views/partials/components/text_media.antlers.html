@@ -235,6 +235,13 @@
             {{ if type == 'collapsible' }}
               {{ partial:components/collapsible }}
             {{ /if }}
+
+            {{ if type == 'information'}}
+              {{ information }}
+                {{ partial:components/collapsible }}
+              {{ /information }}
+            {{ /if }}
+
           {{ /content_text}}
         </div>
       {{ /if }}

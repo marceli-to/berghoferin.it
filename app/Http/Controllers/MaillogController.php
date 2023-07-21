@@ -28,6 +28,13 @@ class MaillogController extends Controller
     $data = $response->json();
     $data = collect($data['items'])->sortByDesc('timestamp')->values()->all();
 
+    // filter out recipients that match:
+    // @mailinator.com
+    // @marceli.to
+    $data = collect($data)->filter(function ($value, $key) {
+      return !str_contains($value['recipient'], '@mailinator.com') && !str_contains($value['recipient'], '@marceli.to');
+    })->values()->all();
+
     $first = collect($data)->first();
     $last = collect($data)->last();
     return view(

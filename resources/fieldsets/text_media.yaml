@@ -45,6 +45,11 @@ fields:
           fields:
             -
               import: collapsible
+        information:
+          display: Information
+          fields:
+            -
+              import: information
   -
     handle: image
     field:

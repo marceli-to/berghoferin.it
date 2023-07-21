@@ -1,0 +1,71 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          localizable: true
+          validate:
+            - required
+      -
+        handle: text
+        field:
+          collapse: false
+          always_show_set_button: false
+          previews: true
+          smart_typography: false
+          buttons:
+            - bold
+            - anchor
+          save_html: false
+          inline: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          enable_input_rules: true
+          enable_paste_rules: true
+          antlers: false
+          remove_empty_nodes: false
+          display: Text
+          type: bard
+          icon: bard
+          localizable: true
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: show_in_offer
+        field:
+          default: false
+          display: 'Show in offer'
+          type: toggle
+          icon: toggle
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - information
+          max_items: 1
+          listable: false
+          localizable: true
+title: Information

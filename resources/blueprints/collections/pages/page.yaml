@@ -91,6 +91,11 @@ sections:
               fields:
                 -
                   import: rooms_outro
+            information:
+              display: Information
+              fields:
+                -
+                  import: information
   sidebar:
     display: Sidebar
     fields:

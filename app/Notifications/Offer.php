@@ -38,9 +38,11 @@ class Offer extends Notification
    */
   public function toMail($notifiable)
   {
+    // set app locale
+    app()->setLocale($this->data->user_language);
     return (new MailMessage)
       ->from('no-reply@berghoferin.it')
-      ->subject(__('Unser Angebot'))
+      ->subject(__('Unser Angebot', [], $this->data->user_language))
       ->markdown('mail.offer', ['data' => $this->data]);
   }
 

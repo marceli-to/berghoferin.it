@@ -8,53 +8,30 @@
     {{ trans key="Frühstück, eine Auswahl an Getränken aus der Minibar, Gepäckservice, Parkservice inklusive kostenlosen Parkplatzes, Nutzung des WLAN sowie freien Zugang zum Lido alpin Pool & Spa." :site="user_language" }}
   </div>
 </details>
-<details class="border-t border-midnight-300 pt-12 pb-12">
-  <summary class="flex items-center leading-none justify-between cursor-pointer">
-    <h3 class="select-none text-left font-regular">{{ trans key="Ortstaxe" :site="user_language" }}</h3>
-    {{ partial:icons/chevron-down :class="'chevron-down block w-15 h-8'" }}
-    {{ partial:icons/chevron-up :class="'chevron-up hidden w-15 h-8'" }}
-  </summary>
-  <div class="pt-25 pb-12">
-    {{ trans key="Die Ortstaxe in Höhe von 1,60 Euro pro Person und Nacht wird separat berechnet und kann nur vor Ort bezahlt werden. Kinder und Jugendliche bis zum vollendeten 14. Lebensjahr sind von der Zahlungspflicht der Ortstaxe ausgenommen." :site="user_language" }}
-  </div>
-</details>
-<details class="border-t border-midnight-300 pt-12 pb-12">
-  <summary class="flex items-center leading-none justify-between cursor-pointer">
-    <h3 class="select-none text-left font-regular">{{ trans key="Buchung" :site="user_language" }}</h3>
-    {{ partial:icons/chevron-down :class="'chevron-down block w-15 h-8'" }}
-    {{ partial:icons/chevron-up :class="'chevron-up hidden w-15 h-8'" }}
-  </summary>
-  <div class="pt-25 pb-12">
-    {{ trans key="Für eine Buchung ist eine schriftliche Annahme des Angebots erforderlich; sie kommt durch unsere schriftliche Buchungsbestätigung zustande und wird durch eine Angeldzahlung in Höhe von 50% des Gesamtpreises (innerhalb von zehn Tagen) fixiert. Angeldzahlungen können durch Belastung der angegebenen Kreditkarte (Visa, MasterCard, American Express) erfolgen." :site="user_language" }}
-  </div>
-</details>
-<details class="border-t border-midnight-300 pt-12 pb-12">
-  <summary class="flex items-center leading-none justify-between cursor-pointer">
-    <h3 class="select-none text-left font-regular">{{ trans key="Stornokonditionen" :site="user_language" }}</h3>
-    {{ partial:icons/chevron-down :class="'chevron-down block w-15 h-8'" }}
-    {{ partial:icons/chevron-up :class="'chevron-up hidden w-15 h-8'" }}
-  </summary>
-  <div class="pt-25 pb-12">
-    {{ trans key="Es besteht kein Rücktrittsrecht im Sinne des Konsumentenschutzkodex (Mitteilung gemäß Teil III, Titel III, Abschnitt I des Konsumentenschutzkodex – GvD 206/2005); dennoch werden folgende Stornokonditionen eingeräumt: Bei Stornierung bis 30 Tage vor Anreise wird die geleistete Angeldzahlung vollumfänglich rückerstattet; bei Stornierung bis sieben Tage vor Anreise wird die geleistete Anzahlung in Höhe von 50% des gesamten Arrangementpreises einbehalten; bei Stornierung innerhalb der letzten sieben Tage vor Anreise, Nichtankunft oder vorzeitiger Abreise wird der gesamte Preis für das gebuchte Arrangement in Rechnung gestellt.<br><br>Diese Stornierungskonditionen gelten unabhängig von einer etwaigen Weitervermietung der stornierten Suiten.<br><br>Eine Stornierung muss schriftlich erfolgen und erlangt ihre Wirksamkeit durch eine schriftliche Bestätigung des Fine Hotel & Hideaway Berghoferin.<br><br>Zur persönlichen Absicherung wird der Abschluss einer Reiserücktrittsversicherung empfohlen." :site="user_language" }}
-  </div>
-</details>
-<details class="border-t border-midnight-300 pt-12 pb-12">
-  <summary class="flex items-center leading-none justify-between cursor-pointer">
-    <h3 class="select-none text-left font-regular">{{ trans key="Check-In & Check-Out" :site="user_language" }}</h3>
-    {{ partial:icons/chevron-down :class="'chevron-down block w-15 h-8'" }}
-    {{ partial:icons/chevron-up :class="'chevron-up hidden w-15 h-8'" }}
-  </summary>
-  <div class="pt-25 pb-12">
-    {{ trans key="Am Anreisetag steht die reservierte Suite ab 15 Uhr, am Abreisetag bis 11 Uhr zur Verfügung.<br><br>Für eine bestmögliche Organisation von Abend- und Nachtankünften wird bei Anreisen nach 20 Uhr um eine Vorabankündigung gebeten.<br><br>Auf Anfrage besteht bei Verfügbarkeit die Möglichkeit zu einem Late Check-out (bis 18 Uhr des Abreisetages); hierfür werden pro Person 100 Euro verrechnet." :site="user_language" }}
-  </div>
-</details>
-<details class="border-t border-midnight-300 pt-12 pb-12">
-  <summary class="flex items-center leading-none justify-between cursor-pointer">
-    <h3 class="select-none text-left font-regular">{{ trans key="Zahlungsmittel" :site="user_language" }}</h3>
-    {{ partial:icons/chevron-down :class="'chevron-down block w-15 h-8'" }}
-    {{ partial:icons/chevron-up :class="'chevron-up hidden w-15 h-8'" }}
-  </summary>
-  <div class="pt-25 pb-12">
-    {{ trans key="Als Zahlungsmittel werden Bargeld, Debit- und Kreditkarten (Visa, MasterCard, American Express) akzeptiert." :site="user_language" }}
-  </div>
-</details>
+
+{{ collection:information show_in_offer:is="true" sort="order" }}
+  <details class="border-t border-midnight-300 pt-12 pb-12">
+    <summary class="flex items-center leading-none justify-between cursor-pointer">
+      <h3 class="select-none text-left font-regular">{{ title }}</h3>
+      {{ partial:icons/chevron-down :class="'chevron-down block w-15 h-8'" }}
+      {{ partial:icons/chevron-up :class="'chevron-up hidden w-15 h-8'" }}
+    </summary>
+    <div class="pt-25 pb-12">
+      {{ text }}
+    </div>
+  </details>
+{{ /collection:information }} 
+
+{{ information }}
+  <details class="border-t border-midnight-300 pt-12 pb-12">
+    <summary class="flex items-center leading-none justify-between cursor-pointer">
+      <h3 class="select-none text-left font-regular">{{ title }}</h3>
+      {{ partial:icons/chevron-down :class="'chevron-down block w-15 h-8'" }}
+      {{ partial:icons/chevron-up :class="'chevron-up hidden w-15 h-8'" }}
+    </summary>
+    <div class="pt-25 pb-12">
+      {{ text }}
+    </div>
+  </details>
+{{ /information }}
+
