@@ -1,3 +1,59 @@
+{{# init $room_charges_per_night #}}
+{{ $room_charges_per_night = 0; }}
+
+{{# calculate $room_charges_per_night #}}
+{{ $room_charges_per_night = room:rate * number_suites }}
+
+{{# init $room_charges_total_value #}}
+{{ $room_charges_total_value = 0; }}
+
+{{# calculate $room_charges_total #}}
+{{ $room_charges_total_value = ($room_charges_per_night * number_nights) }}
+
+{{# init $total_additional_charges_value #}}
+{{ $total_additional_charges_value = 0 }}
+{{ $has_additional_charges = false }}
+
+{{# calculate additional charges #}}
+{{ if additional_charges }}
+  {{ $has_additional_charges = true }}
+  {{ additional_charges }}
+    {{ if flat }}
+      {{ $total_additional_charges_value = $total_additional_charges_value + amount }}
+    {{ else }}
+      {{ $total_additional_charges_value = $total_additional_charges_value + (amount * number_nights) }}
+    {{ /if }}
+  {{ /additional_charges }}
+{{ /if }}
+
+{{# init $discount_value and $discount_label #}}
+{{ $has_discount = false }}
+{{ $discount_value = 0 }}
+{{ $discount_label = '' }}
+
+{{# calculate $discount_value #}}
+{{ if discount }}
+  {{ $has_discount = true }}
+  {{ if discount_type == 'percent' }}
+    {{ $discount_value = ($room_charges_total_value * (discount_amount / 100)) }}
+    {{ $discount_label = discount_description + ', ' + discount_amount + '%' }}
+  {{ else }}
+    {{ $discount_value = discount_amount }}
+    {{ $discount_label = discount_description }}
+  {{ /if }}
+{{ /if  }}
+{{# // calculate $discount_value #}}
+
+{{# init grand total #}}
+{{ $grand_total = 0; }}
+
+{{# calculate grand total #}}
+{{ $grand_total = $room_charges_total_value + $total_additional_charges_value - $discount_value }}
+
+{{# set $has_deposit #}}
+{{ $has_deposit = deposit && state == 'accepted' ? true : false }}
+
+
 {{ partial:components/list-item :class="'border-midnight-500'" }}
 <div>{{ trans key="Anreise" :site="user_language" }}</div>
 <div>
@@ -34,82 +90,29 @@
 
 {{ partial:components/list-item :class="'border-midnight-500'" }}
 <div>{{ trans key="Preis pro Nacht" :site="user_language" }}</div>
-<div>{{ (room:rate * number_suites) | format_number(2, ',', '.') }} &euro;</div>
+<div>{{ $room_charges_per_night | format_number(2, ',', '.') }} &euro;</div>
 {{ /partial:components/list-item }}
 
-{{ if discount }}
-
-  {{ partial:components/list-item }}
-    <div>{{ trans key="Zwischensumme" :site="user_language" }}</div>
-    <div>{{ (room:rate * number_suites * number_nights) | format_number(2, ',', '.') }} &euro;</div>
-  {{ /partial:components/list-item }}
-
-  {{ partial:components/list-item }}
-    <div>{{ discount_description }}{{ if discount_type == 'percent' }}, {{ discount_amount }}%{{ /if }}</div>
-    <div>
-      {{ if discount_type == 'percent' }}
-        – {{ (room:rate * number_suites * number_nights * discount_amount / 100) | format_number(2, ',', '.') }} &euro;
-      {{ else }}
-        – {{ discount_amount | format_number(2, ',', '.') }} &euro;
-      {{ /if }}
-    </div>
-  {{ /partial:components/list-item }}
-
-  {{ partial:components/list-item }}
-    <div>{{ trans key="Gesamtbetrag inkl. MwSt & Service" :site="user_language" }}</div>
-    <div>
-      {{ if discount_type == 'percent' }}
-        {{ (room:rate * number_suites * number_nights - room:rate * number_nights * discount_amount / 100) | format_number(2, ',', '.') }} &euro;
-      {{ else }}
-        {{ (room:rate * number_suites * number_nights - discount_amount) | format_number(2, ',', '.') }} &euro;
-      {{ /if }}
-    </div>
-  {{ /partial:components/list-item }}
-
-{{ else }}
-
-  {{ $total_additional_charges = 0 }}
-  {{ if additional_charges }}
-    
-    {{# Subtotal #}}
-    {{ partial:components/list-item :class="'{{ deposit ? 'border-b border-midnight-300 mb-40' : ''}}'" }}
-      <div>{{ trans key="Zwischentotal" :site="user_language" }}</div>
-      <div>{{ (room:rate * number_suites * number_nights) | format_number(2, ',', '.') }} &euro;</div>
-    {{ /partial:components/list-item }}
-
-    {{# Additional charges #}}
-    {{ partial:views/offer/partials/additional_charges }}
-
-    {{# Subtotal with charges #}}
-    {{ partial:components/list-item :class="'mb-20'" }}
-      <div>Zwischensumme</div>
-      <div>{{ total_additional_charges | format_number(2, ',', '.') }} &euro;</div>
-    {{ /partial:components/list-item }}
-
-    {{ /if }}
-
-    {{ partial:components/list-item :class="'{{ deposit ? 'border-b border-midnight-300 mb-40' : 'border-t border-midnight-500'}}'" }}
-      <div>{{ trans key="Gesamtbetrag inkl. MwSt & Service" :site="user_language" }}</div>
-      <div>{{ ((room:rate * number_suites * number_nights) + $total_additional_charges) | format_number(2, ',', '.') }} &euro;</div>
-    {{ /partial:components/list-item }}
-
-
+{{# discount #}}
+{{ if $has_discount }}
+  {{ partial:views/offer/partials/discount }}
 {{ /if }}
 
-{{ if deposit && state == 'accepted' }}
-  {{ partial:components/list-item :class="'border-midnight-500'" }}
-    <div>{{ trans key="Angeldzahlung" :site="user_language" }}</div>
+{{# additional charges #}}
+{{ if $has_additional_charges }}
+  {{ partial:views/offer/partials/additional_charges }}
+{{ /if }}
 
-    {{ if discount }}
-      <div>
-        {{ if discount_type == 'percent' }}
-          {{ ((((room:rate * number_suites * number_nights) - (room:rate * number_nights * discount_amount / 100)) + $total_additional_charges) / 2) | format_number(2, ',', '.') }} &euro;
-        {{ else }}
-          {{ (((room:rate * number_suites * number_nights - discount_amount) + $total_additional_charges) / 2) | format_number(2, ',', '.') }} &euro;
-        {{ /if }}
-      </div>
-    {{ else }}
-      <div>{{ ((room:rate * number_suites * number_nights + $total_additional_charges) / 2) | format_number(2, ',', '.') }} &euro;</div>
-    {{ /if }}
+{{# grand total #}}
+{{ partial:components/list-item :class="'{{ $has_discount || $has_additional_charges ? 'border-t border-midnight-500' : 'border-t border-midnight-300'}}'" }}
+<div>{{ trans key="Gesamtbetrag inkl. MwSt & Service" :site="user_language" }}</div>
+<div>{{ $grand_total | format_number(2, ',', '.') }} &euro;</div>
+{{ /partial:components/list-item }}
+
+{{# deposit #}}
+{{ if $has_deposit }}
+  {{ partial:components/list-item :class="'mt-40 border-midnight-500'" }}
+    <div>{{ trans key="Angeldzahlung" :site="user_language" }}</div>
+    <div>{{ ($grand_total / 2) | format_number(2, ',', '.') }} &euro;</div>
   {{ /partial:components/list-item }}
 {{ /if }}

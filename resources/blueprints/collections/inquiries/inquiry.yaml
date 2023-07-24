@@ -427,9 +427,41 @@ sections:
           listable: hidden
           instructions_position: below
           visibility: visible
-          instructions: 'Information dropdown on the right'
+          instructions: 'Information items shown on the right side of the proposal'
       -
         import: information
+      -
+        handle: accepted_alternative_id
+        field:
+          default: null
+          display: 'Accepted alternative'
+          type: hidden
+          icon: hidden
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: hidden
+  alternative_proposals:
+    display: 'Alternative proposals'
+    fields:
+      -
+        handle: alternative_proposals
+        field:
+          collapse: false
+          previews: true
+          sets:
+            alternative_proposal:
+              display: 'Alternative proposal'
+              fields:
+                -
+                  import: alternative_proposal
+          display: 'Alternative proposals'
+          type: replicator
+          icon: replicator
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
   e-mail:
     display: 'Proposal E-Mail'
     fields:

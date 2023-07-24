@@ -1,0 +1,107 @@
+title: 'Alternative proposal'
+fields:
+  -
+    handle: state
+    field:
+      options:
+        open: 'Angebot offen'
+        accepted: 'Angebot akzeptiert'
+        declined: 'Angebot abgelehnt'
+      multiple: false
+      max_items: 1
+      clearable: false
+      searchable: true
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      default: open
+      display: Status
+      type: select
+      icon: select
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: arrival_date
+    field:
+      mode: single
+      time_enabled: false
+      time_seconds_enabled: false
+      full_width: false
+      inline: false
+      columns: 1
+      rows: 1
+      display: 'Arrival date'
+      type: date
+      icon: date
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - required
+  -
+    handle: departure_date
+    field:
+      mode: single
+      time_enabled: false
+      time_seconds_enabled: false
+      full_width: false
+      inline: false
+      columns: 1
+      rows: 1
+      display: 'Departure date'
+      type: date
+      icon: date
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - required
+  -
+    handle: number_suites
+    field:
+      input_type: number
+      antlers: false
+      display: 'Number of suites'
+      type: text
+      icon: text
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - required
+  -
+    handle: number_guests
+    field:
+      input_type: number
+      antlers: false
+      display: 'Number of guests'
+      type: text
+      icon: text
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - required
+  -
+    handle: room
+    field:
+      max_items: 1
+      mode: default
+      create: true
+      collections:
+        - rooms
+      display: Room
+      type: entries
+      icon: entries
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - required

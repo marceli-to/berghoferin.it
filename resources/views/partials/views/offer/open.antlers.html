@@ -5,8 +5,45 @@
     </div>
   </article>
   <div class="md:col-span-14 md:col-start-2 xl:col-span-5 xl:col-start-5">
-    {{ partial:views/offer/partials/summary }}
-    {{ partial:views/offer/partials/form }}
+
+    {{ if alternative_proposals }}
+      {{ $parent_id = id }}
+      {{ alternative_proposals }}
+        {{ $proposals = alternative_proposals | count }}
+        {{ $proposal_index = index+1 }}
+        {{ number_nights = arrival_date | diff_in_days }}
+        {{ if $proposals > 1 }}
+          <details {{ if $proposal_index == 1 }} open {{ /if }} class="min-h-[60px] proposal {{ state == 'declined' ? 'opacity-50' : ''}}">
+            <summary class="border-b border-midnight-500 pb-8 flex items-center leading-none justify-between cursor-pointer">
+              <h3 class="select-none text-left font-medium uppercase">
+                {{ trans key="Angebot" :site="user_language" }} {{ $proposal_index }} {{ state == 'declined' ? {{ trans key="(abgelehnt)" :site="user_language" }} : ''}}
+              </h3>
+              {{ partial:icons/chevron-down :class="'chevron-down block w-15 h-8'" }}
+              {{ partial:icons/chevron-up :class="'chevron-up hidden w-15 h-8'" }}
+            </summary>
+            <div>
+              {{ partial:views/offer/partials/summary }}
+              {{ if state == 'open'}}
+                {{ partial:views/offer/partials/form is_alternative="true" parent_id="$parent_id" proposal_index="$proposal_index" }}
+              {{ /if }}
+            </div>
+          </details>
+        {{ else }}
+          {{ partial:views/offer/partials/summary }}
+          {{ if state == 'open'}}
+            {{ partial:views/offer/partials/form is_alternative="true" parent_id="$parent_id" }}
+          {{ /if }}
+        {{ /if }}
+
+      {{ /alternative_proposals }}
+
+    {{ else }}
+      
+      {{ partial:views/offer/partials/summary }}
+      {{ partial:views/offer/partials/form }}
+
+    {{ /if }}
+
     {{ partial:views/offer/partials/greetings }}
   </div>
   <div class="mt-80 xl:mt-0 md:col-span-14 md:col-start-2 xl:col-span-5 xl:col-start-11">

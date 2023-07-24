@@ -5,13 +5,21 @@
       <p>{{ trans key="Wir freuen uns, dass Sie sich für einen Aufenthalt im Fine Hotel & Hideaway Berghoferin entschieden haben." :site="user_language" }}</p>
       <p>
         {{ trans key="Hiermit bestätigen wir die nachfolgend aufgeführte Reservierung." :site="user_language" }}
-        {{ if true }}
+        {{ if deposit }}
           {{ trans key="Bitte beachten Sie die Hinweise zur Angeldzahlung." :site="user_language" }}
         {{ /if }}
       </p>
     </div>
     <div>
+      {{ if alternative_proposals }}
+        {{ alternative_proposals }}
+        {{ if id == accepted_alternative_id}}
+          {{ partial:views/offer/partials/summary }}
+        {{ /if }}
+        {{ /alternative_proposals }}
+      {{ else }}
       {{ partial:views/offer/partials/summary }}
+      {{ /if }}
     </div>
   </article>
   <article class="content md:col-span-14 md:col-start-2 xl:col-span-5 xl:col-start-11">

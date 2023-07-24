@@ -1,16 +1,32 @@
 <form method="post" action="/accept-offer">
+  {{ if is_alternative }}
+    <input type="hidden" name="is_alternative" value="1">
+    <input type="hidden" name="parent_id" value="{{ $parent_id }}">
+  {{ /if }}
   <input type="hidden" name="id" value="{{ id }}">
   <input type="hidden" name="_token" value="{{ csrf_token }}">
-  <button type="submit" title="{{ trans key="Angebot annehmen" :site="user_language" }}" class="flex justify-start items-center w-full pb-6 pt-8 mt-30 border-t border-b border-chestnut text-chestnut !no-underline">
+  <button type="submit" class="flex justify-start items-center w-full pb-6 pt-8 mt-30 border-t border-b border-chestnut text-chestnut !no-underline">
     {{ partial:icons/chevron-right :class="'mr-8 -mt-3'" }}
-    {{ trans key="Angebot annehmen" :site="user_language" }}
+    {{ if $proposal_index }}
+      {{ trans :key="'Angebot :index annehmen'" :site="user_language" :index="$proposal_index" }}
+    {{ else }}
+      {{ trans key="Angebot annehmen" :site="user_language" }}
+    {{ /if }}
   </button>
 </form>
 <form method="post" action="/decline-offer">
+  {{ if is_alternative }}
+    <input type="hidden" name="is_alternative" value="1">
+    <input type="hidden" name="parent_id" value="{{ $parent_id }}">
+  {{ /if }}
   <input type="hidden" name="id" value="{{ id }}">
   <input type="hidden" name="_token" value="{{ csrf_token }}">
-  <button type="submit" title="{{ trans key="Angebot ablehnen" :site="user_language" }}" class="flex justify-start items-center w-full pb-6 pt-8 mt-30 border-t border-b border-midnight-500 !no-underline">
+  <button type="submit" class="flex justify-start items-center w-full pb-6 pt-8 mt-30 border-t border-b border-midnight-500 !no-underline">
     {{ partial:icons/chevron-right :class="'mr-8 -mt-3'" }}
-    {{ trans key="Angebot ablehnen" :site="user_language" }}
+    {{ if $proposal_index }}
+      {{ trans :key="'Angebot :index ablehnen'" :site="user_language" :index="$proposal_index" }}
+    {{ else }}
+      {{ trans key="Angebot ablehnen" :site="user_language" }}
+    {{ /if }}
   </button>
 </form>

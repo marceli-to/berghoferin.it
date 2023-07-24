@@ -14,9 +14,10 @@ class Decline extends Notification
    *
    * @return void
    */
-  public function __construct($data)
+  public function __construct($data, $proposal = null)
   {
     $this->data = $data;
+    $this->proposal = $proposal;
   }
 
   /**
@@ -41,7 +42,7 @@ class Decline extends Notification
     return (new MailMessage)
       ->from('no-reply@berghoferin.it')
       ->subject('Angebot abgelehnt')
-      ->markdown('mail.decline', ['data' => $this->data]);
+      ->markdown('mail.decline', ['data' => $this->data, 'proposal' => $this->proposal]);
   }
 
   /**

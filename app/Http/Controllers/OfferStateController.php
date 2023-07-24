@@ -17,7 +17,23 @@ class OfferStateController extends Controller
    */
   public function accept(Request $request)
   { 
-    $entry = Entry::find($request->input('id'));
+    if ($request->input('is_alternative'))
+    {
+      $entry = Entry::find($request->input('parent_id'));
+      $proposals = $entry->data()->get('alternative_proposals');
+      $entry->set('alternative_proposals', array_map(function($proposal) use ($request) {
+          $proposal['state'] = $proposal['id'] == $request->input('id') ? 'accepted' :  $proposal['state'];
+          return $proposal;
+        }, $proposals)
+      );
+      $entry->set('accepted_alternative_id', $request->input('id'));
+      $entry->save();
+    }
+    else
+    {
+      $entry = Entry::find($request->input('id'));
+    }
+
     $entry->set('state', 'accepted');
     $entry->save();
     Notification::route('mail', env('MAIL_TO'))->notify(new AcceptNotification($entry));
@@ -32,10 +48,48 @@ class OfferStateController extends Controller
    */
   public function decline(Request $request)
   { 
-    $entry = Entry::find($request->input('id'));
-    $entry->set('state', 'declined');
-    $entry->save();
-    Notification::route('mail', env('MAIL_TO'))->notify(new DeclineNotification($entry));
+    if ($request->input('is_alternative'))
+    {
+      $entry = Entry::find($request->input('parent_id'));
+      $proposals = $entry->data()->get('alternative_proposals');
+      $entry->set('alternative_proposals', array_map(function($proposal) use ($request) {
+          $proposal['state'] = $proposal['id'] == $request->input('id') ? 'declined' : $proposal['state'];
+          return $proposal;
+        }, $proposals)
+      );
+      $entry->save();
+
+      // get proposal by id
+      $proposal = array_filter($entry->data()->get('alternative_proposals'), function($proposal) use ($request) {
+        return $proposal['id'] == $request->input('id');
+      });
+
+      // check if all alternative proposals are declined
+      $allDeclined = true;
+      foreach ($entry->data()->get('alternative_proposals') as $proposal)
+      {
+        if ($proposal['state'] == 'open')
+        {
+          $allDeclined = false;
+        }
+      }
+      
+      if ($allDeclined)
+      {
+        $entry->set('state', 'declined');
+        $entry->save();
+      }
+
+      // send notification
+      Notification::route('mail', env('MAIL_TO'))->notify(new DeclineNotification($entry, $proposal));
+    }
+    else 
+    {
+      $entry = Entry::find($request->input('id'));
+      $entry->set('state', 'declined');
+      $entry->save();
+      Notification::route('mail', env('MAIL_TO'))->notify(new DeclineNotification($entry));
+    }
     return redirect()->back();
   }
 }

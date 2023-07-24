@@ -5,3 +5,15 @@ details[open] .chevron-down {
 details[open] .chevron-up {
   @apply block
 }
+
+details.proposal[open] summary {
+  @apply border-none
+}
+
+details.proposal + details.proposal {
+  @apply mt-0
+}
+
+details.proposal[open] + details.proposal {
+  @apply mt-60
+}

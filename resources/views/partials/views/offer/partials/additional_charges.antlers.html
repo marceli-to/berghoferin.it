@@ -1,26 +1,22 @@
-{{ additional_charges }}
-   
-  {{ if flat }}
-    {{ $total_additional_charges = $total_additional_charges + amount }}
-  {{ else }}
-    {{ $total_additional_charges = $total_additional_charges + (amount * number_nights) }}
-  {{ /if }}
+{{# Subtotal #}}
+{{ partial:components/list-item :class="'{{ deposit ? 'border-b border-midnight-300 mb-40' : ''}}'" }}
+  <div>{{ trans key="Zwischentotal" :site="user_language" }}</div>
+  <div>{{ ($room_charges_total_value - $discount_value) | format_number(2, ',', '.') }} &euro;</div>
+{{ /partial:components/list-item }}
 
+{{ additional_charges }}
   {{ partial:components/list-item :class="'{{ first ? 'border-midnight-500 mt-20' : ''}}'" }}
-    <div>
-      {{ description }}
-    </div>
+    <div>{{ description }}</div>
     {{ if flat }}
       <div>{{ amount | format_number(2, ',', '.') }} &euro;</div>
     {{ else }}
       <div>{{ (amount * number_nights) | format_number(2, ',', '.') }} &euro;</div>
     {{ /if }}
   {{ /partial:components/list-item }}
-  
 {{ /additional_charges }}
 
-    {{# Subtotal with charges #}}
-    {{ partial:components/list-item :class="'mb-20'" }}
-      <div>Zwischensumme</div>
-      <div>{{ total_additional_charges | format_number(2, ',', '.') }} &euro;</div>
-    {{ /partial:components/list-item }}
+{{# Subtotal with charges #}}
+{{ partial:components/list-item :class="'mb-20'" }}
+  <div>Zwischensumme</div>
+  <div>{{ $total_additional_charges_value | format_number(2, ',', '.') }} &euro;</div>
+{{ /partial:components/list-item }}
