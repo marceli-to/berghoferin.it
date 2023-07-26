@@ -1,13 +1,12 @@
 
-{{ if valid_until <= now }}
+{{# {{ if valid_until <= now }}
   Dieses Angebot ist nicht mehr gültig.
-{{ else }}
-  {{ if state == 'new' || state == 'preview' || state == 'offered' }}
-    {{ partial:views/offer/open }}
-  {{ elseif state == 'declined'}}
-    {{ partial:views/offer/declined }}
-  {{ elseif state == 'accepted' }}
-    {{ partial:views/offer/accepted }}
-  {{ /if }}
-{{ /if }}
+{{ /if }} #}}
 
+{{ if state == 'new' || state == 'preview' || state == 'offered' }}
+  {{ partial:views/offer/open }}
+{{ elseif state == 'declined'}}
+  {{ partial:views/offer/declined }}
+{{ elseif state == 'accepted' }}
+  {{ partial:views/offer/accepted }}
+{{ /if }}
