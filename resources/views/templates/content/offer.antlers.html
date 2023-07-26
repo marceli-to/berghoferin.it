@@ -1,4 +1,4 @@
-{{ if now > (72 * 60 * 60) }}
+{{ if timestamp > (timestamp + 72 * 60 * 60) }}
   {{ partial:views/offer/invalid }}
 {{ else }}
   {{ if state == 'new' || state == 'preview' || state == 'offered' }}
