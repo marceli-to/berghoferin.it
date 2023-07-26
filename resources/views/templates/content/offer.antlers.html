@@ -1,12 +1,16 @@
-{{ if timestamp > (timestamp + 72 * 60 * 60) }}
+{{# {{ if timestamp > (timestamp + 72 * 60 * 60) }}
   {{ partial:views/offer/invalid }}
 {{ else }}
-  {{ if state == 'new' || state == 'preview' || state == 'offered' }}
-    {{ partial:views/offer/open }}
-  {{ elseif state == 'declined'}}
-    {{ partial:views/offer/declined }}
-  {{ elseif state == 'accepted' }}
-    {{ partial:views/offer/accepted }}
-  {{ /if }}
+
+{{ /if }} #}}
+
+{{ timestamp + 72 * 60 * 60 }}
+
+{{ if state == 'new' || state == 'preview' || state == 'offered' }}
+{{ partial:views/offer/open }}
+{{ elseif state == 'declined'}}
+{{ partial:views/offer/declined }}
+{{ elseif state == 'accepted' }}
+{{ partial:views/offer/accepted }}
 {{ /if }}
 
