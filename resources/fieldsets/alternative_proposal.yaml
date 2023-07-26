@@ -61,6 +61,20 @@ fields:
       validate:
         - required
   -
+    handle: number_nights
+    field:
+      input_type: number
+      antlers: false
+      display: 'Number of nights'
+      type: text
+      icon: text
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - required
+  -
     handle: number_suites
     field:
       input_type: number

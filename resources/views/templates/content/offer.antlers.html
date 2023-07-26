@@ -1,10 +1,6 @@
-{{# {{ if timestamp > (timestamp + 72 * 60 * 60) }}
+{{#
   {{ partial:views/offer/invalid }}
-{{ else }}
-
-{{ /if }} #}}
-
-{{ timestamp }}
+#}}
 
 {{ if state == 'new' || state == 'preview' || state == 'offered' }}
 {{ partial:views/offer/open }}

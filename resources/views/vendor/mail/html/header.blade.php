@@ -7,7 +7,9 @@
           <img class="logo" src="{{ config('app.url') }}/img/mail/berghoferin-logo.png" title="Berghoferin" alt="Berghoferin" height="335" width="528" style="display:block; height:auto; width: 220px;">
         </td>
         <td style="width: 50%; vertical-align: bottom; text-align: right">
-          <span class="text-chestnut text-xsmall">Radein, {{ \Carbon\Carbon::now()->translatedFormat('d. F Y') }}</span>
+          <span class="text-chestnut text-xsmall">
+            {{ __('Radein') }}, {{ \Carbon\Carbon::now()->translatedFormat('d. F Y') }}
+          </span>
         </td>
       </tr>
     </table>

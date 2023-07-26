@@ -431,9 +431,26 @@ sections:
       -
         import: information
       -
+        handle: additional_information
+        field:
+          collapse: false
+          previews: true
+          sets:
+            additional_information:
+              display: 'Additional information'
+              fields:
+                -
+                  import: additional_information
+          display: 'Additional information'
+          type: replicator
+          icon: replicator
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
         handle: accepted_alternative_id
         field:
-          default: null
           display: 'Accepted alternative'
           type: hidden
           icon: hidden
@@ -466,6 +483,17 @@ sections:
     display: 'Proposal E-Mail'
     fields:
       -
+        handle: deny_request
+        field:
+          default: false
+          display: 'Deny request'
+          type: toggle
+          icon: toggle
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
         handle: email_salutation
         field:
           antlers: false
@@ -476,6 +504,38 @@ sections:
           listable: hidden
           instructions_position: above
           visibility: visible
+      -
+        handle: deny_text
+        field:
+          collapse: false
+          always_show_set_button: false
+          previews: true
+          smart_typography: false
+          buttons:
+            - bold
+            - anchor
+          save_html: false
+          inline: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          enable_input_rules: true
+          enable_paste_rules: true
+          antlers: false
+          remove_empty_nodes: false
+          display: Text
+          type: bard
+          icon: bard
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          if:
+            deny_request: 'equals true'
       -
         handle: email_remarks_greetings
         field:
@@ -500,4 +560,6 @@ sections:
           listable: hidden
           instructions_position: below
           visibility: visible
+          unless:
+            deny_request: 'equals true'
 title: Inquiry

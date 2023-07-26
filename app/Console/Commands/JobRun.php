@@ -4,6 +4,7 @@ use Illuminate\Console\Command;
 use Statamic\Facades\Entry;
 use Illuminate\Support\Facades\Notification;
 use App\Notifications\Offer as OfferNotification;
+use App\Notifications\Deny as DenyNotification;
 
 class JobRun extends Command
 {
@@ -45,8 +46,16 @@ class JobRun extends Command
     {
       try {
         $to = $entry->state == 'preview' ? env('MAIL_TO') : $entry->email;
-        Notification::route('mail', $to)->notify(new OfferNotification($entry));
-        $entry->set('state', $entry->state == 'preview' ? 'new' : 'offered');
+        if ($entry->deny_request == true)
+        {
+          Notification::route('mail', $to)->notify(new DenyNotification($entry));
+          $entry->set('state', $entry->state == 'preview' ? 'new' : 'declined');
+        }
+        else
+        {
+          Notification::route('mail', $to)->notify(new OfferNotification($entry));
+          $entry->set('state', $entry->state == 'preview' ? 'new' : 'offered');
+        }
         $entry->save();
       } 
       catch(\Throwable $e) {

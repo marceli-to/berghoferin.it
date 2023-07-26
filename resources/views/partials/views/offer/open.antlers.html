@@ -24,14 +24,14 @@
             <div>
               {{ partial:views/offer/partials/summary }}
               {{ if state == 'open'}}
-                {{ partial:views/offer/partials/form is_alternative="true" parent_id="$parent_id" proposal_index="$proposal_index" }}
+                {{ partial:views/offer/partials/form is_alternative="true" parent_id="$parent_id" proposal_index="$proposal_index" has_multiple_proposals="true" }}
               {{ /if }}
             </div>
           </details>
         {{ else }}
           {{ partial:views/offer/partials/summary }}
           {{ if state == 'open'}}
-            {{ partial:views/offer/partials/form is_alternative="true" parent_id="$parent_id" }}
+            {{ partial:views/offer/partials/form is_alternative="true" parent_id="$parent_id" has_multiple_proposals="false" }}
           {{ /if }}
         {{ /if }}
 

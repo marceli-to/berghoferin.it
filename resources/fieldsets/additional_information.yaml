@@ -1,0 +1,29 @@
+title: 'Additional information'
+fields:
+  -
+    handle: title
+    field:
+      input_type: text
+      antlers: false
+      display: Title
+      type: text
+      icon: text
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - required
+  -
+    handle: text
+    field:
+      antlers: false
+      display: Text
+      type: textarea
+      icon: textarea
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - required

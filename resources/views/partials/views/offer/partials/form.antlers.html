@@ -7,7 +7,7 @@
   <input type="hidden" name="_token" value="{{ csrf_token }}">
   <button type="submit" class="flex justify-start items-center w-full pb-6 pt-8 mt-30 border-t border-b border-chestnut text-chestnut !no-underline">
     {{ partial:icons/chevron-right :class="'mr-8 -mt-3'" }}
-    {{ if $proposal_index }}
+    {{ if $proposal_index && has_multiple_proposals }}
       {{ trans :key="'Angebot :index annehmen'" :site="user_language" :index="$proposal_index" }}
     {{ else }}
       {{ trans key="Angebot annehmen" :site="user_language" }}
@@ -23,7 +23,7 @@
   <input type="hidden" name="_token" value="{{ csrf_token }}">
   <button type="submit" class="flex justify-start items-center w-full pb-6 pt-8 mt-30 border-t border-b border-midnight-500 !no-underline">
     {{ partial:icons/chevron-right :class="'mr-8 -mt-3'" }}
-    {{ if $proposal_index }}
+    {{ if $proposal_index && has_multiple_proposals }}
       {{ trans :key="'Angebot :index ablehnen'" :site="user_language" :index="$proposal_index" }}
     {{ else }}
       {{ trans key="Angebot ablehnen" :site="user_language" }}

@@ -13,12 +13,12 @@
     <div>
       {{ if alternative_proposals }}
         {{ alternative_proposals }}
-        {{ if id == accepted_alternative_id}}
+        {{ if id == accepted_alternative_id }}
           {{ partial:views/offer/partials/summary }}
         {{ /if }}
         {{ /alternative_proposals }}
       {{ else }}
-      {{ partial:views/offer/partials/summary }}
+        {{ partial:views/offer/partials/summary }}
       {{ /if }}
     </div>
   </article>
