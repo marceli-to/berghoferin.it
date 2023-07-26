@@ -4,7 +4,8 @@
 
 {{ /if }} #}}
 
-{{ timestamp + 72 * 60 * 60 }}
+{{ timestamp }}
+{{ (72 * 60 * 60) }}
 
 {{ if state == 'new' || state == 'preview' || state == 'offered' }}
 {{ partial:views/offer/open }}
