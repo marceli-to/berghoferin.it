@@ -57,3 +57,7 @@ article.content a:hover {
 .site-grid {
   @apply md:grid md:grid-cols-16 gap-16 w-full
 }
+
+em, i {
+  @apply italic;
+}

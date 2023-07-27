@@ -50,6 +50,11 @@ fields:
           fields:
             -
               import: information
+        teaser:
+          display: Teaser
+          fields:
+            -
+              import: teaser
   -
     handle: image
     field:

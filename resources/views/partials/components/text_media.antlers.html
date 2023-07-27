@@ -1,7 +1,7 @@
 {{# Home #}}
 {{ if category == 'home' }}
-  <section class="flex flex-col md:col-span-full md:grid md:grid-cols-16 gap-16">
-    <article class="order-2 md:order-1 md:col-span-6 md:col-start-2 xl:col-span-4 xl:col-start-5 md:mt-200 xl:mt-220">
+  <section class="flex flex-col md:col-span-full md:grid md:grid-cols-16 md:gap-16">
+    <article class="order-2 md:order-1 md:col-span-6 md:col-start-2 xl:col-span-4 xl:col-start-5 md:mt-160 xl:mt-220">
       {{ if header_image }}
         {{ partial:components/image :image="header_image" :width="'201'" :height="'79'" :caption="header_image:alt" class="w-201 h-79" }}
       {{ /if }}
@@ -26,11 +26,19 @@
       {{ /if }}
     </article>
     {{ if image }}
-      <figure class="flex justify-end my-80 md:my-0 md:-mt-16 xl:mt-0 order-1 md:order-2 md:col-span-6 md:col-start-10 xl:block xl:col-span-5 xl:col-start-11">
-        {{ partial:components/image :image="image" :width="'640'" :height="'1000'" :caption="image:alt" class="max-w-[80%] md:max-w-none" }}
+      <figure class="flex justify-start mt-80 mb-48 md:mb-0 md:-mt-16 xl:mt-0 order-1 md:order-2 md:col-span-6 md:col-start-10 xl:block xl:col-span-5 xl:col-start-10">
+        {{ partial:components/image :image="image" :width="'640'" :height="'1000'" :caption="image:alt" }}
       </figure>
     {{ /if }}
   </section>
+
+  {{# teasers #}}
+  {{ content_text }}
+    {{ if type == 'teaser'}}
+      {{ partial:components/teaser }}
+    {{ /if }}
+  {{ /content_text }}
+  
 {{ /if }}
 
 {{# About #}}
