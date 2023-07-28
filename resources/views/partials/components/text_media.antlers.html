@@ -1,6 +1,6 @@
 {{# Home #}}
 {{ if category == 'home' }}
-  <section class="flex flex-col md:col-span-full md:grid md:grid-cols-16 md:gap-16">
+  <section class="flex flex-col md:col-span-full md:grid md:grid-cols-16 gap-16">
     <article class="order-2 md:order-1 md:col-span-6 md:col-start-2 xl:col-span-4 xl:col-start-5 md:mt-160 xl:mt-220">
       {{ if header_image }}
         {{ partial:components/image :image="header_image" :width="'201'" :height="'79'" :caption="header_image:alt" class="w-201 h-79" }}
