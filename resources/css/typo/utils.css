@@ -6,3 +6,8 @@ sup {
   @apply left-1;
   font-size: 70%;
 }
+
+.wb {
+  word-break: normal;
+  hyphens: auto;
+}
