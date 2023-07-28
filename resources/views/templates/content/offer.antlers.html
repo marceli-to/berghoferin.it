@@ -1,12 +1,12 @@
-{{#
-  {{ partial:views/offer/invalid }}
-#}}
 
-{{ if state == 'new' || state == 'preview' || state == 'offered' }}
-{{ partial:views/offer/open }}
-{{ elseif state == 'declined'}}
-{{ partial:views/offer/declined }}
-{{ elseif state == 'accepted' }}
-{{ partial:views/offer/accepted }}
+{{ if state == 'offered' && valid_until && valid_until < now }}
+  {{ partial:views/offer/expired }}
+{{ else }}
+  {{ if state == 'new' || state == 'preview' || state == 'offered' }}
+    {{ partial:views/offer/open }}
+  {{ elseif state == 'declined'}}
+    {{ partial:views/offer/declined }}
+  {{ elseif state == 'accepted' }}
+    {{ partial:views/offer/accepted }}
+  {{ /if }}
 {{ /if }}
-

@@ -250,6 +250,23 @@ sections:
           instructions_position: above
           visibility: visible
       -
+        handle: valid_until
+        field:
+          mode: single
+          time_enabled: false
+          time_seconds_enabled: false
+          full_width: false
+          inline: false
+          columns: 1
+          rows: 1
+          display: 'Valid until'
+          type: date
+          icon: date
+          localizable: false
+          listable: hidden
+          instructions_position: above
+          visibility: read_only
+      -
         handle: created_at
         field:
           mode: single
