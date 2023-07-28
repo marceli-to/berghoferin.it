@@ -4,7 +4,11 @@
       {{ partial:components/image :image="image" :width="'640'" :height="'1000'" :caption="image:alt" }}
     </figure>
     <div class="order-1 md:order-2 md:col-span-7 md:col-start-9 xl:col-span-5 xl:col-start-10 mb-32 md:mb-0 md:mt-80">
-      {{ partial:components/image :image="header_image" :width="'465'" :height="'219'" :caption="header_image:alt" class="w-auto h-79" }}
+      {{ if locale == 'en'}}
+        {{ partial:components/image :image="header_image" :width="'465'" :height="'219'" :caption="header_image:alt" class="w-auto h-105" }}
+      {{ else }}
+        {{ partial:components/image :image="header_image" :width="'465'" :height="'219'" :caption="header_image:alt" class="w-auto h-79" }}
+      {{ /if }}
       <div class="order-3 hidden md:block mt-32">
         <div class="wb">{{ text }}</div>
         <a href="{{ link }}" class="text-burgundy-500 mt-32 inline-flex items-center leading-none group">
