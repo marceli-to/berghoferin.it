@@ -25,7 +25,7 @@ class Job
         {
           Notification::route('mail', $to)->notify(new OfferNotification($entry));
           $entry->set('state', $entry->state == 'preview' ? 'new' : 'offered');
-          $entry->set('valid_until', now()->addDays(2));
+          $entry->set('valid_until', now()->addDays(3));
         }
         $entry->save();
       } 
