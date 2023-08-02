@@ -32,6 +32,9 @@
   @endif
 </div>
 @endif
+<div class="text-base pb-xlarge">
+  {{ __('Bitte beachten Sie, dass dieses Angebot eine Gültigkeit von 72 Stunden hat.') }}
+</div>
 @if ($data->email_remarks_greetings)
 <div class="text-base">
   {!! nl2br($data->email_remarks_greetings) !!}

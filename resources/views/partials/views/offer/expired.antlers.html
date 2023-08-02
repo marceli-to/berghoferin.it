@@ -1,14 +1,13 @@
 <section class="text-midnight-500 md:col-span-full md:grid md:grid-cols-16 md:gap-16">
   <article class="content mb-30 md:col-span-14 md:col-start-2 xl:col-span-5 xl:col-start-5 ">
     <div>
-      <p>{{ trans key="Bitte beachten Sie, dass dieses Angebot eine Gültigkeit von 72 Stunden hat." :site="user_language" }}</p>
       <p>
         {{ if user_language == 'de' }}
           Die Gültigkeit dieses Buchungsangebots ist abgelaufen. Gerne lassen wir Ihnen ein neues Angebot zukommen; bitte stellen Sie hierzu eine erneute <a href="/buchungsanfrage" class="underline underline-offset-4 hover:!no-underline">Buchungsanfrage</a> oder wenden Sie sich per <a href="tel:+39 0471 887 150" class="underline underline-offset-4 hover:!no-underline">Telefon</a> oder <a href="mailto:contact@berghoferin.it" class="underline underline-offset-4 hover:!no-underline">E-Mail</a> direkt an die Rezeption.
         {{ elseif user_language == 'it' }}
           La validità dell’offerta per la prenotazione è scaduta. Saremo lieti di farle pervenire una nuova offerta; la preghiamo a tal fine di effettuare una nuova richiesta di <a href="/it/richiesta-di-prenotazione" class="underline underline-offset-4 hover:!no-underline">prenotazione</a> o di contattare la reception <a href="tel:+39 0471 887 150" class="underline underline-offset-4 hover:!no-underline">telefonicamente</a> o tramite <a href="mailto:contact@berghoferin.it" class="underline underline-offset-4 hover:!no-underline">e-mail.</a>
         {{ elseif user_language == 'en' }}
-          The validity of this booking offer has expired. We would be delighted to send you a new offer; please make a new <a href="/en/booking-request" class="underline underline-offset-4 hover:!no-underline">booking request</a> or contact the reception directly by <a href="tel:+39 0471 887 150" class="underline underline-offset-4 hover:!no-underline">phone</a> or <a href="mailto:contact@berghoferin.it" class="underline underline-offset-4 hover:!no-underline">e-mail</a>.
+          Regrettably, the validity period of this offer has ended. We would be delighted to provide you with a new proposal. Kindly submit a new <a href="/en/booking-request" class="underline underline-offset-4 hover:!no-underline">booking request</a> or directly contact reception via <a href="tel:+39 0471 887 150" class="underline underline-offset-4 hover:!no-underline">phone</a> or <a href="mailto:contact@berghoferin.it" class="underline underline-offset-4 hover:!no-underline">e-mail</a>.
         {{ /if }}
       </p>
     </div>
