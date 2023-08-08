@@ -286,21 +286,10 @@ sections:
       -
         handle: user_language
         field:
-          options:
-            de: Deutsch
-            en: Englisch
-            it: Italiensisch
-          multiple: false
-          max_items: 1
-          clearable: false
-          searchable: true
-          taggable: false
-          push_tags: false
-          cast_booleans: false
           default: de
           display: 'User language'
-          type: select
-          icon: select
+          type: hidden
+          icon: hidden
           localizable: false
           listable: hidden
           instructions_position: above
