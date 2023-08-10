@@ -265,7 +265,7 @@ sections:
           localizable: false
           listable: hidden
           instructions_position: above
-          visibility: read_only
+          visibility: visible
       -
         handle: created_at
         field:
