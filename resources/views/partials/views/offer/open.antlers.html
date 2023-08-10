@@ -16,7 +16,7 @@
           <details {{ if $proposal_index == 1 }} open {{ /if }} class="min-h-[60px] proposal {{ state == 'declined' ? 'opacity-50' : ''}}">
             <summary class="border-b border-midnight-500 pb-8 flex items-center leading-none justify-between cursor-pointer">
               <h3 class="select-none text-left font-medium uppercase">
-                {{ trans key="Angebot" :site="user_language" }} {{ $proposal_index }} {{ state == 'declined' ? {{ trans key="(abgelehnt)" :site="user_language" }} : ''}}
+                {{ trans key="Angebot" }} {{ $proposal_index }} {{ state == 'declined' ? {{ trans key="(abgelehnt)" }} : ''}}
               </h3>
               {{ partial:icons/chevron-down :class="'chevron-down block w-15 h-8'" }}
               {{ partial:icons/chevron-up :class="'chevron-up hidden w-15 h-8'" }}

@@ -283,17 +283,6 @@ sections:
           listable: hidden
           instructions_position: above
           visibility: visible
-      -
-        handle: user_language
-        field:
-          default: de
-          display: 'User language'
-          type: hidden
-          icon: hidden
-          localizable: false
-          listable: hidden
-          instructions_position: above
-          visibility: visible
   sidebar:
     display: Sidebar
     fields:

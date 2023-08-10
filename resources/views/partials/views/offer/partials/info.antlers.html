@@ -1,36 +1,40 @@
 <details class="border-t border-midnight-300 pt-12 pb-12">
   <summary class="flex items-center leading-none justify-between cursor-pointer">
-    <h3 class="select-none text-left font-regular">{{ trans key="Im Preis inbegriffen" :site="user_language" }}</h3>
+    <h3 class="select-none text-left font-regular">{{ trans key="Im Preis inbegriffen" }}</h3>
     {{ partial:icons/chevron-down :class="'chevron-down block w-15 h-8'" }}
     {{ partial:icons/chevron-up :class="'chevron-up hidden w-15 h-8'" }}
   </summary>
   <div class="pt-25 pb-12">
-    {{ trans key="Frühstück, eine Auswahl an Getränken aus der Minibar, Gepäckservice, Parkservice inklusive kostenlosen Parkplatzes, Nutzung des WLAN sowie freien Zugang zum Lido alpin Pool & Spa." :site="user_language" }}
+    {{ trans key="Frühstück, eine Auswahl an Getränken aus der Minibar, Gepäckservice, Parkservice inklusive kostenlosen Parkplatzes, Nutzung des WLAN sowie freien Zugang zum Lido alpin Pool & Spa." }}
   </div>
 </details>
 
 {{ information }}
-  <details class="border-t border-midnight-300 pt-12 pb-12">
-    <summary class="flex items-center leading-none justify-between cursor-pointer">
-      <h3 class="select-none text-left font-regular">{{ title }}</h3>
-      {{ partial:icons/chevron-down :class="'chevron-down block w-15 h-8'" }}
-      {{ partial:icons/chevron-up :class="'chevron-up hidden w-15 h-8'" }}
-    </summary>
-    <div class="pt-25 pb-12">
-      {{ text }}
-    </div>
-  </details>
+  {{ if title != '' && text != '' }}
+    <details class="border-t border-midnight-300 pt-12 pb-12">
+      <summary class="flex items-center leading-none justify-between cursor-pointer">
+        <h3 class="select-none text-left font-regular">{{ title }}</h3>
+        {{ partial:icons/chevron-down :class="'chevron-down block w-15 h-8'" }}
+        {{ partial:icons/chevron-up :class="'chevron-up hidden w-15 h-8'" }}
+      </summary>
+      <div class="pt-25 pb-12">
+        {{ text }}
+      </div>
+    </details>
+  {{ /if }}
 {{ /information }}
 
 {{ additional_information }}
-  <details class="border-t border-midnight-300 pt-12 pb-12">
-    <summary class="flex items-center leading-none justify-between cursor-pointer">
-      <h3 class="select-none text-left font-regular">{{ title }}</h3>
-      {{ partial:icons/chevron-down :class="'chevron-down block w-15 h-8'" }}
-      {{ partial:icons/chevron-up :class="'chevron-up hidden w-15 h-8'" }}
-    </summary>
-    <div class="pt-25 pb-12">
-      {{ text }}
-    </div>
-  </details>
+  {{ if title != '' && text != '' }}
+    <details class="border-t border-midnight-300 pt-12 pb-12">
+      <summary class="flex items-center leading-none justify-between cursor-pointer">
+        <h3 class="select-none text-left font-regular">{{ title }}</h3>
+        {{ partial:icons/chevron-down :class="'chevron-down block w-15 h-8'" }}
+        {{ partial:icons/chevron-up :class="'chevron-up hidden w-15 h-8'" }}
+      </summary>
+      <div class="pt-25 pb-12">
+        {{ text }}
+      </div>
+    </details>
+  {{ /if }}
 {{ /additional_information }}

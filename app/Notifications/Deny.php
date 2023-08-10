@@ -39,10 +39,10 @@ class Deny extends Notification
   public function toMail($notifiable)
   {
     // set app locale
-    app()->setLocale($this->data->user_language);
+    app()->setLocale($this->data->locale);
     return (new MailMessage)
       ->from('no-reply@berghoferin.it')
-      ->subject(__('Ihre Anfrage', [], $this->data->user_language))
+      ->subject(__('Ihre Anfrage', [], $this->data->locale))
       ->markdown('mail.deny', ['data' => $this->data]);
   }
 

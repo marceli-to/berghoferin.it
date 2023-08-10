@@ -1,6 +1,6 @@
 {{# Subtotal #}}
 {{ partial:components/list-item :class="'{{ deposit ? 'border-b border-midnight-300 mb-40' : ''}}'" }}
-  <div>{{ trans key="Zwischentotal" :site="user_language" }}</div>
+  <div>{{ trans key="Zwischentotal" }}</div>
   <div>{{ ($room_charges_total_value - $discount_value) | format_number(2, ',', '.') }} &euro;</div>
 {{ /partial:components/list-item }}
 

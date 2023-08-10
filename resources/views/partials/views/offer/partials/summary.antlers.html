@@ -55,41 +55,41 @@
 
 
 {{ partial:components/list-item :class="'border-midnight-500'" }}
-<div>{{ trans key="Anreise" :site="user_language" }}</div>
+<div>{{ trans key="Anreise" }}</div>
 <div>
   {{ arrival_date iso_format="dddd, DD. MMMM YYYY" }}
 </div>
 {{ /partial:components/list-item }}
 
 {{ partial:components/list-item }}
-<div>{{ trans key="Abreise" :site="user_language" }}</div>
+<div>{{ trans key="Abreise" }}</div>
 <div>
   {{ departure_date iso_format="dddd, DD. MMMM YYYY" }}
 </div>
 {{ /partial:components/list-item }}
 
 {{ partial:components/list-item }}
-<div>{{ trans key="Anzahl Nächte" :site="user_language" }}</div>
+<div>{{ trans key="Anzahl Nächte" }}</div>
 <div>{{ number_nights }}</div>
 {{ /partial:components/list-item }}
 
 {{ partial:components/list-item }}
-<div>{{ trans key="Anzahl Suiten" :site="user_language" }}</div>
+<div>{{ trans key="Anzahl Suiten" }}</div>
 <div>{{ number_suites }}</div>
 {{ /partial:components/list-item }}
 
 {{ partial:components/list-item }}
-<div>{{ trans key="Personen" :site="user_language" }}</div>
+<div>{{ trans key="Personen" }}</div>
 <div>{{ number_guests }}</div>
 {{ /partial:components/list-item }}
 
 {{ partial:components/list-item :class="'border-b border-midnight-300 mb-40'" }}
-<div>{{ trans key="Suitentyp" :site="user_language" }}</div>
+<div>{{ trans key="Suitentyp" }}</div>
 <div>{{ room:title }}</div>
 {{ /partial:components/list-item }}
 
 {{ partial:components/list-item :class="'border-midnight-500'" }}
-<div>{{ trans key="Preis pro Nacht" :site="user_language" }}</div>
+<div>{{ trans key="Preis pro Nacht" }}</div>
 <div>{{ $room_charges_per_night | format_number(2, ',', '.') }} &euro;</div>
 {{ /partial:components/list-item }}
 
@@ -105,14 +105,14 @@
 
 {{# grand total #}}
 {{ partial:components/list-item :class="'{{ $has_discount || $has_additional_charges ? 'border-t border-midnight-500' : 'border-t border-midnight-300'}}'" }}
-<div>{{ trans key="Gesamtbetrag inkl. MwSt & Service" :site="user_language" }}</div>
+<div>{{ trans key="Gesamtbetrag inkl. MwSt & Service" }}</div>
 <div>{{ $grand_total | format_number(2, ',', '.') }} &euro;</div>
 {{ /partial:components/list-item }}
 
 {{# deposit #}}
 {{ if $has_deposit }}
   {{ partial:components/list-item :class="'mt-40 border-midnight-500'" }}
-    <div>{{ trans key="Angeldzahlung" :site="user_language" }}</div>
+    <div>{{ trans key="Angeldzahlung" }}</div>
     <div>{{ ($grand_total / 2) | format_number(2, ',', '.') }} &euro;</div>
   {{ /partial:components/list-item }}
 {{ /if }}

@@ -40,7 +40,7 @@ class Confirmation extends Notification
   {
     return (new MailMessage)
       ->from('no-reply@berghoferin.it')
-      ->subject(__('Ihre Buchungsanfrage', [], $this->data->user_language))
+      ->subject(__('Ihre Buchungsanfrage', [], $this->data->locale))
       ->markdown('mail.confirmation', ['data' => $this->data]);
   }
 
