@@ -1,9 +1,9 @@
 {{ if category == 'hotel-and-destination' }}
   <section class="flex flex-col md:col-span-full md:grid md:grid-cols-16 md:gap-16 mt-80">
-    <figure class="order-2 md:order-1 md:col-span-6 md:col-start-2 xl:col-span-4 xl:col-start-5 mb-32 md:mb-0">
+    <figure class="order-2 md:order-1 md:col-span-6 md:col-start-2 xl:col-span-5 xl:col-start-5 mb-32 md:mb-0">
       {{ partial:components/image :image="image" :width="'640'" :height="'1000'" :caption="image:alt" }}
     </figure>
-    <div class="order-1 md:order-2 md:col-span-7 md:col-start-9 xl:col-span-5 xl:col-start-10 mb-32 md:mb-0 md:mt-80">
+    <div class="order-1 md:order-2 md:col-span-7 md:col-start-9 xl:col-span-5 xl:col-start-11 mb-32 md:mb-0 md:mt-80">
       {{ if locale == 'en'}}
         {{ partial:components/image :image="header_image" :width="'465'" :height="'219'" :caption="header_image:alt" class="w-auto h-105" }}
       {{ else }}
@@ -29,7 +29,7 @@
 
 {{ if category == 'suites-and-services' }}
   <section class="flex flex-col md:col-span-full md:grid md:grid-cols-16 md:gap-16 mt-80">
-    <figure class="order-2 md:order-2 md:col-span-6 md:col-start-10 xl:col-span-4 xl:col-start-11 mt-32 md:mt-0">
+    <figure class="order-2 md:order-2 md:col-span-6 md:col-start-10 xl:col-span-5 xl:col-start-11 mt-32 md:mt-0">
       {{ partial:components/image :image="image" :width="'640'" :height="'1000'" :caption="image:alt" }}
     </figure>
     <div class="order-1 md:order-1 md:col-span-7 md:col-start-2 xl:col-span-5 xl:col-start-5 md:mt-80">
@@ -79,7 +79,7 @@
 
 {{ if category == 'spa-and-wellness' }}
   <section class="flex flex-col md:col-span-full md:grid md:grid-cols-16 md:gap-16 mt-80">
-    <figure class="order-2 md:order-2 md:col-span-6 md:col-start-10 xl:col-span-4 xl:col-start-11 mt-32 md:mt-0">
+    <figure class="order-2 md:order-2 md:col-span-6 md:col-start-10 xl:col-span-5 xl:col-start-11 mt-32 md:mt-0">
       {{ partial:components/image :image="image" :width="'640'" :height="'1000'" :caption="image:alt" }}
     </figure>
     <div class="order-1 md:order-1 md:col-span-7 md:col-start-2 xl:col-span-5 xl:col-start-5 md:mt-80">
