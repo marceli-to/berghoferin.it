@@ -20,4 +20,5 @@ yarn-error.log
 /content
 /users
 /public/assets
+/public/robots.txt
 INSTALL.txt
