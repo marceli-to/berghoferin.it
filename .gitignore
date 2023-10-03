@@ -19,6 +19,6 @@ yarn-error.log
 /.vscode
 /content
 /users
-/public/assets
-/public/robots.txt
+public/assets
+public/robots.txt
 INSTALL.txt
