@@ -3,7 +3,7 @@
     {{ if column_1 }}
       <div class="md:col-span-4">
         {{ column_1 }}
-          <article class="mb-64 xl:mb-96">
+          <article class="mb-64 xl:mb-96 {{ last ? '!mb-0' : ''}}">
             <img 
               src="{{ glide :src="url" :width="'1000'" }}" 
               class="block w-full {{ if height > width }} aspect-[3/4] {{ /if}}" 
@@ -20,7 +20,7 @@
     {{ if column_2 }}
       <div class="md:col-span-4 md:col-start-6">
         {{ column_2 }}
-          <article class="mb-64 xl:mb-96">
+          <article class="mb-64 xl:mb-96 {{ last ? '!mb-0' : ''}}">
             <img 
               src="{{ glide :src="url" :width="'1000'" }}" 
               class="block w-full {{ if height > width }} aspect-[3/4] {{ /if}}" 
@@ -37,7 +37,7 @@
     {{ if column_3 }}
     <div class="md:col-span-4 md:col-start-11">
       {{ column_3 }}
-        <article class="mb-64 xl:mb-96">
+        <article class="mb-64 xl:mb-96 {{ last ? '!mb-0' : ''}}">
           <img 
             src="{{ glide :src="url" :width="'1000'" }}" 
             class="block w-full {{ if height > width }} aspect-[3/4] {{ /if}}" 
