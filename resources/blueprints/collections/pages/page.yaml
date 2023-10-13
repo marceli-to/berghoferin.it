@@ -96,6 +96,11 @@ sections:
               fields:
                 -
                   import: information
+            impressions:
+              display: Impressions
+              fields:
+                -
+                  import: impressions
   sidebar:
     display: Sidebar
     fields:

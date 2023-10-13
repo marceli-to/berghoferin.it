@@ -1,0 +1,50 @@
+title: Impressions
+fields:
+  -
+    handle: column_1
+    field:
+      mode: list
+      container: assets
+      folder: content
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      display: 'Column 1'
+      type: assets
+      icon: assets
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: column_2
+    field:
+      mode: list
+      container: assets
+      folder: content
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      display: 'Column 2'
+      type: assets
+      icon: assets
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: column_3
+    field:
+      mode: list
+      container: assets
+      folder: content
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      display: 'Column 3'
+      type: assets
+      icon: assets
+      localizable: false
+      listable: hidden
+      instructions_position: above
+      visibility: visible

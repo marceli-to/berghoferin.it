@@ -18,9 +18,12 @@
     {{ partial:views/rooms/outro }}
   {{ /if }}
 
-
   {{ if rooms }}
     {{ partial:views/rooms/index }}
   {{ /if }}
+
+  {{ if type == 'impressions' }}
+    {{ partial:views/impressions }}
+  {{ /if }} 
 
 {{ /content }}

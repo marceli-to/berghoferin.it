@@ -1,0 +1,54 @@
+<section class="md:col-span-14 md:col-start-2">
+  <div class="md:grid md:grid-cols-14 md:gap-16 md:gap-y-80 w-full">
+    {{ if column_1 }}
+      <div class="md:col-span-4">
+        {{ column_1 }}
+          <article class="mb-64 xl:mb-96">
+            <img 
+              src="{{ glide :src="url" :width="width ? width : 1000" }}" 
+              class="block w-full {{ if height > width }} aspect-[3/4] {{ /if}}" 
+              width="{{ width ? width : 1000 }}" 
+              height="{{ height ? height : 1000 }}" 
+              alt="{{ caption }}"
+              loading="lazy"
+            />
+          </article>
+        {{ /column_1 }}
+      </div>
+    {{ /if }}
+
+    {{ if column_2 }}
+      <div class="md:col-span-4 md:col-start-6">
+        {{ column_2 }}
+          <article class="mb-64 xl:mb-96">
+            <img 
+              src="{{ glide :src="url" :width="width ? width : 1000" }}" 
+              class="block w-full {{ if height > width }} aspect-[3/4] {{ /if}}" 
+              width="{{ width ? width : 1000 }}" 
+              height="{{ height ? height : 1000 }}" 
+              alt="{{ caption }}"
+              loading="lazy"
+            />      
+          </article>
+        {{ /column_2 }}
+      </div>
+    {{ /if }}
+
+    {{ if column_3 }}
+    <div class="md:col-span-4 md:col-start-11">
+      {{ column_3 }}
+        <article class="mb-64 xl:mb-96">
+          <img 
+            src="{{ glide :src="url" :width="width ? width : 1000" }}" 
+            class="block w-full {{ if height > width }} aspect-[3/4] {{ /if}}" 
+            width="{{ width ? width : 1000 }}" 
+            height="{{ height ? height : 1000 }}" 
+            alt="{{ caption }}"
+            loading="lazy"
+          />
+      </article>
+      {{ /column_3 }}
+    </div>
+    {{ /if }}
+  </div>
+</section>
