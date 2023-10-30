@@ -44,10 +44,10 @@
               inline
               range
               auto-apply
-              :start-date="new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate())"
+              :start-date="new Date(2024, 5, 7)"
               :min-range="2"
-              :min-date="new Date(2024, 7, 6)"
-              :max-date="new Date(2024, 6, 10)"
+              :min-date="new Date(2024, 5, 7)"
+              :max-date="new Date(2024, 9, 6)"
               :enable-time-picker="false"
               month-name-format="long"
               :locale="_getLocale()">
