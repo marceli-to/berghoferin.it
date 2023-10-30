@@ -46,8 +46,8 @@
               auto-apply
               :start-date="new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate())"
               :min-range="2"
-              :min-date="new Date(2023, 5, 15)"
-              :max-date="new Date(2023, 9, 29)"
+              :min-date="new Date(2024, 6, 7)"
+              :max-date="new Date(2024, 10, 6)"
               :enable-time-picker="false"
               month-name-format="long"
               :locale="_getLocale()">
