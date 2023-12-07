@@ -22,6 +22,7 @@
 {{ vite src="resources/js/app.js" }}
 </head>
 <body class="theme-{{ theme }}">
+  {{ partial:components/button_booking }}
   {{ partial:layout/header }}
   <main class="site {{ if is_homepage }} pt-84 md:pt-120 xl:pt-220 {{ elseif is_offer }} pt-[260px] xl:pt-220 {{ else }} pt-180 {{ /if }}">
     <div class="site-container site-grid">
@@ -37,11 +38,4 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-57HGPVYSSL');
 </script>
-{{# <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10871842850"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'AW-10871842850');
-</script> #}}
 </html>

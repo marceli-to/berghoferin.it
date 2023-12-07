@@ -43,6 +43,10 @@
   @apply text-midnight-500;
 }
 
+.theme-midnight .btn-booking {
+  @apply bg-midnight-500;
+}
+
 /**
  * Chestnut
  */
@@ -79,6 +83,11 @@
 .theme-chestnut .site-footer * {
   @apply text-chestnut;
 }
+
+.theme-chestnut .btn-booking {
+  @apply bg-chestnut
+}
+
 
 /**
  * Eggplant
@@ -162,6 +171,10 @@
   @apply text-forest;
 }
 
+.theme-forest .btn-booking {
+  @apply bg-forest
+}
+
 /**
  * Bronze
  */
@@ -203,6 +216,9 @@
   @apply text-bronze;
 }
 
+.theme-bronze .btn-booking {
+  @apply bg-bronze
+}
 
 /**
  * Arctic
@@ -243,4 +259,8 @@
 
 .theme-arctic .site-footer * {
   @apply text-arctic;
+}
+
+.theme-arctic .btn-booking {
+  @apply bg-arctic
 }
