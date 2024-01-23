@@ -130,6 +130,11 @@
   @apply text-eggplant;
 }
 
+.theme-eggplant .btn-booking {
+  @apply bg-eggplant
+}
+
+
 /**
  * Forest
  */
