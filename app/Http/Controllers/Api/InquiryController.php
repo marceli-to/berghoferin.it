@@ -55,7 +55,6 @@ class InquiryController extends Controller
     $inquiry->slug($inquiry->slug() . '-' . $inquiry->id());
     $inquiry->save();
 
-
     // Add default information items from the information collection to this inquiry
     $information_items = Entry::query()->where('collection', 'information')->where('site', $inquiry->locale)->where('show_in_offer', TRUE)->orderBy('order')->get();
     $information = [];

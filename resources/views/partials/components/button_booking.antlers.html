@@ -1,4 +1,6 @@
-<a href="{{ trans key="https://bookings.hotelrez.co.uk/?chain=19159&hotel=45124&level=hotel&locale=de-DE" }}" class="fixed bottom-[5%] md:bottom-[25%] left-0 text-white flex items-center pt-8 pb-7 pl-24 pr-52 !leading-none left-0 btn-booking" target="_blank" title="{{ trans key="Buchen" }}">
-  {{ partial:icons/chevron-right :class="'block mr-8 -mt-2 w-7 h-12'" }}
-  <div>{{ trans key="Buchen" }}</div>
-</a>
+{{ if current_uri | contains('angebot') == false && current_uri | contains('offer') == false && current_uri | contains('offerta') == false}}
+  <a href="{{ trans key="https://bookings.hotelrez.co.uk/?chain=19159&hotel=45124&level=hotel&locale=de-DE" }}" class="fixed bottom-[5%] md:bottom-[25%] left-0 text-white flex items-center pt-8 pb-7 pl-24 pr-52 !leading-none left-0 btn-booking" target="_blank" title="{{ trans key="Buchen" }}">
+    {{ partial:icons/chevron-right :class="'block mr-8 -mt-2 w-7 h-12'" }}
+    <div>{{ trans key="Buchen" }}</div>
+  </a>
+{{ /if }}
