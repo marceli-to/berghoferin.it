@@ -24,11 +24,19 @@
 <body class="theme-{{ theme }}">
   {{ partial:components/button_booking }}
   {{ partial:layout/header }}
-  <main class="site {{ if is_homepage }} pt-84 md:pt-120 xl:pt-220 {{ elseif is_offer }} pt-[260px] xl:pt-220 {{ else }} pt-180 {{ /if }}">
+
+  {{# <main class="site {{ if is_homepage }} pt-84 md:pt-120 xl:pt-220 {{ elseif is_offer }} pt-[260px] xl:pt-220 {{ else }} pt-180 {{ /if }}">
+    <div class="site-container site-grid">
+      {{ template_content }}
+    </div>
+  </main> #}}
+
+  <main class="site {{ if is_homepage }} pt-145 md:pt-150 xl:pt-[220px] {{ elseif is_offer }} pt-[260px] xl:pt-220 {{ else }} pt-200 md:pt-240 {{ /if }}">
     <div class="site-container site-grid">
       {{ template_content }}
     </div>
   </main>
+
   {{ partial:layout/footer }}
 </body>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-57HGPVYSSL"></script>

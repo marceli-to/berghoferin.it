@@ -2,6 +2,14 @@
   "__commonjsHelpers-28e086c5.js": {
     "file": "assets/_commonjsHelpers-28e086c5.js"
   },
+  "resources/css/fonts/CormorantGaramond-SemiBold.woff": {
+    "file": "assets/CormorantGaramond-SemiBold-438ef62b.woff",
+    "src": "resources/css/fonts/CormorantGaramond-SemiBold.woff"
+  },
+  "resources/css/fonts/CormorantGaramond-SemiBold.woff2": {
+    "file": "assets/CormorantGaramond-SemiBold-d9620881.woff2",
+    "src": "resources/css/fonts/CormorantGaramond-SemiBold.woff2"
+  },
   "resources/css/fonts/Volte-Light.ttf": {
     "file": "assets/Volte-Light-8a7a2638.ttf",
     "src": "resources/css/fonts/Volte-Light.ttf"
@@ -51,7 +59,7 @@
     "src": "resources/css/fonts/Volte-RegularItalic.woff2"
   },
   "resources/js/app.css": {
-    "file": "assets/app-697f87b4.css",
+    "file": "assets/app-86dc645f.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -67,12 +75,14 @@
       "assets/Volte-Light-8a7a2638.ttf",
       "assets/Volte-Medium-d3133821.woff2",
       "assets/Volte-Medium-1afa8a03.woff",
-      "assets/Volte-Medium-528a2656.ttf"
+      "assets/Volte-Medium-528a2656.ttf",
+      "assets/CormorantGaramond-SemiBold-d9620881.woff2",
+      "assets/CormorantGaramond-SemiBold-438ef62b.woff"
     ],
     "css": [
-      "assets/app-697f87b4.css"
+      "assets/app-86dc645f.css"
     ],
-    "file": "assets/app-516290d3.js",
+    "file": "assets/app-d752777f.js",
     "imports": [
       "__commonjsHelpers-28e086c5.js"
     ],
