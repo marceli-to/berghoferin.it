@@ -37,48 +37,20 @@ module.exports = {
       },
 
       fontFamily: {
-        // 'regular': ['VolteRegular', ...defaultTheme.fontFamily.sans],
-        // 'italic': ['VolteItalic', ...defaultTheme.fontFamily.sans],
-        // 'light': ['VolteLight', ...defaultTheme.fontFamily.sans],
-        // 'medium': ['VolteMedium', ...defaultTheme.fontFamily.sans],
-
-        /** [new] **/
-        'regular': ['CormorantGaramond', ...defaultTheme.fontFamily.sans],
-        'italic': ['CormorantGaramond', ...defaultTheme.fontFamily.sans],
-        'light': ['CormorantGaramond', ...defaultTheme.fontFamily.sans],
-        'medium': ['CormorantGaramond', ...defaultTheme.fontFamily.sans],
-
+        'regular': ['VolteRegular', ...defaultTheme.fontFamily.sans],
+        'italic': ['VolteItalic', ...defaultTheme.fontFamily.sans],
+        'light': ['VolteLight', ...defaultTheme.fontFamily.sans],
+        'medium': ['VolteMedium', ...defaultTheme.fontFamily.sans],
       },
 
-      // fontSize: {
-      //   'xxs': '0.5rem',    // 10px
-      //   'xs': '0.75rem',    // 12px -- small font size
-      //   'sm': '0.875rem',   // 14px
-      //   'base': '1rem',     // 16px
-      //   'md': '1.125rem',   // 18px -- regular font size
-      //   'lg': '1.25rem',    // 20px
-      //   'xl': '1.6rem',     // 25px -- large font size
-      //   '2xl': '1.75rem',   // 28px
-      //   '3xl': '3rem',      // not in use
-      //   '4xl': '4rem',      // not in use
-      //   '5xl': '5rem',      // not in use
-      // },
-
-      /** [new] **/
       fontSize: {
         'xxs': '0.5rem',    // 10px
-        'xs': '0.875rem',    // 12px -- small font size
+        'xs': '0.75rem',    // 12px -- small font size
         'sm': '0.875rem',   // 14px
         'base': '1rem',     // 16px
-
-        /** [new] **/
-        'md': '1.313rem',   // 20px -- regular font size
-        
+        'md': '1.125rem',   // 18px -- regular font size
         'lg': '1.25rem',    // 20px
-        
-        /** [new] **/
         'xl': '1.6rem',     // 25px -- large font size
-
         '2xl': '1.75rem',   // 28px
         '3xl': '3rem',      // not in use
         '4xl': '4rem',      // not in use

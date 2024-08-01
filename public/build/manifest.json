@@ -59,7 +59,7 @@
     "src": "resources/css/fonts/Volte-RegularItalic.woff2"
   },
   "resources/js/app.css": {
-    "file": "assets/app-ad84e2ef.css",
+    "file": "assets/app-86dc645f.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -80,9 +80,9 @@
       "assets/CormorantGaramond-SemiBold-438ef62b.woff"
     ],
     "css": [
-      "assets/app-ad84e2ef.css"
+      "assets/app-86dc645f.css"
     ],
-    "file": "assets/app-4b9d16cf.js",
+    "file": "assets/app-d752777f.js",
     "imports": [
       "__commonjsHelpers-28e086c5.js"
     ],
