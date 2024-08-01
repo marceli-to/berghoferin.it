@@ -6,26 +6,16 @@ html {
   overflow-y: scroll;
 }
 
-/* body {
-  @apply font-regular text-midnight-500 text-md leading-6 flex min-h-screen flex-col
-} */
-
-/** [new] **/
 body {
-  @apply font-regular font-semibold text-midnight-500 text-md leading-7 flex min-h-screen flex-col
+  @apply font-regular text-midnight-500 text-md leading-6 flex min-h-screen flex-col
 }
 
 main {
   @apply flex-1
 }
 
-/* header.site-header {
-  @apply bg-white h-83 md:h-120 fixed w-full z-10
-} */
-
-/** [new] **/
 header.site-header {
-  @apply bg-white h-125 md:h-180 fixed w-full z-10
+  @apply bg-white h-83 md:h-120 fixed w-full z-10
 }
 
 article.content p {
